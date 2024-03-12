@@ -1,0 +1,23 @@
+11 Mar 2024 09:40:24,577 | [25] | INFO  | ~1 | User Logged In LDAP
+11 Mar 2024 09:40:25,096 | [21] | INFO  | ~2 | AD User : LAMINAAR\namit.singh Validated.
+ 
+11 Mar 2024 09:40:58,717 | [22] | INFO  | ~3 | User Logged In LDAP
+ 
+11 Mar 2024 09:48:27,660 | [12] | INFO  | ~1 | User Logged In LDAP
+11 Mar 2024 09:48:31,268 | [9] | INFO  | ~2 | AD User : LAMINAAR\namit.singh Validated.
+ 
+11 Mar 2024 09:49:28,260 | [12] | INFO  | ~3 | User Logged In LDAP
+11 Mar 2024 09:49:51,022 | [11] | INFO  | ~4 | User Logged In LDAP
+11 Mar 2024 09:49:51,055 | [35] | INFO  | ~5 | AD User : LAMINAAR\namit.singh Validated.
+ 
+11 Mar 2024 09:49:53,488 | [35] | INFO  | ~6 | User Logged In LDAP
+11 Mar 2024 09:49:53,516 | [33] | INFO  | ~7 | AD User : LAMINAAR\namit.singh Validated.
+ 
+11 Mar 2024 10:02:05,060 | [30] | INFO  | ~8 | UserName:ADMIN Logged Client Type CDT_DEFAULT::127.0.0.1
+11 Mar 2024 10:02:05,150 | [51] | INFO  | ~9 | ADMIN User Authenticated !!
+11 Mar 2024 10:02:07,603 | [31] | INFO  | ~10 | UserName:ADMIN Logged Client Type CDT_DEFAULT::127.0.0.1
+11 Mar 2024 10:02:07,670 | [11] | INFO  | ~11 | ADMIN User Authenticated !!
+11 Mar 2024 10:15:30,333 | [56] | INFO  | ~12 | Logging Out Token:0d399c1c-52b6-4aa8-8525-a1f742c45daf
+11 Mar 2024 10:16:23,258 | [46] | INFO  | ~13 | Logging Out Token:ae99c792-33d9-46b7-8763-3b46cd705d90
+11 Mar 2024 10:16:25,323 | [47] | INFO  | ~14 | Logging Out Token:ae99c792-33d9-46b7-8763-3b46cd705d90
+11 Mar 2024 10:16:25,323 | [52] | INFO  | ~15 | Invalid Token:|ae99c792-33d9-46b7-8763-3b46cd705d90

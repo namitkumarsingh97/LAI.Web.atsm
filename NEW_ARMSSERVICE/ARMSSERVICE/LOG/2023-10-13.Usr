@@ -1,0 +1,14 @@
+13 Oct 2023 08:45:53,167 | [129] | INFO  | ~128 | Scavenging Inactivate User 3713faa0-10f2-4c05-be07-e1e0a2d22126:ADMIN
+13 Oct 2023 08:45:53,167 | [103] | INFO  | ~129 | ADMIN Logged Out From Host - PID:
+13 Oct 2023 08:45:53,167 | [125] | INFO  | ~130 | Unable To Logout Token :
+13 Oct 2023 10:33:38,412 | [128] | INFO  | ~131 | Logging Out Token:3713faa0-10f2-4c05-be07-e1e0a2d22126
+13 Oct 2023 10:33:38,412 | [121] | INFO  | ~132 | Invalid Token:|3713faa0-10f2-4c05-be07-e1e0a2d22126
+13 Oct 2023 10:33:40,708 | [90] | INFO  | ~133 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.8
+13 Oct 2023 10:33:40,795 | [58] | INFO  | ~134 | ADMIN User Authenticated !!
+13 Oct 2023 16:10:13,253 | [76] | INFO  | ~135 | Logging Out Token:8cb6fd63-6051-4e37-833c-e7dc53cf2528
+13 Oct 2023 16:10:15,512 | [131] | INFO  | ~136 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.8
+13 Oct 2023 16:10:15,592 | [67] | INFO  | ~137 | ADMIN User Authenticated !!
+13 Oct 2023 17:40:00,267 | [113] | INFO  | ~138 | Scavenging Inactivate User 74914a54-fd4b-40c8-a190-7043511e1007:ADMIN
+13 Oct 2023 17:40:00,267 | [138] | INFO  | ~140 | Unable To Logout Token :
+13 Oct 2023 17:40:00,267 | [88] | INFO  | ~139 | ADMIN Logged Out From Host - PID:
+ 

@@ -1,0 +1,21 @@
+ 
+13 Jul 2023 12:53:48,776 | [15] | INFO  | ~1 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+13 Jul 2023 12:55:06,778 | [14] | INFO  | ~2 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+13 Jul 2023 12:55:08,449 | [21] | INFO  | ~3 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+ 
+13 Jul 2023 13:09:22,240 | [27] | INFO  | ~1 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+13 Jul 2023 13:09:33,003 | [22] | INFO  | ~2 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+13 Jul 2023 13:09:33,375 | [25] | INFO  | ~3 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+13 Jul 2023 13:17:02,645 | [22] | INFO  | ~4 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+13 Jul 2023 13:17:05,027 | [29] | INFO  | ~5 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+13 Jul 2023 17:30:00,681 | [29] | INFO  | ~6 | Starting Log Files Archival ..
+13 Jul 2023 17:30:14,372 | [108] | INFO  | ~8 | Zipping Logs took 14 Secs
+13 Jul 2023 17:30:14,372 | [59] | INFO  | ~7 | Archived Logs  Succeeded !!
+ 

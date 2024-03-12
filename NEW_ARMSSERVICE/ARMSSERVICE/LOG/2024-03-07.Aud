@@ -1,0 +1,9 @@
+07 Mar 2024 08:58:24,330 | [240] | INFO  | ~46 | Starting Log Files Archival ..
+07 Mar 2024 08:59:35,540 | [162] | INFO  | ~47 | 
+
+Starting Async Purging Of Archive Database ...
+07 Mar 2024 08:59:35,543 | [258] | INFO  | ~48 | Archive DB Returned NULL Dataset !!
+07 Mar 2024 08:59:36,709 | [205] | INFO  | ~49 | Zipping Logs took 72 Secs
+07 Mar 2024 08:59:36,711 | [205] | INFO  | ~50 | Archived Logs  Succeeded !!
+07 Mar 2024 17:32:26,507 | [236] | INFO  | ~51 | Starting Log Files Archival ..
+ 

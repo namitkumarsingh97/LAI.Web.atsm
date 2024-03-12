@@ -1,0 +1,5 @@
+05 Nov 2023 10:59:16,659 | [70] | INFO  | ~9 | FAILED To Relay Email To 3 
+05 Nov 2023 10:59:16,660 | [74] | INFO  | ~10 | FAILED In Twilio Init : Check Balance
+05 Nov 2023 10:59:47,772 | [25] | INFO  | ~11 | FAILED In Twilio Init : Check Balance
+05 Nov 2023 10:59:47,772 | [111] | INFO  | ~12 | FAILED To Relay Email To 3 
+ 

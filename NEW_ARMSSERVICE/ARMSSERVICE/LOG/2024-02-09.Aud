@@ -1,0 +1,8 @@
+09 Feb 2024 09:40:42,665 | [250] | INFO  | ~34 | 
+
+Starting Async Purging Of Archive Database ...
+09 Feb 2024 09:40:42,669 | [173] | INFO  | ~35 | Archive DB Returned NULL Dataset !!
+09 Feb 2024 17:30:00,107 | [214] | INFO  | ~36 | Starting Log Files Archival ..
+09 Feb 2024 17:31:37,811 | [241] | INFO  | ~37 | Zipping Logs took 97 Secs
+09 Feb 2024 17:31:37,812 | [229] | INFO  | ~38 | Archived Logs  Succeeded !!
+ 

@@ -1,0 +1,8 @@
+09 Nov 2023 08:54:32,322 | [112] | INFO  | ~18 | ADMIN Logged Out From Host - PID:
+09 Nov 2023 08:54:32,322 | [141] | INFO  | ~19 | Unable To Logout Token :
+09 Nov 2023 08:54:32,322 | [138] | INFO  | ~17 | Scavenging Inactivate User 48da4c54-06bb-4f4a-a1f6-9eea47f50881:ADMIN
+09 Nov 2023 09:51:50,257 | [143] | INFO  | ~20 | Logging Out Token:48da4c54-06bb-4f4a-a1f6-9eea47f50881
+09 Nov 2023 09:51:50,257 | [144] | INFO  | ~21 | Invalid Token:|48da4c54-06bb-4f4a-a1f6-9eea47f50881
+09 Nov 2023 09:51:52,284 | [22] | INFO  | ~22 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.8
+09 Nov 2023 09:51:52,347 | [142] | INFO  | ~23 | ADMIN User Authenticated !!
+ 

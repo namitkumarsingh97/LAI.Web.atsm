@@ -1,0 +1,18 @@
+25 Jan 2024 08:55:36,754 | [211] | INFO  | ~70 | Scavenging Inactivate User 1312f3e8-c1a3-454f-a7ac-0f3f93d3f842:ADMIN
+25 Jan 2024 08:55:36,754 | [226] | INFO  | ~71 | ADMIN Logged Out From Host - PID:
+25 Jan 2024 08:55:36,754 | [160] | INFO  | ~72 | Unable To Logout Token :
+25 Jan 2024 08:57:32,290 | [164] | INFO  | ~74 | Invalid Token:|1312f3e8-c1a3-454f-a7ac-0f3f93d3f842
+25 Jan 2024 08:57:32,290 | [247] | INFO  | ~73 | Logging Out Token:1312f3e8-c1a3-454f-a7ac-0f3f93d3f842
+25 Jan 2024 09:22:25,270 | [238] | INFO  | ~75 | UserName:ADMIN Logged Client Type CDT_DEFAULT::127.0.0.1
+25 Jan 2024 09:22:25,343 | [226] | INFO  | ~76 | ADMIN User Authenticated !!
+25 Jan 2024 09:33:16,382 | [169] | INFO  | ~77 | Logging Out Token:c4ba9951-ef39-424c-93c5-fd64110fb5c4
+25 Jan 2024 09:34:41,317 | [226] | INFO  | ~78 | UserName:ADMIN Logged Client Type CDT_DEFAULT::127.0.0.1
+25 Jan 2024 09:34:41,497 | [211] | INFO  | ~79 | ADMIN User Authenticated !!
+25 Jan 2024 09:53:32,629 | [169] | INFO  | ~80 | Logging Out Token:4109cee8-166f-48bc-aae1-cbd2a097d4db
+25 Jan 2024 09:53:34,452 | [95] | INFO  | ~81 | UserName:ADMIN Logged Client Type CDT_DEFAULT::127.0.0.1
+25 Jan 2024 09:53:34,519 | [211] | INFO  | ~82 | ADMIN User Authenticated !!
+25 Jan 2024 10:18:17,399 | [234] | INFO  | ~83 | Logging Out Token:bd03d783-02dd-4cc4-8f61-75eb6e1fa5a6
+25 Jan 2024 17:24:55,079 | [231] | INFO  | ~84 | UserName:ADMIN Logged Client Type CDT_DEFAULT::127.0.0.1
+25 Jan 2024 17:24:55,153 | [225] | INFO  | ~85 | ADMIN User Authenticated !!
+25 Jan 2024 18:07:48,336 | [203] | INFO  | ~86 | Logging Out Token:86311352-ad7e-4c34-adb1-539db6b80a5c
+ 

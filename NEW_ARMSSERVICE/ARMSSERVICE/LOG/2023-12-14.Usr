@@ -1,0 +1,14 @@
+14 Dec 2023 18:37:09,554 | [6] | INFO  | ~1 | User Logged In LDAP
+14 Dec 2023 18:37:10,689 | [5] | INFO  | ~2 | Validation Failed For Login In AD 
+ 
+14 Dec 2023 18:37:12,192 | [7] | INFO  | ~3 | User Logged In LDAP
+14 Dec 2023 18:37:13,249 | [7] | INFO  | ~4 | AD User : NT AUTHORITY\SYSTEM Validated.
+ 
+14 Dec 2023 18:37:13,979 | [13] | INFO  | ~5 | User Logged In LDAP
+14 Dec 2023 18:37:14,074 | [4] | INFO  | ~6 | AD User : NT AUTHORITY\SYSTEM Validated.
+ 
+14 Dec 2023 18:51:36,365 | [21] | INFO  | ~1 | User Logged In LDAP
+14 Dec 2023 18:51:38,717 | [22] | INFO  | ~2 | AD User : LAMINAAR\namit.singh Validated.
+ 
+14 Dec 2023 18:51:54,133 | [20] | INFO  | ~3 | User Logged In LDAP
+ 

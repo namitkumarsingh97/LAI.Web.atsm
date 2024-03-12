@@ -1,0 +1,288 @@
+19 Jun 2023 09:16:22,886 | [ARMS Scheduler_Worker-21] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:SelectTable:SelectTable:A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: SQL Network Interfaces, error: 26 - Error Locating Server/Instance Specified)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, Boolean withFailover, Boolean isFirstTransparentAttempt, SqlAuthenticationMethod authType, String certificate, ServerCertificateValidationCallback serverCallback, ClientCertificateRetrievalCallback clientCallback, Boolean useOriginalAddressInfo, Boolean disableTnir)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover, Boolean isFirstTransparentAttempt, Boolean disableTnir)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, ServerCertificateValidationCallback serverCallback, ClientCertificateRetrievalCallback clientCallback, DbConnectionPool pool, String accessToken, SqlClientOriginalNetworkAddressInfo originalNetworkAddressInfo, Boolean applyTransientFaultHandling)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Arms.Service.clsBAL.SelectTable(String _CommandText)
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:-1,State:0,Class:20
+ 
+ 
+ 
+ 
+19 Jun 2023 13:25:00,203 | [ARMS Scheduler_Worker-6] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:ExecuteNonQuery:ExecuteNonQuery:Violation of UNIQUE KEY constraint 'UK_MTD_APPLICATIONRESOURCEUSAGE_USAGEASOF'. Cannot insert duplicate key in object 'mtd.APPLICATIONRESOURCEUSAGE'. The duplicate key value is (2023-06-19 07:55:00.1150615).The statement has been terminated.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_MTD_APPLICATIONRESOURCEUSAGE_USAGEASOF'. Cannot insert duplicate key in object 'mtd.APPLICATIONRESOURCEUSAGE'. The duplicate key value is (2023-06-19 07:55:00.1150615).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Arms.Service.clsDAL.ExecuteNonQuery(CommandType CommandType, String CommandText, SqlParameter[] CommandParameters)
+ClientConnectionId:dea24726-e3af-4b8c-9bda-f10ad3d32dbe
+Error Number:2627,State:1,Class:14
+ 
+19 Jun 2023 13:54:35,790 | [15] | ERROR | ~1 | EMPTY NLB Token
+ 
+ 
+19 Jun 2023 13:54:45,881 | [12] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:HostService:HostService:HTTP could not register URL http://+:9095/arms/IDBO/. Another application has already registered this URL with HTTP.SYS.:http://172.18.11.30:9095/arms/IDBO
+System.ServiceModel.AddressAlreadyInUseException: HTTP could not register URL http://+:9095/arms/IDBO/. Another application has already registered this URL with HTTP.SYS. ---> System.Net.HttpListenerException: Failed to listen on prefix 'http://+:9095/arms/IDBO/' because it conflicts with an existing registration on the machine.
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   at System.ServiceModel.Channels.TransportManager.Open(TransportChannelListener channelListener)
+   at System.ServiceModel.Channels.TransportManagerContainer.Open(SelectTransportManagersCallback selectTransportManagerCallback)
+   at System.ServiceModel.Channels.TransportChannelListener.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelListener`1.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.ChannelDispatcher.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at Arms.GlobalLibrary.ServiceHosting.HostService()
+19 Jun 2023 13:54:45,906 | [12] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:HostService:HostService:HTTP could not register URL http://+:9095/arms/IFIO/. Another application has already registered this URL with HTTP.SYS.:http://172.18.11.30:9095/arms/IFIO
+System.ServiceModel.AddressAlreadyInUseException: HTTP could not register URL http://+:9095/arms/IFIO/. Another application has already registered this URL with HTTP.SYS. ---> System.Net.HttpListenerException: Failed to listen on prefix 'http://+:9095/arms/IFIO/' because it conflicts with an existing registration on the machine.
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   at System.ServiceModel.Channels.TransportManager.Open(TransportChannelListener channelListener)
+   at System.ServiceModel.Channels.TransportManagerContainer.Open(SelectTransportManagersCallback selectTransportManagerCallback)
+   at System.ServiceModel.Channels.TransportChannelListener.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelListener`1.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.ChannelDispatcher.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at Arms.GlobalLibrary.ServiceHosting.HostService()
+19 Jun 2023 13:54:45,911 | [12] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:HostService:HostService:HTTP could not register URL http://+:9095/arms/IDSO/. Another application has already registered this URL with HTTP.SYS.:http://172.18.11.30:9095/arms/IDSO
+System.ServiceModel.AddressAlreadyInUseException: HTTP could not register URL http://+:9095/arms/IDSO/. Another application has already registered this URL with HTTP.SYS. ---> System.Net.HttpListenerException: Failed to listen on prefix 'http://+:9095/arms/IDSO/' because it conflicts with an existing registration on the machine.
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   at System.ServiceModel.Channels.TransportManager.Open(TransportChannelListener channelListener)
+   at System.ServiceModel.Channels.TransportManagerContainer.Open(SelectTransportManagersCallback selectTransportManagerCallback)
+   at System.ServiceModel.Channels.TransportChannelListener.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelListener`1.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.ChannelDispatcher.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at Arms.GlobalLibrary.ServiceHosting.HostService()
+19 Jun 2023 13:54:45,933 | [12] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:HostService:HostService:HTTP could not register URL http://+:9095/arms/IUSO/. Another application has already registered this URL with HTTP.SYS.:http://172.18.11.30:9095/arms/IUSO
+System.ServiceModel.AddressAlreadyInUseException: HTTP could not register URL http://+:9095/arms/IUSO/. Another application has already registered this URL with HTTP.SYS. ---> System.Net.HttpListenerException: Failed to listen on prefix 'http://+:9095/arms/IUSO/' because it conflicts with an existing registration on the machine.
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   at System.ServiceModel.Channels.TransportManager.Open(TransportChannelListener channelListener)
+   at System.ServiceModel.Channels.TransportManagerContainer.Open(SelectTransportManagersCallback selectTransportManagerCallback)
+   at System.ServiceModel.Channels.TransportChannelListener.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelListener`1.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.ChannelDispatcher.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at Arms.GlobalLibrary.ServiceHosting.HostService()
+19 Jun 2023 13:54:45,971 | [12] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:HostService:HostService:HTTP could not register URL http://+:9095/arms/ISVO/. Another application has already registered this URL with HTTP.SYS.:http://172.18.11.30:9095/arms/ISVO
+System.ServiceModel.AddressAlreadyInUseException: HTTP could not register URL http://+:9095/arms/ISVO/. Another application has already registered this URL with HTTP.SYS. ---> System.Net.HttpListenerException: Failed to listen on prefix 'http://+:9095/arms/ISVO/' because it conflicts with an existing registration on the machine.
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   at System.ServiceModel.Channels.TransportManager.Open(TransportChannelListener channelListener)
+   at System.ServiceModel.Channels.TransportManagerContainer.Open(SelectTransportManagersCallback selectTransportManagerCallback)
+   at System.ServiceModel.Channels.TransportChannelListener.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelListener`1.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.ChannelDispatcher.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at Arms.GlobalLibrary.ServiceHosting.HostService()
+19 Jun 2023 13:54:45,980 | [12] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:HostService:HostService:HTTP could not register URL http://+:9095/arms/IMDO/. Another application has already registered this URL with HTTP.SYS.:http://172.18.11.30:9095/arms/IMDO
+System.ServiceModel.AddressAlreadyInUseException: HTTP could not register URL http://+:9095/arms/IMDO/. Another application has already registered this URL with HTTP.SYS. ---> System.Net.HttpListenerException: Failed to listen on prefix 'http://+:9095/arms/IMDO/' because it conflicts with an existing registration on the machine.
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   at System.ServiceModel.Channels.TransportManager.Open(TransportChannelListener channelListener)
+   at System.ServiceModel.Channels.TransportManagerContainer.Open(SelectTransportManagersCallback selectTransportManagerCallback)
+   at System.ServiceModel.Channels.TransportChannelListener.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelListener`1.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.ChannelDispatcher.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at Arms.GlobalLibrary.ServiceHosting.HostService()
+19 Jun 2023 13:54:45,987 | [12] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:HostService:HostService:HTTP could not register URL http://+:9095/arms/IEMO/. Another application has already registered this URL with HTTP.SYS.:http://172.18.11.30:9095/arms/IEMO
+System.ServiceModel.AddressAlreadyInUseException: HTTP could not register URL http://+:9095/arms/IEMO/. Another application has already registered this URL with HTTP.SYS. ---> System.Net.HttpListenerException: Failed to listen on prefix 'http://+:9095/arms/IEMO/' because it conflicts with an existing registration on the machine.
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   at System.ServiceModel.Channels.TransportManager.Open(TransportChannelListener channelListener)
+   at System.ServiceModel.Channels.TransportManagerContainer.Open(SelectTransportManagersCallback selectTransportManagerCallback)
+   at System.ServiceModel.Channels.TransportChannelListener.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelListener`1.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.ChannelDispatcher.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at Arms.GlobalLibrary.ServiceHosting.HostService()
+19 Jun 2023 13:54:45,993 | [12] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:HostService:HostService:HTTP could not register URL http://+:9095/arms/ISMO/. Another application has already registered this URL with HTTP.SYS.:http://172.18.11.30:9095/arms/ISMO
+System.ServiceModel.AddressAlreadyInUseException: HTTP could not register URL http://+:9095/arms/ISMO/. Another application has already registered this URL with HTTP.SYS. ---> System.Net.HttpListenerException: Failed to listen on prefix 'http://+:9095/arms/ISMO/' because it conflicts with an existing registration on the machine.
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   at System.ServiceModel.Channels.TransportManager.Open(TransportChannelListener channelListener)
+   at System.ServiceModel.Channels.TransportManagerContainer.Open(SelectTransportManagersCallback selectTransportManagerCallback)
+   at System.ServiceModel.Channels.TransportChannelListener.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelListener`1.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.ChannelDispatcher.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at Arms.GlobalLibrary.ServiceHosting.HostService()
+19 Jun 2023 13:54:46,003 | [12] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:HostService:HostService:HTTP could not register URL http://+:9095/arms/ILMO/. Another application has already registered this URL with HTTP.SYS.:http://172.18.11.30:9095/arms/ILMO
+System.ServiceModel.AddressAlreadyInUseException: HTTP could not register URL http://+:9095/arms/ILMO/. Another application has already registered this URL with HTTP.SYS. ---> System.Net.HttpListenerException: Failed to listen on prefix 'http://+:9095/arms/ILMO/' because it conflicts with an existing registration on the machine.
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   at System.ServiceModel.Channels.TransportManager.Open(TransportChannelListener channelListener)
+   at System.ServiceModel.Channels.TransportManagerContainer.Open(SelectTransportManagersCallback selectTransportManagerCallback)
+   at System.ServiceModel.Channels.TransportChannelListener.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelListener`1.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.ChannelDispatcher.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at Arms.GlobalLibrary.ServiceHosting.HostService()
+19 Jun 2023 13:54:46,011 | [12] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:HostService:HostService:HTTP could not register URL http://+:9095/arms/IVER/. Another application has already registered this URL with HTTP.SYS.:http://172.18.11.30:9095/arms/IVER
+System.ServiceModel.AddressAlreadyInUseException: HTTP could not register URL http://+:9095/arms/IVER/. Another application has already registered this URL with HTTP.SYS. ---> System.Net.HttpListenerException: Failed to listen on prefix 'http://+:9095/arms/IVER/' because it conflicts with an existing registration on the machine.
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   at System.ServiceModel.Channels.TransportManager.Open(TransportChannelListener channelListener)
+   at System.ServiceModel.Channels.TransportManagerContainer.Open(SelectTransportManagersCallback selectTransportManagerCallback)
+   at System.ServiceModel.Channels.TransportChannelListener.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelListener`1.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.ChannelDispatcher.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at Arms.GlobalLibrary.ServiceHosting.HostService()
+19 Jun 2023 13:54:46,018 | [12] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:HostService:HostService:HTTP could not register URL http://+:9095/arms/ISYN/. Another application has already registered this URL with HTTP.SYS.:http://172.18.11.30:9095/arms/ISYN
+System.ServiceModel.AddressAlreadyInUseException: HTTP could not register URL http://+:9095/arms/ISYN/. Another application has already registered this URL with HTTP.SYS. ---> System.Net.HttpListenerException: Failed to listen on prefix 'http://+:9095/arms/ISYN/' because it conflicts with an existing registration on the machine.
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   at System.ServiceModel.Channels.TransportManager.Open(TransportChannelListener channelListener)
+   at System.ServiceModel.Channels.TransportManagerContainer.Open(SelectTransportManagersCallback selectTransportManagerCallback)
+   at System.ServiceModel.Channels.TransportChannelListener.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelListener`1.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.ChannelDispatcher.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at Arms.GlobalLibrary.ServiceHosting.HostService()
+19 Jun 2023 13:54:46,025 | [12] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:HostService:HostService:HTTP could not register URL http://+:9095/arms/ILBO/. Another application has already registered this URL with HTTP.SYS.:http://172.18.11.30:9095/arms/ILBO
+System.ServiceModel.AddressAlreadyInUseException: HTTP could not register URL http://+:9095/arms/ILBO/. Another application has already registered this URL with HTTP.SYS. ---> System.Net.HttpListenerException: Failed to listen on prefix 'http://+:9095/arms/ILBO/' because it conflicts with an existing registration on the machine.
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   --- End of inner exception stack trace ---
+   at System.ServiceModel.Channels.SharedHttpTransportManager.OnOpen()
+   at System.ServiceModel.Channels.TransportManager.Open(TransportChannelListener channelListener)
+   at System.ServiceModel.Channels.TransportManagerContainer.Open(SelectTransportManagersCallback selectTransportManagerCallback)
+   at System.ServiceModel.Channels.TransportChannelListener.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.HttpChannelListener`1.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.Dispatcher.ChannelDispatcher.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at System.ServiceModel.ServiceHostBase.OnOpen(TimeSpan timeout)
+   at System.ServiceModel.Channels.CommunicationObject.Open(TimeSpan timeout)
+   at Arms.GlobalLibrary.ServiceHosting.HostService()
+19 Jun 2023 13:54:46,054 | [12] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:.ctor:Failed to listen on prefix 'http://*:8888/' because it conflicts with an existing registration on the machine.
+System.Net.HttpListenerException (0x80004005): Failed to listen on prefix 'http://*:8888/' because it conflicts with an existing registration on the machine.
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at Arms.Service.Web.WebServer..ctor(String rootPath)
+19 Jun 2023 13:54:49,093 | [1] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73::Exception has been thrown by the target of an invocation.
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.Net.HttpListenerException: Failed to listen on prefix 'http://172.18.11.30:8080/' because it conflicts with an existing registration on the machine.
+   at System.Net.HttpListener.AddAllPrefixes()
+   at System.Net.HttpListener.Start()
+   at Microsoft.Owin.Host.HttpListener.OwinHttpListener.Start(HttpListener listener, Func`2 appFunc, IList`1 addresses, IDictionary`2 capabilities, Func`2 loggerFactory)
+   at Microsoft.Owin.Host.HttpListener.OwinServerFactory.Create(Func`2 app, IDictionary`2 properties)
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Owin.Hosting.ServerFactory.ServerFactoryAdapter.Create(IAppBuilder builder)
+   at Microsoft.Owin.Hosting.Engine.HostingEngine.Start(StartContext context)
+   at Microsoft.Owin.Hosting.Starter.HostingStarter.Start(StartOptions options)
+   at Arms.Service.Class.clsBootstrap..()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Arms.Service.Class.clsBootstrap..()
+ 
+ 
+ 
+ 
+19 Jun 2023 14:10:00,091 | [ARMS Scheduler_Worker-9] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:ExecuteNonQuery:ExecuteNonQuery:Violation of UNIQUE KEY constraint 'UK_MTD_APPLICATIONRESOURCEUSAGE_USAGEASOF'. Cannot insert duplicate key in object 'mtd.APPLICATIONRESOURCEUSAGE'. The duplicate key value is (2023-06-19 08:40:00.0962854).The statement has been terminated.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_MTD_APPLICATIONRESOURCEUSAGE_USAGEASOF'. Cannot insert duplicate key in object 'mtd.APPLICATIONRESOURCEUSAGE'. The duplicate key value is (2023-06-19 08:40:00.0962854).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Arms.Service.clsDAL.ExecuteNonQuery(CommandType CommandType, String CommandText, SqlParameter[] CommandParameters)
+ClientConnectionId:7301f884-86a4-4431-b586-434e72134146
+Error Number:2627,State:1,Class:14
+ 

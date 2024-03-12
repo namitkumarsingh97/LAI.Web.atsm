@@ -1,0 +1,36 @@
+22 Feb 2024 09:15:50,880 | [134] | INFO  | ~56 | Scavenging Inactivate User 7d3070d3-cecf-40fe-9050-608df16d13d5:ADMIN
+22 Feb 2024 09:15:50,880 | [157] | INFO  | ~58 | Unable To Logout Token :
+22 Feb 2024 09:15:50,880 | [154] | INFO  | ~57 | ADMIN Logged Out From Host - PID:
+22 Feb 2024 11:24:42,596 | [19] | INFO  | ~59 | Logging Out Token:7d3070d3-cecf-40fe-9050-608df16d13d5
+22 Feb 2024 11:24:42,596 | [135] | INFO  | ~60 | Invalid Token:|7d3070d3-cecf-40fe-9050-608df16d13d5
+22 Feb 2024 11:24:45,017 | [92] | INFO  | ~61 | UserName:ADMIN Logged Client Type CDT_DEFAULT::127.0.0.1
+22 Feb 2024 11:24:45,081 | [130] | INFO  | ~62 | ADMIN User Authenticated !!
+22 Feb 2024 12:40:00,068 | [124] | INFO  | ~65 | Unable To Logout Token :
+22 Feb 2024 12:40:00,068 | [135] | INFO  | ~64 | Scavenging Inactivate User c6e426bd-0e61-418e-92a3-ba694163b650:ADMIN
+22 Feb 2024 12:40:00,068 | [138] | INFO  | ~63 | ADMIN Logged Out From Host - PID:
+22 Feb 2024 19:14:10,170 | [157] | INFO  | ~66 | Invalid Token:|c6e426bd-0e61-418e-92a3-ba694163b650
+22 Feb 2024 19:14:10,170 | [140] | INFO  | ~67 | Logging Out Token:c6e426bd-0e61-418e-92a3-ba694163b650
+22 Feb 2024 19:14:13,865 | [146] | INFO  | ~68 | UserName:ADMIN Logged Client Type CDT_DEFAULT::127.0.0.1
+22 Feb 2024 19:14:13,867 | [51] | INFO  | ~69 | 127.0.0.1:|ADMIN|SDSarms@12345
+22 Feb 2024 19:14:15,402 | [124] | INFO  | ~70 | UserName:ADMIN Logged Client Type CDT_DEFAULT::127.0.0.1
+22 Feb 2024 19:14:15,402 | [120] | INFO  | ~71 | 127.0.0.1:|ADMIN|SDSarms@12345
+22 Feb 2024 19:14:44,049 | [135] | INFO  | ~73 | 127.0.0.1:|ADMIN|SDSarms@12345
+22 Feb 2024 19:14:44,049 | [126] | INFO  | ~72 | UserName:ADMIN Logged Client Type CDT_DEFAULT::127.0.0.1
+22 Feb 2024 19:15:06,498 | [143] | INFO  | ~74 | UserName:ADMIN Logged Client Type CDT_DEFAULT::127.0.0.1
+22 Feb 2024 19:15:06,498 | [129] | INFO  | ~75 | 127.0.0.1:|ADMIN|SDSarms@12345
+ 
+22 Feb 2024 19:17:00,488 | [21] | INFO  | ~1 | User Logged In LDAP
+22 Feb 2024 19:17:10,498 | [25] | INFO  | ~2 | AD User : LAMINAAR\namit.singh Validated.
+ 
+22 Feb 2024 19:17:19,467 | [22] | INFO  | ~3 | User Logged In LDAP
+22 Feb 2024 19:17:29,352 | [21] | INFO  | ~4 | User Logged In LDAP
+22 Feb 2024 19:17:29,371 | [22] | INFO  | ~5 | AD User : LAMINAAR\namit.singh Validated.
+ 
+22 Feb 2024 19:17:29,896 | [25] | INFO  | ~6 | User Logged In LDAP
+22 Feb 2024 19:17:29,909 | [23] | INFO  | ~7 | AD User : LAMINAAR\namit.singh Validated.
+ 
+22 Feb 2024 19:18:06,988 | [20] | INFO  | ~8 | UserName:ADMIN Logged Client Type CDT_DEFAULT::127.0.0.1
+22 Feb 2024 19:18:06,990 | [55] | INFO  | ~9 | 127.0.0.1:|ADMIN|SDSarms@12345
+22 Feb 2024 19:19:09,618 | [50] | INFO  | ~10 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.5
+22 Feb 2024 19:19:09,619 | [56] | INFO  | ~11 | 192.168.1.5:|ADMIN|SDSarms@12345
+ 

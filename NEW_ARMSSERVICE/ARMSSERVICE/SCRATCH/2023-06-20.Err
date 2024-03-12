@@ -1,0 +1,51 @@
+20 Jun 2023 09:15:10,885 | [ARMS Scheduler_Worker-18] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:IsAvailableNetworkActive:IsAvailableNetworkActive:An exception occurred during a Ping request.
+System.Net.NetworkInformation.PingException: An exception occurred during a Ping request. ---> System.ComponentModel.Win32Exception: Unknown error (0x2b2a)
+   at System.Net.NetworkInformation.Ping.InternalSend(IPAddress address, Byte[] buffer, Int32 timeout, PingOptions options, Boolean async)
+   at System.Net.NetworkInformation.Ping.Send(IPAddress address, Int32 timeout, Byte[] buffer, PingOptions options)
+   --- End of inner exception stack trace ---
+   at System.Net.NetworkInformation.Ping.Send(IPAddress address, Int32 timeout, Byte[] buffer, PingOptions options)
+   at System.Net.NetworkInformation.Ping.Send(IPAddress address, Int32 timeout)
+   at Arms.GlobalLibrary.GlobalCommon.IsAvailableNetworkActive()
+20 Jun 2023 09:55:00,255 | [ARMS Scheduler_Worker-7] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:UserScavenger:UserScavenger
+System.Messaging.MessageQueueException (0x80004005): Message that the cursor is currently pointing to has been removed from the queue by another process or by another call to Receive without the use of this cursor.
+   at System.Messaging.MessageQueue.ReceiveCurrent(TimeSpan timeout, Int32 action, CursorHandle cursor, MessagePropertyFilter filter, MessageQueueTransaction internalTransaction, MessageQueueTransactionType transactionType)
+   at System.Messaging.MessageEnumerator.RemoveCurrent(TimeSpan timeout, MessageQueueTransaction transaction, MessageQueueTransactionType transactionType)
+   at Arms.Service.clsScheduler.UserScavengerJob.Execute(IJobExecutionContext _Context)
+20 Jun 2023 13:55:11,858 | [ARMS Scheduler_Worker-14] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:SelectTable:SelectTable:A transport-level error has occurred when receiving results from the server. (provider: Session Provider, error: 19 - Physical connection is not usable)
+Microsoft.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: Session Provider, error: 19 - Physical connection is not usable)
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader()
+   at Arms.Service.clsBAL.SelectTable(String _CommandText)
+ClientConnectionId:ba7eadfd-72fc-4e3f-b16d-c4b4490b8ee6
+Error Number:-1,State:0,Class:20
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+20 Jun 2023 16:11:52,203 | [48] | ERROR | ~1 | EMPTY NLB Token
+ 
+ 
+ 
+20 Jun 2023 17:15:00,133 | [ARMS Scheduler_Worker-22] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:UserScavenger:UserScavenger
+System.Messaging.MessageQueueException (0x80004005): Message that the cursor is currently pointing to has been removed from the queue by another process or by another call to Receive without the use of this cursor.
+   at System.Messaging.MessageQueue.ReceiveCurrent(TimeSpan timeout, Int32 action, CursorHandle cursor, MessagePropertyFilter filter, MessageQueueTransaction internalTransaction, MessageQueueTransactionType transactionType)
+   at System.Messaging.MessageEnumerator.get_Current()
+   at Arms.Service.clsScheduler.UserScavengerJob.Execute(IJobExecutionContext _Context)
+ 

@@ -1,0 +1,18 @@
+08 Sep 2023 07:40:17,222 | [21] | INFO  | ~100 | Scavenging Inactivate User 7a1a7c9f-4bd8-4ba4-95bc-5cd2eb989806:ADMIN
+08 Sep 2023 07:40:17,223 | [151] | INFO  | ~102 | Unable To Logout Token :
+08 Sep 2023 07:40:17,223 | [107] | INFO  | ~101 | ADMIN Logged Out From Host - PID:
+08 Sep 2023 07:44:42,873 | [109] | INFO  | ~103 | Logging Out Token:7a1a7c9f-4bd8-4ba4-95bc-5cd2eb989806
+08 Sep 2023 07:44:42,873 | [57] | INFO  | ~104 | Invalid Token:|7a1a7c9f-4bd8-4ba4-95bc-5cd2eb989806
+08 Sep 2023 07:44:45,484 | [154] | INFO  | ~105 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.9
+08 Sep 2023 09:20:00,292 | [107] | INFO  | ~107 | ADMIN Logged Out From Host - PID:
+08 Sep 2023 09:20:00,292 | [100] | INFO  | ~106 | Scavenging Inactivate User 736c7017-7752-4931-b459-6511be6d0451:ADMIN
+08 Sep 2023 09:20:00,292 | [61] | INFO  | ~108 | Unable To Logout Token :
+08 Sep 2023 09:21:42,076 | [21] | INFO  | ~109 | Invalid Token:|736c7017-7752-4931-b459-6511be6d0451
+08 Sep 2023 09:21:42,076 | [121] | INFO  | ~110 | Logging Out Token:736c7017-7752-4931-b459-6511be6d0451
+08 Sep 2023 09:21:44,693 | [87] | INFO  | ~111 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.9
+08 Sep 2023 10:00:40,385 | [109] | INFO  | ~112 | Logging Out Token:e97acbfd-f984-475d-a8c0-f0fd8bae6853
+08 Sep 2023 10:00:42,622 | [121] | INFO  | ~113 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.9
+08 Sep 2023 12:10:00,343 | [25] | INFO  | ~114 | Unable To Logout Token :
+08 Sep 2023 12:10:00,343 | [153] | INFO  | ~115 | Scavenging Inactivate User dcbd8cd8-b8b8-4740-bc65-fade9de0d9f7:ADMIN
+08 Sep 2023 12:10:00,343 | [124] | INFO  | ~116 | ADMIN Logged Out From Host - PID:
+ 

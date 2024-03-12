@@ -1,0 +1,22 @@
+15 Sep 2023 07:31:01,229 | [51] | INFO  | ~26 | Scavenging Inactivate User b0d9122f-da39-4d87-834c-47bda045ef6b:ADMIN
+15 Sep 2023 07:31:01,231 | [69] | INFO  | ~28 | Unable To Logout Token :
+15 Sep 2023 07:31:01,230 | [25] | INFO  | ~27 | ADMIN Logged Out From Host - PID:
+15 Sep 2023 09:30:43,921 | [73] | INFO  | ~30 | Invalid Token:|b0d9122f-da39-4d87-834c-47bda045ef6b
+15 Sep 2023 09:30:43,921 | [16] | INFO  | ~29 | Logging Out Token:b0d9122f-da39-4d87-834c-47bda045ef6b
+15 Sep 2023 09:30:45,350 | [51] | INFO  | ~31 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.7
+15 Sep 2023 10:40:00,530 | [50] | INFO  | ~32 | Scavenging Inactivate User 05070f02-7845-400d-a8b1-7a04841bceaf:ADMIN
+15 Sep 2023 10:40:00,530 | [73] | INFO  | ~34 | Unable To Logout Token :
+15 Sep 2023 10:40:00,530 | [11] | INFO  | ~33 | ADMIN Logged Out From Host - PID:
+15 Sep 2023 11:06:36,013 | [183] | INFO  | ~36 | Invalid Token:|05070f02-7845-400d-a8b1-7a04841bceaf
+15 Sep 2023 11:06:36,013 | [10] | INFO  | ~35 | Logging Out Token:05070f02-7845-400d-a8b1-7a04841bceaf
+15 Sep 2023 11:06:38,192 | [78] | INFO  | ~37 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.7
+15 Sep 2023 13:05:00,066 | [222] | INFO  | ~38 | Scavenging Inactivate User ff8f51e4-6d83-4df5-b348-8a7bd6bf79d9:ADMIN
+15 Sep 2023 13:05:00,066 | [238] | INFO  | ~40 | Unable To Logout Token :
+15 Sep 2023 13:05:00,066 | [75] | INFO  | ~39 | ADMIN Logged Out From Host - PID:
+15 Sep 2023 15:15:06,911 | [25] | INFO  | ~41 | Logging Out Token:ff8f51e4-6d83-4df5-b348-8a7bd6bf79d9
+15 Sep 2023 15:15:06,911 | [73] | INFO  | ~42 | Invalid Token:|ff8f51e4-6d83-4df5-b348-8a7bd6bf79d9
+15 Sep 2023 15:15:09,009 | [63] | INFO  | ~43 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.7
+15 Sep 2023 18:00:00,750 | [216] | INFO  | ~44 | Scavenging Inactivate User e7e00fc9-279d-4117-9043-3f87d22b78e5:ADMIN
+15 Sep 2023 18:00:00,750 | [249] | INFO  | ~46 | Unable To Logout Token :
+15 Sep 2023 18:00:00,750 | [172] | INFO  | ~45 | ADMIN Logged Out From Host - PID:
+ 

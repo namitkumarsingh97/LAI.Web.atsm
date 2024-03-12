@@ -1,0 +1,16 @@
+02 Feb 2024 09:05:06,379 | [58] | INFO  | ~5 | Power Event On Services !!
+02 Feb 2024 09:05:08,783 | [19] | INFO  | ~6 | Power Event On Services !!
+ 
+02 Feb 2024 09:11:54,713 | [22] | INFO  | ~1 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+02 Feb 2024 09:29:36,823 | [169] | INFO  | ~2 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+02 Feb 2024 09:29:37,853 | [164] | INFO  | ~3 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+02 Feb 2024 16:55:04,254 | [21] | INFO  | ~4 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+02 Feb 2024 16:55:05,983 | [167] | INFO  | ~5 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+02 Feb 2024 17:30:00,148 | [80] | INFO  | ~6 | Starting Log Files Archival ..
+02 Feb 2024 17:30:56,842 | [168] | INFO  | ~7 | Zipping Logs took 56 Secs
+02 Feb 2024 17:30:56,842 | [39] | INFO  | ~8 | Archived Logs  Succeeded !!
+ 

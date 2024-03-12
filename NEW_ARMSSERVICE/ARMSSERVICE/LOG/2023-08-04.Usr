@@ -1,0 +1,17 @@
+04 Aug 2023 11:23:49,766 | [88] | INFO  | ~46 | Logging Out Token:19f6f216-b4dc-46b3-aa29-fe0b1de2a0f1
+04 Aug 2023 11:23:49,766 | [21] | INFO  | ~47 | Invalid Token:|19f6f216-b4dc-46b3-aa29-fe0b1de2a0f1
+04 Aug 2023 11:24:15,938 | [92] | INFO  | ~48 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.6
+04 Aug 2023 11:24:16,016 | [95] | INFO  | ~49 | ADMIN User Authenticated !!
+04 Aug 2023 11:24:16,214 | [59] | INFO  | ~50 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.6
+04 Aug 2023 11:24:16,496 | [103] | INFO  | ~51 | ADMIN User Authenticated !!
+04 Aug 2023 11:24:29,389 | [67] | INFO  | ~52 | Logging Out Token:d7dff524-23d9-4d10-b440-39b1f856cac3
+04 Aug 2023 11:24:31,812 | [103] | INFO  | ~53 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.6
+04 Aug 2023 11:24:31,883 | [20] | INFO  | ~54 | ADMIN User Authenticated !!
+04 Aug 2023 13:25:00,067 | [59] | INFO  | ~55 | Scavenging Inactivate User 4cc785cb-a1d8-4ecc-9632-85538ed84720:ADMIN
+04 Aug 2023 13:25:00,067 | [71] | INFO  | ~57 | Unable To Logout Token :
+04 Aug 2023 13:25:00,067 | [117] | INFO  | ~56 | ADMIN Logged Out From Host - PID:
+04 Aug 2023 17:41:02,836 | [103] | INFO  | ~59 | Logging Out Token:4cc785cb-a1d8-4ecc-9632-85538ed84720
+04 Aug 2023 17:41:02,836 | [129] | INFO  | ~58 | Invalid Token:|4cc785cb-a1d8-4ecc-9632-85538ed84720
+04 Aug 2023 17:41:05,029 | [61] | INFO  | ~60 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.6
+04 Aug 2023 17:41:05,074 | [20] | INFO  | ~61 | ADMIN User Authenticated !!
+ 

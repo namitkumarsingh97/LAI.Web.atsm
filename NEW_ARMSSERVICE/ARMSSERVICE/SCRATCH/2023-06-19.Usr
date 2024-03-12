@@ -1,0 +1,54 @@
+19 Jun 2023 09:28:32,386 | [50] | INFO  | ~25 | UserName:ADMIN Logged Client Type CDT_DEFAULT::172.18.11.30
+19 Jun 2023 09:28:32,415 | [51] | INFO  | ~26 | ADMIN User Authenticated !!
+19 Jun 2023 10:23:40,465 | [19] | INFO  | ~27 | Logging Out Token:bfd3ea96-03cd-49b0-9fa7-ca86b81968a5
+19 Jun 2023 10:23:49,416 | [110] | INFO  | ~28 | UserName:ADMIN Logged Client Type CDT_DEFAULT::172.18.11.30
+19 Jun 2023 10:23:49,424 | [22] | INFO  | ~29 | ADMIN User Authenticated !!
+19 Jun 2023 10:24:14,697 | [107] | INFO  | ~30 | Logging Out Token:3691b4d5-4abd-44cd-9265-d4e77d94e405
+19 Jun 2023 10:24:16,213 | [112] | INFO  | ~31 | UserName:ADMIN Logged Client Type CDT_DEFAULT::172.18.11.30
+19 Jun 2023 10:24:16,224 | [58] | INFO  | ~32 | ADMIN User Authenticated !!
+19 Jun 2023 10:27:01,081 | [24] | INFO  | ~33 | Logging Out Token:33c6ed73-c1f2-4eb0-91f7-d5771616d1f5
+19 Jun 2023 10:27:02,809 | [120] | INFO  | ~34 | UserName:ADMIN Logged Client Type CDT_DEFAULT::172.18.11.30
+19 Jun 2023 10:27:02,821 | [19] | INFO  | ~35 | ADMIN User Authenticated !!
+ 
+19 Jun 2023 13:20:21,363 | [5] | INFO  | ~1 | User Logged In LDAP
+19 Jun 2023 13:20:23,600 | [6] | INFO  | ~2 | Validation Failed For Login In AD 
+ 
+19 Jun 2023 13:20:24,044 | [5] | INFO  | ~3 | User Logged In LDAP
+19 Jun 2023 13:20:24,376 | [9] | INFO  | ~4 | AD User : NT AUTHORITY\SYSTEM Validated.
+ 
+19 Jun 2023 13:20:24,539 | [8] | INFO  | ~5 | User Logged In LDAP
+19 Jun 2023 13:20:24,546 | [4] | INFO  | ~6 | AD User : NT AUTHORITY\SYSTEM Validated.
+ 
+19 Jun 2023 13:54:22,616 | [8] | INFO  | ~1 | User Logged In LDAP
+19 Jun 2023 13:54:24,587 | [14] | INFO  | ~2 | AD User : LAMINAAR\namit.singh Validated.
+ 
+19 Jun 2023 13:54:30,426 | [10] | INFO  | ~3 | User Logged In LDAP
+19 Jun 2023 13:54:38,269 | [11] | INFO  | ~4 | User Logged In LDAP
+19 Jun 2023 13:54:38,279 | [13] | INFO  | ~5 | AD User : LAMINAAR\namit.singh Validated.
+ 
+19 Jun 2023 13:54:39,358 | [9] | INFO  | ~6 | User Logged In LDAP
+19 Jun 2023 13:54:39,370 | [8] | INFO  | ~7 | AD User : LAMINAAR\namit.singh Validated.
+ 
+ 
+19 Jun 2023 14:04:24,104 | [17] | INFO  | ~1 | User Logged In LDAP
+19 Jun 2023 14:04:26,388 | [18] | INFO  | ~2 | AD User : LAMINAAR\namit.singh Validated.
+ 
+19 Jun 2023 14:04:29,355 | [18] | INFO  | ~3 | User Logged In LDAP
+19 Jun 2023 14:04:44,242 | [12] | INFO  | ~4 | User Logged In LDAP
+19 Jun 2023 14:04:44,249 | [11] | INFO  | ~5 | AD User : LAMINAAR\namit.singh Validated.
+ 
+19 Jun 2023 14:04:44,919 | [10] | INFO  | ~6 | User Logged In LDAP
+19 Jun 2023 14:04:44,925 | [9] | INFO  | ~7 | AD User : LAMINAAR\namit.singh Validated.
+ 
+19 Jun 2023 14:05:03,314 | [18] | INFO  | ~8 | UserName:ADMIN Logged Client Type CDT_DEFAULT::172.18.11.30
+19 Jun 2023 14:05:03,340 | [11] | INFO  | ~9 | ADMIN User Authenticated !!
+19 Jun 2023 15:13:32,240 | [5] | INFO  | ~10 | Logging Out Token:ad789a40-a795-425a-b0d7-43e35c339d62
+19 Jun 2023 15:15:25,227 | [57] | INFO  | ~11 | UserName:ADMIN Logged Client Type CDT_DEFAULT::172.18.11.30
+19 Jun 2023 15:15:25,236 | [17] | INFO  | ~12 | ADMIN User Authenticated !!
+19 Jun 2023 15:40:00,049 | [5] | INFO  | ~15 | Unable To Logout Token :
+19 Jun 2023 15:40:00,049 | [60] | INFO  | ~13 | Scavenging Inactivate User ad789a40-a795-425a-b0d7-43e35c339d62:ADMIN
+19 Jun 2023 15:40:00,049 | [19] | INFO  | ~14 | ADMIN Logged Out From Host - PID:
+19 Jun 2023 16:30:00,062 | [67] | INFO  | ~17 | ADMIN Logged Out From Host - PID:
+19 Jun 2023 16:30:00,062 | [9] | INFO  | ~18 | Unable To Logout Token :
+19 Jun 2023 16:30:00,062 | [53] | INFO  | ~16 | Scavenging Inactivate User 491ef87d-afec-4d19-8185-a75a4b2c1d25:ADMIN
+ 

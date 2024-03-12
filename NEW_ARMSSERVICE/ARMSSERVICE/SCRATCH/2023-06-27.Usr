@@ -1,0 +1,7 @@
+27 Jun 2023 15:50:36,785 | [47] | INFO  | ~31 | Invalid Token:|e2011d93-f4e5-4b12-86c9-fb2166d38aa6
+27 Jun 2023 15:50:36,785 | [6] | INFO  | ~30 | Logging Out Token:e2011d93-f4e5-4b12-86c9-fb2166d38aa6
+27 Jun 2023 15:50:39,484 | [48] | INFO  | ~32 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.2.197
+27 Jun 2023 15:50:39,510 | [11] | INFO  | ~33 | ADMIN User Authenticated !!
+27 Jun 2023 16:55:00,011 | [11] | INFO  | ~34 | Scavenging Inactivate User 5f3ad6d0-1cd5-44ce-9760-77341ed57657:ADMIN
+27 Jun 2023 16:55:00,011 | [10] | INFO  | ~36 | Unable To Logout Token :
+27 Jun 2023 16:55:00,011 | [53] | INFO  | ~35 | ADMIN Logged Out From Host - PID:

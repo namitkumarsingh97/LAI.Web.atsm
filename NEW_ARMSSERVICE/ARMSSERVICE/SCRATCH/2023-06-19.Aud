@@ -1,0 +1,30 @@
+19 Jun 2023 09:16:44,390 | [59] | INFO  | ~41 | Starting Log Files Archival ..
+19 Jun 2023 09:16:54,420 | [76] | INFO  | ~42 | Starting Archival Process..
+19 Jun 2023 09:16:54,746 | [107] | INFO  | ~43 | Archived Logs  Succeeded !!
+19 Jun 2023 09:16:54,746 | [56] | INFO  | ~44 | Zipping Logs took 10 Secs
+ 
+ 
+19 Jun 2023 13:20:23,860 | [6] | INFO  | ~1 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+19 Jun 2023 13:20:24,447 | [8] | INFO  | ~2 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+19 Jun 2023 13:20:24,617 | [11] | INFO  | ~3 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+19 Jun 2023 13:54:25,187 | [8] | INFO  | ~1 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+19 Jun 2023 13:54:35,814 | [4] | INFO  | ~4 | Stopping Services !!
+ 
+19 Jun 2023 13:54:38,571 | [10] | INFO  | ~2 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+19 Jun 2023 13:54:39,660 | [14] | INFO  | ~3 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+ 
+19 Jun 2023 14:04:26,749 | [17] | INFO  | ~1 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+19 Jun 2023 14:04:44,443 | [10] | INFO  | ~2 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+19 Jun 2023 14:04:45,052 | [12] | INFO  | ~3 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+19 Jun 2023 17:30:00,140 | [74] | INFO  | ~4 | Starting Log Files Archival ..
+19 Jun 2023 17:30:03,912 | [58] | INFO  | ~5 | Starting Archival Process..
+19 Jun 2023 17:30:03,960 | [18] | INFO  | ~6 | Archived Logs  Succeeded !!
+19 Jun 2023 17:30:03,961 | [9] | INFO  | ~7 | Zipping Logs took 3 Secs
+ 

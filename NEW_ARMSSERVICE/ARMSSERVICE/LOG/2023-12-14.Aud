@@ -1,0 +1,21 @@
+14 Dec 2023 09:03:17,847 | [105] | INFO  | ~40 | 
+
+Starting Async Purging Of Archive Database ...
+14 Dec 2023 09:03:17,851 | [93] | INFO  | ~41 | Archive DB Returned NULL Dataset !!
+14 Dec 2023 17:30:00,014 | [112] | INFO  | ~42 | Starting Log Files Archival ..
+14 Dec 2023 17:30:46,199 | [96] | INFO  | ~43 | Zipping Logs took 46 Secs
+14 Dec 2023 17:30:46,200 | [96] | INFO  | ~44 | Archived Logs  Succeeded !!
+ 
+ 
+14 Dec 2023 18:37:11,383 | [6] | INFO  | ~1 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+14 Dec 2023 18:37:13,815 | [4] | INFO  | ~2 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+14 Dec 2023 18:37:14,598 | [6] | INFO  | ~3 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+14 Dec 2023 18:51:39,761 | [20] | INFO  | ~1 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+14 Dec 2023 19:35:27,553 | [113] | INFO  | ~4 | Power Event On Services !!
+14 Dec 2023 19:35:27,924 | [42] | INFO  | ~5 | Power Event On Services !!
+14 Dec 2023 20:50:26,670 | [181] | INFO  | ~6 | Power Event On Services !!
+ 

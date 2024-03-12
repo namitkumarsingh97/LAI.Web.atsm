@@ -1,0 +1,5 @@
+01 Mar 2024 08:58:58,299 | [237] | INFO  | ~7 | FAILED To Relay Email To 3 
+01 Mar 2024 08:58:58,299 | [236] | INFO  | ~8 | FAILED In Twilio Init : Check Balance
+01 Mar 2024 18:32:42,349 | [172] | INFO  | ~9 | FAILED In Twilio Init : Check Balance
+01 Mar 2024 18:32:42,351 | [212] | INFO  | ~10 | FAILED To Relay Email To 3 
+ 

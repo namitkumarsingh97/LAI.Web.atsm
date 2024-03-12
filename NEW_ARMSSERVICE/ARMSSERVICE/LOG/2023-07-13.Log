@@ -1,0 +1,463 @@
+13 Jul 2023 12:53:43,419 | [10] | INFO  | ~1 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+13 Jul 2023 12:53:47,832 | [14] | INFO  | ~2 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+13 Jul 2023 12:53:48,161 | [11] | INFO  | ~3 | Application Path is verified.
+13 Jul 2023 12:53:48,161 | [9] | INFO  | ~4 | Logger Engine Initialized.
+13 Jul 2023 12:53:48,167 | [15] | INFO  | ~5 | Checked Network Availability.
+13 Jul 2023 12:53:48,171 | [12] | INFO  | ~6 | Mapping Directories.
+13 Jul 2023 12:53:48,750 | [10] | INFO  | ~7 | DB Backup Set To 0:30
+13 Jul 2023 12:53:48,753 | [11] | INFO  | ~8 | Log Backup Set To 17:30
+13 Jul 2023 12:53:48,757 | [9] | INFO  | ~9 | EOD Set To 0:1
+13 Jul 2023 12:53:48,944 | [8] | INFO  | ~10 | Config Loaded Successfully
+13 Jul 2023 12:55:06,230 | [19] | INFO  | ~11 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+13 Jul 2023 12:55:06,261 | [23] | INFO  | ~12 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+13 Jul 2023 12:55:06,426 | [20] | INFO  | ~13 | Application Path is verified.
+13 Jul 2023 12:55:06,426 | [13] | INFO  | ~14 | Logger Engine Initialized.
+13 Jul 2023 12:55:06,460 | [25] | INFO  | ~15 | Checked Network Availability.
+13 Jul 2023 12:55:06,461 | [23] | INFO  | ~16 | Mapping Directories.
+13 Jul 2023 12:55:06,757 | [21] | INFO  | ~17 | DB Backup Set To 0:30
+13 Jul 2023 12:55:06,760 | [21] | INFO  | ~18 | Log Backup Set To 17:30
+13 Jul 2023 12:55:06,764 | [13] | INFO  | ~19 | EOD Set To 0:1
+13 Jul 2023 12:55:06,881 | [20] | INFO  | ~20 | Config Loaded Successfully
+13 Jul 2023 12:55:07,903 | [22] | INFO  | ~21 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+13 Jul 2023 12:55:07,922 | [23] | INFO  | ~22 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+13 Jul 2023 12:55:08,085 | [14] | INFO  | ~23 | Application Path is verified.
+13 Jul 2023 12:55:08,085 | [22] | INFO  | ~24 | Logger Engine Initialized.
+13 Jul 2023 12:55:08,123 | [21] | INFO  | ~25 | Checked Network Availability.
+13 Jul 2023 12:55:08,124 | [19] | INFO  | ~26 | Mapping Directories.
+13 Jul 2023 12:55:08,430 | [13] | INFO  | ~27 | DB Backup Set To 0:30
+13 Jul 2023 12:55:08,432 | [14] | INFO  | ~28 | Log Backup Set To 17:30
+13 Jul 2023 12:55:08,435 | [20] | INFO  | ~29 | EOD Set To 0:1
+13 Jul 2023 12:55:08,570 | [22] | INFO  | ~30 | Config Loaded Successfully
+13 Jul 2023 12:55:08,576 | [23] | INFO  | ~31 | Setting File Import Cache
+13 Jul 2023 12:55:09,481 | [19] | INFO  | ~32 | Lazy DS Processing Enabled
+13 Jul 2023 12:55:11,400 | [13] | INFO  | ~33 | Lazy Audit Write Enabled
+13 Jul 2023 12:55:11,677 | [22] | INFO  | ~34 | Lazy SignalR Notify Enabled
+13 Jul 2023 12:55:11,677 | [23] | INFO  | ~35 | MSMQ Initialized.
+13 Jul 2023 12:55:31,230 | [14] | INFO  | ~36 | Synced Date Time With DB Server
+13 Jul 2023 12:55:32,374 | [21] | INFO  | ~37 | Database Engine Initialized.
+13 Jul 2023 12:55:32,399 | [23] | INFO  | ~38 | POP3 Engine Initialized.
+13 Jul 2023 12:55:32,406 | [13] | INFO  | ~39 | SMTP Engine Initialized.
+13 Jul 2023 12:55:32,424 | [20] | INFO  | ~40 | CRON Engine Initialized.
+13 Jul 2023 12:55:32,448 | [22] | INFO  | ~41 | Loading Metadata Users !!
+13 Jul 2023 12:55:32,488 | [25] | INFO  | ~42 | TSC:1
+13 Jul 2023 12:55:32,488 | [23] | INFO  | ~43 | Loading ORM !!
+13 Jul 2023 12:55:33,117 | [20] | INFO  | ~44 | Loading Trusted Subscribers !!
+13 Jul 2023 12:55:33,224 | [25] | INFO  | ~45 | Registered Peers IP:192.168.16.113:192.168.1.4
+13 Jul 2023 12:55:33,225 | [13] | INFO  | ~47 | Registered NLB Token
+13 Jul 2023 12:55:33,225 | [14] | INFO  | ~46 | Registered NLB Peers192.168.16.113,
+13 Jul 2023 12:55:33,225 | [23] | INFO  | ~50 | Loading Trusted Devices !!
+13 Jul 2023 12:55:33,225 | [20] | INFO  | ~49 | Server Slave To 192.168.16.120:9095
+13 Jul 2023 12:55:33,225 | [21] | INFO  | ~48 | Registered 10 trusted users.
+13 Jul 2023 12:55:33,326 | [23] | INFO  | ~51 | Cached 2 trusted devices.
+13 Jul 2023 12:55:33,326 | [25] | INFO  | ~52 | Loading Application Metadata !!
+13 Jul 2023 12:55:34,371 | [14] | INFO  | ~53 | Loading Application Data !!
+13 Jul 2023 12:55:34,414 | [22] | INFO  | ~54 | Loading Application Databases : 1
+13 Jul 2023 12:55:34,414 | [23] | INFO  | ~55 | Loading Application Emails !!
+13 Jul 2023 12:55:34,417 | [22] | INFO  | ~56 | Loading Application Rules !!
+13 Jul 2023 12:55:34,480 | [20] | INFO  | ~57 | Loaded Application Rules :1
+13 Jul 2023 12:55:34,496 | [21] | INFO  | ~59 | Loading MFA Service Actions !!
+13 Jul 2023 12:55:34,513 | [14] | INFO  | ~60 | Cached Custom Message Dictionary :7
+13 Jul 2023 12:55:34,483 | [25] | INFO  | ~58 | Loading Application Preferences !!
+13 Jul 2023 12:55:34,513 | [23] | INFO  | ~61 | Loading Status Messages :7
+13 Jul 2023 12:55:34,513 | [13] | INFO  | ~62 | Loading Application Automated Imports !!
+13 Jul 2023 12:55:34,575 | [21] | INFO  | ~63 | Granting Access Privileges To IMPEX Path
+13 Jul 2023 12:55:34,585 | [14] | INFO  | ~64 | Cached 1 Bulk Import Sites.
+13 Jul 2023 12:55:34,616 | [13] | INFO  | ~67 | Cached Application Metadata !!
+13 Jul 2023 12:55:34,616 | [23] | INFO  | ~65 | Cached Download URL Dictionary :0
+13 Jul 2023 12:55:34,616 | [25] | INFO  | ~66 | Loading Pre Defined Scheduled Download URLs :0
+13 Jul 2023 12:55:34,760 | [21] | INFO  | ~68 | Dynamic Parsing Enabled :3
+13 Jul 2023 12:55:34,760 | [14] | INFO  | ~69 | Cached Application Message Map Metadata !!
+13 Jul 2023 12:55:35,591 | [22] | INFO  | ~70 | User Scavenger CRON Initialized 
+
+13 Jul 2023 12:55:35,687 | [19] | INFO  | ~71 | LOG Backup CRON Initialized 
+
+13 Jul 2023 12:55:35,781 | [14] | INFO  | ~72 | Loaded Application Emails:4
+13 Jul 2023 12:55:35,783 | [21] | INFO  | ~75 | DB Backup CRON Initialized 
+
+13 Jul 2023 12:55:35,786 | [20] | INFO  | ~77 | Memory Monitor CRON Initialized 
+
+13 Jul 2023 12:55:35,785 | [14] | INFO  | ~76 | Memory Monitor CRON Initialized 
+
+13 Jul 2023 12:55:35,787 | [23] | INFO  | ~78 | Network Monitor CRON Initialized 
+
+13 Jul 2023 12:55:35,782 | [22] | INFO  | ~74 | SMS Monitor CRON Initialized 
+
+13 Jul 2023 12:55:35,820 | [21] | INFO  | ~80 | Impex Transfers Initialized 
+
+13 Jul 2023 12:55:35,782 | [25] | INFO  | ~73 | POP Emails CRON Initialized 
+
+13 Jul 2023 12:55:35,810 | [19] | INFO  | ~79 | EOD CRON Initialized 
+
+13 Jul 2023 12:55:35,823 | [21] | INFO  | ~81 | SignalR Lazy Notify Initialized.
+13 Jul 2023 12:55:36,268 | [13] | INFO  | ~82 | Hosting http://192.168.1.4:9095/arms/IDBO
+13 Jul 2023 12:55:36,676 | [22] | INFO  | ~83 | Hosted SData hosted at http://192.168.1.4:9095/arms/IDBO
+
+13 Jul 2023 12:55:36,677 | [25] | INFO  | ~84 | Hosting http://192.168.1.4:9095/arms/IFIO
+13 Jul 2023 12:55:36,688 | [19] | INFO  | ~85 | Hosted SFile hosted at http://192.168.1.4:9095/arms/IFIO
+
+13 Jul 2023 12:55:36,690 | [21] | INFO  | ~86 | Hosting http://192.168.1.4:9095/arms/IDSO
+13 Jul 2023 12:55:36,696 | [13] | INFO  | ~87 | Hosted SDataStream hosted at http://192.168.1.4:9095/arms/IDSO
+
+13 Jul 2023 12:55:36,696 | [22] | INFO  | ~88 | Hosting http://192.168.1.4:9095/arms/IUSO
+13 Jul 2023 12:55:36,730 | [23] | INFO  | ~89 | Hosted SUser hosted at http://192.168.1.4:9095/arms/IUSO
+
+13 Jul 2023 12:55:36,732 | [20] | INFO  | ~90 | Hosting http://192.168.1.4:9095/arms/ISVO
+13 Jul 2023 12:55:36,766 | [21] | INFO  | ~91 | Hosted SServer hosted at http://192.168.1.4:9095/arms/ISVO
+
+13 Jul 2023 12:55:36,768 | [25] | INFO  | ~92 | Hosting http://192.168.1.4:9095/arms/IMDO
+13 Jul 2023 12:55:36,779 | [22] | INFO  | ~93 | Hosted SDevice hosted at http://192.168.1.4:9095/arms/IMDO
+
+13 Jul 2023 12:55:36,780 | [23] | INFO  | ~94 | Hosting http://192.168.1.4:9095/arms/IEMO
+13 Jul 2023 12:55:36,785 | [23] | INFO  | ~95 | Hosted SEmail hosted at http://192.168.1.4:9095/arms/IEMO
+
+13 Jul 2023 12:55:36,785 | [13] | INFO  | ~96 | Hosting http://192.168.1.4:9095/arms/ISMO
+13 Jul 2023 12:55:36,793 | [20] | INFO  | ~98 | Hosting http://192.168.1.4:9095/arms/ILMO
+13 Jul 2023 12:55:36,793 | [25] | INFO  | ~97 | Hosted SSMS hosted at http://192.168.1.4:9095/arms/ISMO
+
+13 Jul 2023 12:55:36,798 | [14] | INFO  | ~99 | Hosted SLMO hosted at http://192.168.1.4:9095/arms/ILMO
+
+13 Jul 2023 12:55:36,799 | [21] | INFO  | ~100 | Hosting http://192.168.1.4:9095/arms/IVER
+13 Jul 2023 12:55:36,805 | [19] | INFO  | ~101 | Hosted SVER hosted at http://192.168.1.4:9095/arms/IVER
+
+13 Jul 2023 12:55:36,805 | [13] | INFO  | ~102 | Hosting http://192.168.1.4:9095/arms/ISYN
+13 Jul 2023 12:55:36,821 | [25] | INFO  | ~103 | Hosted SSYN hosted at http://192.168.1.4:9095/arms/ISYN
+
+13 Jul 2023 12:55:36,822 | [13] | INFO  | ~104 | Hosting http://192.168.1.4:9095/arms/ILBO
+13 Jul 2023 12:55:36,828 | [22] | INFO  | ~105 | Hosted SNLB hosted at http://192.168.1.4:9095/arms/ILBO
+
+13 Jul 2023 12:55:36,836 | [21] | INFO  | ~106 | IPC Pipe 57e472d4-9a0e-42f0-a92e-85ede7b7dc04 Started
+13 Jul 2023 12:55:36,851 | [23] | INFO  | ~107 | Web Monitor Initialized At http://192.168.1.4:8888
+ 
+13 Jul 2023 13:09:17,130 | [20] | INFO  | ~1 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+13 Jul 2023 13:09:21,744 | [26] | INFO  | ~2 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+13 Jul 2023 13:09:21,902 | [24] | INFO  | ~4 | Logger Engine Initialized.
+13 Jul 2023 13:09:21,902 | [22] | INFO  | ~3 | Application Path is verified.
+13 Jul 2023 13:09:21,906 | [27] | INFO  | ~6 | Mapping Directories.
+13 Jul 2023 13:09:21,906 | [28] | INFO  | ~5 | Checked Network Availability.
+13 Jul 2023 13:09:22,222 | [21] | INFO  | ~7 | DB Backup Set To 0:30
+13 Jul 2023 13:09:22,223 | [24] | INFO  | ~8 | Log Backup Set To 17:30
+13 Jul 2023 13:09:22,226 | [26] | INFO  | ~9 | EOD Set To 0:1
+13 Jul 2023 13:09:22,331 | [25] | INFO  | ~10 | Config Loaded Successfully
+13 Jul 2023 13:09:32,717 | [21] | INFO  | ~11 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+13 Jul 2023 13:09:32,726 | [27] | INFO  | ~12 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+13 Jul 2023 13:09:32,809 | [21] | INFO  | ~13 | Logger Engine Initialized.
+13 Jul 2023 13:09:32,809 | [24] | INFO  | ~14 | Application Path is verified.
+13 Jul 2023 13:09:32,831 | [25] | INFO  | ~15 | Checked Network Availability.
+13 Jul 2023 13:09:32,831 | [22] | INFO  | ~16 | Mapping Directories.
+13 Jul 2023 13:09:32,996 | [20] | INFO  | ~17 | DB Backup Set To 0:30
+13 Jul 2023 13:09:32,996 | [24] | INFO  | ~18 | Log Backup Set To 17:30
+13 Jul 2023 13:09:32,997 | [26] | INFO  | ~19 | EOD Set To 0:1
+13 Jul 2023 13:09:33,060 | [24] | INFO  | ~20 | Config Loaded Successfully
+13 Jul 2023 13:09:33,112 | [26] | INFO  | ~21 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+13 Jul 2023 13:09:33,122 | [24] | INFO  | ~22 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+13 Jul 2023 13:09:33,204 | [26] | INFO  | ~24 | Logger Engine Initialized.
+13 Jul 2023 13:09:33,204 | [27] | INFO  | ~23 | Application Path is verified.
+13 Jul 2023 13:09:33,226 | [25] | INFO  | ~25 | Checked Network Availability.
+13 Jul 2023 13:09:33,226 | [24] | INFO  | ~26 | Mapping Directories.
+13 Jul 2023 13:09:33,369 | [21] | INFO  | ~27 | DB Backup Set To 0:30
+13 Jul 2023 13:09:33,370 | [26] | INFO  | ~28 | Log Backup Set To 17:30
+13 Jul 2023 13:09:33,371 | [26] | INFO  | ~29 | EOD Set To 0:1
+13 Jul 2023 13:09:33,406 | [22] | INFO  | ~30 | Config Loaded Successfully
+13 Jul 2023 13:09:33,409 | [24] | INFO  | ~31 | Setting File Import Cache
+13 Jul 2023 13:09:33,594 | [20] | INFO  | ~32 | Lazy DS Processing Enabled
+13 Jul 2023 13:09:34,633 | [27] | INFO  | ~33 | Lazy Audit Write Enabled
+13 Jul 2023 13:09:34,734 | [25] | INFO  | ~34 | Lazy SignalR Notify Enabled
+13 Jul 2023 13:09:34,734 | [21] | INFO  | ~35 | MSMQ Initialized.
+13 Jul 2023 13:09:35,500 | [24] | INFO  | ~36 | Synced Date Time With DB Server
+13 Jul 2023 13:09:36,211 | [25] | INFO  | ~37 | Database Engine Initialized.
+13 Jul 2023 13:09:36,220 | [22] | INFO  | ~38 | POP3 Engine Initialized.
+13 Jul 2023 13:09:36,224 | [27] | INFO  | ~39 | SMTP Engine Initialized.
+13 Jul 2023 13:09:36,230 | [24] | INFO  | ~40 | CRON Engine Initialized.
+13 Jul 2023 13:09:36,239 | [25] | INFO  | ~41 | Loading Metadata Users !!
+13 Jul 2023 13:09:36,251 | [22] | INFO  | ~42 | TSC:1
+13 Jul 2023 13:09:36,251 | [27] | INFO  | ~43 | Loading ORM !!
+13 Jul 2023 13:09:36,782 | [25] | INFO  | ~44 | Loading Trusted Subscribers !!
+13 Jul 2023 13:09:36,856 | [27] | INFO  | ~45 | Registered Peers IP:192.168.16.113:192.168.1.4
+13 Jul 2023 13:09:36,856 | [21] | INFO  | ~48 | Registered 10 trusted users.
+13 Jul 2023 13:09:36,856 | [22] | INFO  | ~50 | Loading Trusted Devices !!
+13 Jul 2023 13:09:36,856 | [26] | INFO  | ~49 | Server Slave To 192.168.16.120:9095
+13 Jul 2023 13:09:36,856 | [24] | INFO  | ~46 | Registered NLB Peers192.168.16.113,
+13 Jul 2023 13:09:36,856 | [25] | INFO  | ~47 | Registered NLB Token
+13 Jul 2023 13:09:36,931 | [18] | INFO  | ~52 | Loading Application Metadata !!
+13 Jul 2023 13:09:36,931 | [21] | INFO  | ~51 | Cached 2 trusted devices.
+13 Jul 2023 13:09:37,370 | [20] | INFO  | ~53 | Loading Application Data !!
+13 Jul 2023 13:09:37,379 | [18] | INFO  | ~54 | Loading Application Databases : 1
+13 Jul 2023 13:09:37,379 | [21] | INFO  | ~55 | Loading Application Rules !!
+13 Jul 2023 13:09:37,379 | [22] | INFO  | ~56 | Loading Application Emails !!
+13 Jul 2023 13:09:37,386 | [27] | INFO  | ~57 | Loaded Application Rules :1
+13 Jul 2023 13:09:37,386 | [26] | INFO  | ~58 | Loading Application Preferences !!
+13 Jul 2023 13:09:37,394 | [24] | INFO  | ~59 | Loading MFA Service Actions !!
+13 Jul 2023 13:09:37,400 | [20] | INFO  | ~60 | Cached Custom Message Dictionary :7
+13 Jul 2023 13:09:37,401 | [21] | INFO  | ~61 | Loading Status Messages :7
+13 Jul 2023 13:09:37,401 | [25] | INFO  | ~62 | Loading Application Automated Imports !!
+13 Jul 2023 13:09:37,418 | [18] | INFO  | ~63 | Granting Access Privileges To IMPEX Path
+13 Jul 2023 13:09:37,424 | [24] | INFO  | ~64 | Cached 1 Bulk Import Sites.
+13 Jul 2023 13:09:37,436 | [22] | INFO  | ~65 | Cached Download URL Dictionary :0
+13 Jul 2023 13:09:37,436 | [25] | INFO  | ~67 | Cached Application Metadata !!
+13 Jul 2023 13:09:37,436 | [26] | INFO  | ~66 | Loading Pre Defined Scheduled Download URLs :0
+13 Jul 2023 13:09:37,562 | [18] | INFO  | ~68 | Dynamic Parsing Enabled :3
+13 Jul 2023 13:09:37,562 | [27] | INFO  | ~69 | Cached Application Message Map Metadata !!
+13 Jul 2023 13:09:37,770 | [21] | INFO  | ~70 | User Scavenger CRON Initialized 
+
+13 Jul 2023 13:09:37,814 | [20] | INFO  | ~71 | LOG Backup CRON Initialized 
+
+13 Jul 2023 13:09:37,882 | [22] | INFO  | ~72 | Loaded Application Emails:4
+13 Jul 2023 13:09:37,883 | [18] | INFO  | ~75 | DB Backup CRON Initialized 
+
+13 Jul 2023 13:09:37,882 | [21] | INFO  | ~74 | SMS Monitor CRON Initialized 
+
+13 Jul 2023 13:09:37,885 | [22] | INFO  | ~79 | EOD CRON Initialized 
+
+13 Jul 2023 13:09:37,882 | [26] | INFO  | ~73 | POP Emails CRON Initialized 
+
+13 Jul 2023 13:09:37,892 | [25] | INFO  | ~80 | Impex Transfers Initialized 
+
+13 Jul 2023 13:09:37,892 | [24] | INFO  | ~81 | SignalR Lazy Notify Initialized.
+13 Jul 2023 13:09:37,884 | [20] | INFO  | ~77 | Memory Monitor CRON Initialized 
+
+13 Jul 2023 13:09:37,885 | [18] | INFO  | ~78 | Network Monitor CRON Initialized 
+
+13 Jul 2023 13:09:37,883 | [27] | INFO  | ~76 | Memory Monitor CRON Initialized 
+
+13 Jul 2023 13:09:37,940 | [22] | INFO  | ~82 | Hosting http://192.168.1.4:9095/arms/IDBO
+13 Jul 2023 13:09:38,059 | [26] | INFO  | ~83 | Hosted SData hosted at http://192.168.1.4:9095/arms/IDBO
+
+13 Jul 2023 13:09:38,059 | [24] | INFO  | ~84 | Hosting http://192.168.1.4:9095/arms/IFIO
+13 Jul 2023 13:09:38,064 | [18] | INFO  | ~85 | Hosted SFile hosted at http://192.168.1.4:9095/arms/IFIO
+
+13 Jul 2023 13:09:38,065 | [21] | INFO  | ~86 | Hosting http://192.168.1.4:9095/arms/IDSO
+13 Jul 2023 13:09:38,072 | [25] | INFO  | ~87 | Hosted SDataStream hosted at http://192.168.1.4:9095/arms/IDSO
+
+13 Jul 2023 13:09:38,072 | [26] | INFO  | ~88 | Hosting http://192.168.1.4:9095/arms/IUSO
+13 Jul 2023 13:09:38,084 | [27] | INFO  | ~89 | Hosted SUser hosted at http://192.168.1.4:9095/arms/IUSO
+
+13 Jul 2023 13:09:38,084 | [18] | INFO  | ~90 | Hosting http://192.168.1.4:9095/arms/ISVO
+13 Jul 2023 13:09:38,092 | [24] | INFO  | ~91 | Hosted SServer hosted at http://192.168.1.4:9095/arms/ISVO
+
+13 Jul 2023 13:09:38,093 | [25] | INFO  | ~92 | Hosting http://192.168.1.4:9095/arms/IMDO
+13 Jul 2023 13:09:38,110 | [22] | INFO  | ~93 | Hosted SDevice hosted at http://192.168.1.4:9095/arms/IMDO
+
+13 Jul 2023 13:09:38,110 | [27] | INFO  | ~94 | Hosting http://192.168.1.4:9095/arms/IEMO
+13 Jul 2023 13:09:38,112 | [21] | INFO  | ~95 | Hosted SEmail hosted at http://192.168.1.4:9095/arms/IEMO
+
+13 Jul 2023 13:09:38,113 | [24] | INFO  | ~96 | Hosting http://192.168.1.4:9095/arms/ISMO
+13 Jul 2023 13:09:38,116 | [20] | INFO  | ~97 | Hosted SSMS hosted at http://192.168.1.4:9095/arms/ISMO
+
+13 Jul 2023 13:09:38,116 | [22] | INFO  | ~98 | Hosting http://192.168.1.4:9095/arms/ILMO
+13 Jul 2023 13:09:38,118 | [22] | INFO  | ~99 | Hosted SLMO hosted at http://192.168.1.4:9095/arms/ILMO
+
+13 Jul 2023 13:09:38,118 | [25] | INFO  | ~100 | Hosting http://192.168.1.4:9095/arms/IVER
+13 Jul 2023 13:09:38,120 | [24] | INFO  | ~101 | Hosted SVER hosted at http://192.168.1.4:9095/arms/IVER
+
+13 Jul 2023 13:09:38,121 | [25] | INFO  | ~102 | Hosting http://192.168.1.4:9095/arms/ISYN
+13 Jul 2023 13:09:38,128 | [20] | INFO  | ~103 | Hosted SSYN hosted at http://192.168.1.4:9095/arms/ISYN
+
+13 Jul 2023 13:09:38,128 | [21] | INFO  | ~104 | Hosting http://192.168.1.4:9095/arms/ILBO
+13 Jul 2023 13:09:38,132 | [18] | INFO  | ~105 | Hosted SNLB hosted at http://192.168.1.4:9095/arms/ILBO
+
+13 Jul 2023 13:09:38,136 | [24] | INFO  | ~106 | IPC Pipe f0247585-b342-48ea-8e3a-a1f09c524ab2 Started
+13 Jul 2023 13:09:38,145 | [27] | INFO  | ~107 | Web Monitor Initialized At http://192.168.1.4:8888
+13 Jul 2023 13:16:53,276 | [20] | INFO  | ~108 | ReInitalized ORM Cache
+13 Jul 2023 13:16:57,639 | [18] | INFO  | ~109 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+13 Jul 2023 13:17:00,128 | [47] | INFO  | ~110 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+13 Jul 2023 13:17:02,369 | [29] | INFO  | ~111 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+13 Jul 2023 13:17:02,456 | [25] | INFO  | ~112 | Application Path is verified.
+13 Jul 2023 13:17:02,456 | [28] | INFO  | ~113 | Logger Engine Initialized.
+13 Jul 2023 13:17:02,479 | [24] | INFO  | ~114 | Checked Network Availability.
+13 Jul 2023 13:17:02,479 | [47] | INFO  | ~115 | Mapping Directories.
+13 Jul 2023 13:17:02,637 | [48] | INFO  | ~116 | DB Backup Set To 0:30
+13 Jul 2023 13:17:02,638 | [51] | INFO  | ~117 | Log Backup Set To 17:30
+13 Jul 2023 13:17:02,640 | [23] | INFO  | ~118 | EOD Set To 0:1
+13 Jul 2023 13:17:02,709 | [25] | INFO  | ~119 | Config Loaded Successfully
+13 Jul 2023 13:17:02,709 | [28] | INFO  | ~120 | Loading Metadata Users !!
+13 Jul 2023 13:17:02,709 | [27] | INFO  | ~121 | TSC:11
+13 Jul 2023 13:17:02,709 | [24] | INFO  | ~122 | Loading ORM !!
+13 Jul 2023 13:17:03,206 | [48] | INFO  | ~123 | Loading Trusted Subscribers !!
+13 Jul 2023 13:17:03,269 | [29] | INFO  | ~124 | Registered Peers IP:192.168.16.113:192.168.1.4
+13 Jul 2023 13:17:03,269 | [18] | INFO  | ~127 | Registered 11 trusted users.
+13 Jul 2023 13:17:03,269 | [25] | INFO  | ~128 | Loading Trusted Devices !!
+13 Jul 2023 13:17:03,269 | [46] | INFO  | ~126 | Registered NLB Token
+13 Jul 2023 13:17:03,269 | [28] | INFO  | ~129 | Server Slave To 192.168.16.120:9095
+13 Jul 2023 13:17:03,269 | [22] | INFO  | ~125 | Registered NLB Peers192.168.16.113,
+13 Jul 2023 13:17:03,336 | [24] | INFO  | ~130 | Cached 2 trusted devices.
+13 Jul 2023 13:17:03,336 | [27] | INFO  | ~131 | Loading Application Metadata !!
+13 Jul 2023 13:17:03,678 | [51] | INFO  | ~132 | Loading Application Data !!
+13 Jul 2023 13:17:03,678 | [29] | INFO  | ~138 | Loading MFA Service Actions !!
+13 Jul 2023 13:17:03,678 | [24] | INFO  | ~140 | Loading Status Messages :7
+13 Jul 2023 13:17:03,678 | [46] | INFO  | ~135 | Loading Application Rules !!
+13 Jul 2023 13:17:03,678 | [18] | INFO  | ~134 | Loading Application Emails !!
+13 Jul 2023 13:17:03,678 | [25] | INFO  | ~133 | Loading Application Databases : 1
+13 Jul 2023 13:17:03,678 | [26] | INFO  | ~137 | Loading Application Preferences !!
+13 Jul 2023 13:17:03,678 | [48] | INFO  | ~136 | Loaded Application Rules :1
+13 Jul 2023 13:17:03,678 | [47] | INFO  | ~139 | Cached Custom Message Dictionary :7
+13 Jul 2023 13:17:03,680 | [28] | INFO  | ~142 | Granting Access Privileges To IMPEX Path
+13 Jul 2023 13:17:03,680 | [23] | INFO  | ~141 | Loading Application Automated Imports !!
+13 Jul 2023 13:17:03,698 | [50] | INFO  | ~144 | Cached Download URL Dictionary :0
+13 Jul 2023 13:17:03,698 | [46] | INFO  | ~145 | Loading Pre Defined Scheduled Download URLs :0
+13 Jul 2023 13:17:03,698 | [20] | INFO  | ~143 | Cached 1 Bulk Import Sites.
+13 Jul 2023 13:17:03,700 | [51] | INFO  | ~146 | Cached Application Metadata !!
+13 Jul 2023 13:17:03,765 | [24] | INFO  | ~148 | Cached Application Message Map Metadata !!
+13 Jul 2023 13:17:03,765 | [21] | INFO  | ~147 | Dynamic Parsing Enabled :3
+13 Jul 2023 13:17:03,847 | [26] | INFO  | ~149 | User Scavenger CRON Initialized 
+
+13 Jul 2023 13:17:03,847 | [27] | INFO  | ~152 | SMS Monitor CRON Initialized 
+
+13 Jul 2023 13:17:03,847 | [48] | INFO  | ~150 | LOG Backup CRON Initialized 
+
+13 Jul 2023 13:17:03,848 | [20] | INFO  | ~156 | Network Monitor CRON Initialized 
+
+13 Jul 2023 13:17:03,848 | [46] | INFO  | ~154 | Memory Monitor CRON Initialized 
+
+13 Jul 2023 13:17:03,850 | [51] | INFO  | ~159 | SignalR Lazy Notify Initialized.
+13 Jul 2023 13:17:03,851 | [79] | INFO  | ~160 | Hosting http://192.168.1.4:9095/arms/IDBO
+13 Jul 2023 13:17:03,850 | [22] | INFO  | ~157 | EOD CRON Initialized 
+
+13 Jul 2023 13:17:03,848 | [25] | INFO  | ~153 | DB Backup CRON Initialized 
+
+13 Jul 2023 13:17:03,847 | [47] | INFO  | ~151 | POP Emails CRON Initialized 
+
+13 Jul 2023 13:17:03,850 | [78] | INFO  | ~158 | Impex Transfers Initialized 
+
+13 Jul 2023 13:17:03,848 | [29] | INFO  | ~155 | Memory Monitor CRON Initialized 
+
+13 Jul 2023 13:17:04,278 | [46] | INFO  | ~161 | Hosted 
+
+13 Jul 2023 13:17:04,279 | [51] | INFO  | ~162 | Hosting http://192.168.1.4:9095/arms/IFIO
+13 Jul 2023 13:17:04,284 | [23] | INFO  | ~163 | Hosted 
+
+13 Jul 2023 13:17:04,285 | [22] | INFO  | ~164 | Hosting http://192.168.1.4:9095/arms/IDSO
+13 Jul 2023 13:17:04,288 | [27] | INFO  | ~165 | Hosted 
+
+13 Jul 2023 13:17:04,288 | [47] | INFO  | ~166 | Hosting http://192.168.1.4:9095/arms/IUSO
+13 Jul 2023 13:17:04,292 | [78] | INFO  | ~167 | Hosted 
+
+13 Jul 2023 13:17:04,293 | [29] | INFO  | ~168 | Hosting http://192.168.1.4:9095/arms/ISVO
+13 Jul 2023 13:17:04,304 | [18] | INFO  | ~169 | Hosted 
+
+13 Jul 2023 13:17:04,305 | [21] | INFO  | ~170 | Hosting http://192.168.1.4:9095/arms/IMDO
+13 Jul 2023 13:17:04,310 | [46] | INFO  | ~171 | Hosted 
+
+13 Jul 2023 13:17:04,311 | [51] | INFO  | ~172 | Hosting http://192.168.1.4:9095/arms/IEMO
+13 Jul 2023 13:17:04,315 | [25] | INFO  | ~173 | Hosted 
+
+13 Jul 2023 13:17:04,316 | [22] | INFO  | ~174 | Hosting http://192.168.1.4:9095/arms/ISMO
+13 Jul 2023 13:17:04,321 | [24] | INFO  | ~175 | Hosted 
+
+13 Jul 2023 13:17:04,321 | [47] | INFO  | ~176 | Hosting http://192.168.1.4:9095/arms/ILMO
+13 Jul 2023 13:17:04,326 | [20] | INFO  | ~177 | Hosted 
+
+13 Jul 2023 13:17:04,326 | [29] | INFO  | ~178 | Hosting http://192.168.1.4:9095/arms/IVER
+13 Jul 2023 13:17:04,329 | [79] | INFO  | ~179 | Hosted 
+
+13 Jul 2023 13:17:04,330 | [21] | INFO  | ~180 | Hosting http://192.168.1.4:9095/arms/ISYN
+13 Jul 2023 13:17:04,334 | [46] | INFO  | ~181 | Hosted 
+
+13 Jul 2023 13:17:04,334 | [23] | INFO  | ~182 | Hosting http://192.168.1.4:9095/arms/ILBO
+13 Jul 2023 13:17:04,343 | [25] | INFO  | ~183 | Hosted 
+
+13 Jul 2023 13:17:04,343 | [22] | INFO  | ~184 | IPC Pipe f0247585-b342-48ea-8e3a-a1f09c524ab2 Started
+13 Jul 2023 13:17:04,716 | [20] | INFO  | ~185 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+13 Jul 2023 13:17:04,806 | [26] | INFO  | ~187 | Logger Engine Initialized.
+13 Jul 2023 13:17:04,806 | [79] | INFO  | ~186 | Application Path is verified.
+13 Jul 2023 13:17:04,839 | [50] | INFO  | ~188 | Checked Network Availability.
+13 Jul 2023 13:17:04,839 | [23] | INFO  | ~189 | Mapping Directories.
+13 Jul 2023 13:17:05,018 | [22] | INFO  | ~190 | DB Backup Set To 0:30
+13 Jul 2023 13:17:05,019 | [48] | INFO  | ~191 | Log Backup Set To 17:30
+13 Jul 2023 13:17:05,020 | [78] | INFO  | ~192 | EOD Set To 0:1
+13 Jul 2023 13:17:05,092 | [51] | INFO  | ~193 | Config Loaded Successfully
+13 Jul 2023 13:17:05,092 | [79] | INFO  | ~195 | TSC:12
+13 Jul 2023 13:17:05,092 | [21] | INFO  | ~194 | Loading Metadata Users !!
+13 Jul 2023 13:17:05,092 | [46] | INFO  | ~196 | Loading ORM !!
+13 Jul 2023 13:17:05,607 | [25] | INFO  | ~197 | Loading Trusted Subscribers !!
+13 Jul 2023 13:17:05,679 | [24] | INFO  | ~198 | Registered Peers IP:192.168.16.113:192.168.1.4
+13 Jul 2023 13:17:05,679 | [48] | INFO  | ~199 | Registered NLB Peers192.168.16.113,
+13 Jul 2023 13:17:05,679 | [29] | INFO  | ~201 | Registered 12 trusted users.
+13 Jul 2023 13:17:05,679 | [78] | INFO  | ~200 | Registered NLB Token
+13 Jul 2023 13:17:05,679 | [18] | INFO  | ~203 | Server Slave To 192.168.16.120:9095
+13 Jul 2023 13:17:05,679 | [20] | INFO  | ~202 | Loading Trusted Devices !!
+13 Jul 2023 13:17:05,735 | [50] | INFO  | ~205 | Loading Application Metadata !!
+13 Jul 2023 13:17:05,735 | [23] | INFO  | ~204 | Cached 2 trusted devices.
+13 Jul 2023 13:17:05,813 | [27] | INFO  | ~206 | Loading Application Data !!
+13 Jul 2023 13:17:05,813 | [78] | INFO  | ~210 | Loaded Application Rules :1
+13 Jul 2023 13:17:05,814 | [25] | INFO  | ~212 | Loading MFA Service Actions !!
+13 Jul 2023 13:17:05,813 | [18] | INFO  | ~211 | Loading Application Preferences !!
+13 Jul 2023 13:17:05,814 | [22] | INFO  | ~213 | Cached Custom Message Dictionary :7
+13 Jul 2023 13:17:05,813 | [79] | INFO  | ~208 | Loading Application Databases : 1
+13 Jul 2023 13:17:05,813 | [24] | INFO  | ~209 | Loading Application Rules !!
+13 Jul 2023 13:17:05,813 | [51] | INFO  | ~207 | Loading Application Emails !!
+13 Jul 2023 13:17:05,816 | [20] | INFO  | ~216 | Granting Access Privileges To IMPEX Path
+13 Jul 2023 13:17:05,816 | [48] | INFO  | ~215 | Loading Status Messages :7
+13 Jul 2023 13:17:05,816 | [47] | INFO  | ~214 | Loading Application Automated Imports !!
+13 Jul 2023 13:17:05,839 | [27] | INFO  | ~218 | Cached Download URL Dictionary :0
+13 Jul 2023 13:17:05,839 | [46] | INFO  | ~217 | Cached 1 Bulk Import Sites.
+13 Jul 2023 13:17:05,839 | [21] | INFO  | ~219 | Loading Pre Defined Scheduled Download URLs :0
+13 Jul 2023 13:17:05,839 | [78] | INFO  | ~220 | Cached Application Metadata !!
+13 Jul 2023 13:17:05,904 | [18] | INFO  | ~221 | Dynamic Parsing Enabled :3
+13 Jul 2023 13:17:05,904 | [22] | INFO  | ~222 | Cached Application Message Map Metadata !!
+13 Jul 2023 13:17:05,978 | [24] | INFO  | ~223 | User Scavenger CRON Initialized 
+
+13 Jul 2023 13:17:05,978 | [50] | INFO  | ~228 | Memory Monitor CRON Initialized 
+
+13 Jul 2023 13:17:05,978 | [51] | INFO  | ~224 | LOG Backup CRON Initialized 
+
+13 Jul 2023 13:17:05,978 | [47] | INFO  | ~227 | DB Backup CRON Initialized 
+
+13 Jul 2023 13:17:05,978 | [20] | INFO  | ~226 | SMS Monitor CRON Initialized 
+
+13 Jul 2023 13:17:05,980 | [27] | INFO  | ~231 | EOD CRON Initialized 
+
+13 Jul 2023 13:17:05,979 | [78] | INFO  | ~230 | Network Monitor CRON Initialized 
+
+13 Jul 2023 13:17:05,978 | [21] | INFO  | ~229 | Memory Monitor CRON Initialized 
+
+13 Jul 2023 13:17:05,978 | [28] | INFO  | ~225 | POP Emails CRON Initialized 
+
+13 Jul 2023 13:17:05,981 | [25] | INFO  | ~233 | SignalR Lazy Notify Initialized.
+13 Jul 2023 13:17:05,981 | [29] | INFO  | ~232 | Impex Transfers Initialized 
+
+13 Jul 2023 13:17:05,981 | [18] | INFO  | ~234 | Hosting http://192.168.1.4:9095/arms/IDBO
+13 Jul 2023 13:17:06,004 | [48] | INFO  | ~235 | Hosted 
+
+13 Jul 2023 13:17:06,004 | [47] | INFO  | ~236 | Hosting http://192.168.1.4:9095/arms/IFIO
+13 Jul 2023 13:17:06,016 | [28] | INFO  | ~240 | Hosting http://192.168.1.4:9095/arms/IUSO
+13 Jul 2023 13:17:06,010 | [27] | INFO  | ~237 | Hosted 
+
+13 Jul 2023 13:17:06,010 | [49] | INFO  | ~238 | Hosting http://192.168.1.4:9095/arms/IDSO
+13 Jul 2023 13:17:06,015 | [22] | INFO  | ~239 | Hosted 
+
+13 Jul 2023 13:17:06,037 | [23] | INFO  | ~244 | Hosting http://192.168.1.4:9095/arms/IMDO
+13 Jul 2023 13:17:06,037 | [20] | INFO  | ~243 | Hosted 
+
+13 Jul 2023 13:17:06,027 | [79] | INFO  | ~242 | Hosting http://192.168.1.4:9095/arms/ISVO
+13 Jul 2023 13:17:06,026 | [51] | INFO  | ~241 | Hosted 
+
+13 Jul 2023 13:17:06,043 | [78] | INFO  | ~245 | Hosted 
+
+13 Jul 2023 13:17:06,046 | [46] | INFO  | ~247 | Hosted 
+
+13 Jul 2023 13:17:06,043 | [50] | INFO  | ~246 | Hosting http://192.168.1.4:9095/arms/IEMO
+13 Jul 2023 13:17:06,046 | [18] | INFO  | ~248 | Hosting http://192.168.1.4:9095/arms/ISMO
+13 Jul 2023 13:17:06,051 | [47] | INFO  | ~249 | Hosted 
+
+13 Jul 2023 13:17:06,051 | [26] | INFO  | ~250 | Hosting http://192.168.1.4:9095/arms/ILMO
+13 Jul 2023 13:17:06,055 | [49] | INFO  | ~251 | Hosted 
+
+13 Jul 2023 13:17:06,055 | [22] | INFO  | ~252 | Hosting http://192.168.1.4:9095/arms/IVER
+13 Jul 2023 13:17:06,066 | [20] | INFO  | ~253 | Hosted 
+
+13 Jul 2023 13:17:06,067 | [79] | INFO  | ~254 | Hosting http://192.168.1.4:9095/arms/ISYN
+13 Jul 2023 13:17:06,069 | [51] | INFO  | ~255 | Hosted 
+
+13 Jul 2023 13:17:06,070 | [29] | INFO  | ~256 | Hosting http://192.168.1.4:9095/arms/ILBO
+13 Jul 2023 13:17:06,074 | [46] | INFO  | ~257 | Hosted 
+
+13 Jul 2023 13:17:06,074 | [28] | INFO  | ~258 | IPC Pipe f0247585-b342-48ea-8e3a-a1f09c524ab2 Started
+ 

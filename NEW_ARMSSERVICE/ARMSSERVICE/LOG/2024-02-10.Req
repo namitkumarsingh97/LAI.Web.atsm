@@ -1,0 +1,1092 @@
+10 Feb 2024 00:00:00,715 | [248] | DEBUG | ~7301 | 150~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 00:00:00,723 | [119] | DEBUG | ~7302 | 150~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4699','65535','42245','Available physical memory is high','2196696','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','418','996696064','911536128','00:59:37.7656250 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 00:00:02,316 | [190] | DEBUG | ~7303 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:00:02,316 | [279] | DEBUG | ~7304 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:00:02,319 | [252] | DEBUG | ~7305 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:00:02,319 | [219] | DEBUG | ~7306 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:00:02,321 | [305] | DEBUG | ~7308 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:00:02,321 | [248] | DEBUG | ~7307 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:00:02,334 | [197] | DEBUG | ~7310 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:00:02,334 | [184] | DEBUG | ~7309 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:00:33,783 | [20] | DEBUG | ~7311 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:00:33,783 | [190] | DEBUG | ~7312 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:00:33,787 | [120] | DEBUG | ~7313 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:00:33,787 | [190] | DEBUG | ~7314 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:00:33,792 | [190] | DEBUG | ~7315 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:00:33,792 | [219] | DEBUG | ~7316 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:00:33,794 | [13] | DEBUG | ~7318 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:00:33,794 | [197] | DEBUG | ~7317 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:00:42,879 | [172] | DEBUG | ~7319 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:00:42,879 | [279] | DEBUG | ~7320 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:00:42,890 | [119] | DEBUG | ~7322 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:00:42,894 | [184] | DEBUG | ~7324 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:00:42,890 | [166] | DEBUG | ~7321 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:00:42,894 | [82] | DEBUG | ~7323 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:00:42,912 | [305] | DEBUG | ~7325 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:00:42,912 | [228] | DEBUG | ~7326 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:00:49,474 | [248] | DEBUG | ~7327 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:00:49,476 | [172] | DEBUG | ~7328 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:00:49,486 | [11] | DEBUG | ~7329 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:00:49,491 | [197] | DEBUG | ~7332 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:00:49,491 | [13] | DEBUG | ~7331 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:00:49,494 | [279] | DEBUG | ~7333 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:00:49,494 | [11] | DEBUG | ~7334 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:00:49,487 | [219] | DEBUG | ~7330 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:01:00,011 | [20] | DEBUG | ~7335 | 140~ EXEC [mtd].[stpSaveORMUsage] <iData><ORM><ServiceActionID>3274</ServiceActionID><UsageFrequency>4</UsageFrequency><MinExecutionTime>113</MinExecutionTime><MaxExecutionTime>152</MaxExecutionTime><AvgExecutionTime>132.5</AvgExecutionTime></ORM><ORM><ServiceActionID>1915</ServiceActionID><UsageFrequency>77</UsageFrequency><MinExecutionTime>235</MinExecutionTime><MaxExecutionTime>2996</MaxExecutionTime><AvgExecutionTime>1615.5</AvgExecutionTime></ORM><ORM><ServiceActionID>3609</ServiceActionID><UsageFrequency>1</UsageFrequency><MinExecutionTime>290</MinExecutionTime><MaxExecutionTime>290</MaxExecutionTime><AvgExecutionTime>290</AvgExecutionTime></ORM><ORM><ServiceActionID>3539</ServiceActionID><UsageFrequency>401</UsageFrequency><MinExecutionTime>44</MinExecutionTime><MaxExecutionTime>1915</MaxExecutionTime><AvgExecutionTime>979.5</AvgExecutionTime></ORM><ORM><ServiceActionID>3608</ServiceActionID><UsageFrequency>1</UsageFrequency><MinExecutionTime>95</MinExecutionTime><MaxExecutionTime>95</MaxExecutionTime><AvgExecutionTime>95</AvgExecutionTime></ORM><ORM><ServiceActionID>3493</ServiceActionID><UsageFrequency>2</UsageFrequency><MinExecutionTime>77</MinExecutionTime><MaxExecutionTime>266</MaxExecutionTime><AvgExecutionTime>171.5</AvgExecutionTime></ORM><ORM><ServiceActionID>3538</ServiceActionID><UsageFrequency>10</UsageFrequency><MinExecutionTime>60</MinExecutionTime><MaxExecutionTime>70</MaxExecutionTime><AvgExecutionTime>65</AvgExecutionTime></ORM><ORM><ServiceActionID>3503</ServiceActionID><UsageFrequency>129</UsageFrequency><MinExecutionTime>51</MinExecutionTime><MaxExecutionTime>1126</MaxExecutionTime><AvgExecutionTime>588.5</AvgExecutionTime></ORM><ORM><ServiceActionID>3500</ServiceActionID><UsageFrequency>13</UsageFrequency><MinExecutionTime>53</MinExecutionTime><MaxExecutionTime>79</MaxExecutionTime><AvgExecutionTime>66</AvgExecutionTime></ORM><ORM><ServiceActionID>36</ServiceActionID><UsageFrequency>1</UsageFrequency><MinExecutionTime>62</MinExecutionTime><MaxExecutionTime>62</MaxExecutionTime><AvgExecutionTime>62</AvgExecutionTime></ORM><ORM><ServiceActionID>3386</ServiceActionID><UsageFrequency>3</UsageFrequency><MinExecutionTime>67</MinExecutionTime><MaxExecutionTime>448</MaxExecutionTime><AvgExecutionTime>257.5</AvgExecutionTime></ORM><ORM><ServiceActionID>2169</ServiceActionID><UsageFrequency>444</UsageFrequency><MinExecutionTime>49</MinExecutionTime><MaxExecutionTime>1978</MaxExecutionTime><AvgExecutionTime>1013.5</AvgExecutionTime></ORM><ORM><ServiceActionID>1918</ServiceActionID><UsageFrequency>4</UsageFrequency><MinExecutionTime>360</MinExecutionTime><MaxExecutionTime>509</MaxExecutionTime><AvgExecutionTime>434.5</AvgExecutionTime></ORM><ORM><ServiceActionID>3494</ServiceActionID><UsageFrequency>2</UsageFrequency><MinExecutionTime>59</MinExecutionTime><MaxExecutionTime>266</MaxExecutionTime><AvgExecutionTime>162.5</AvgExecutionTime></ORM><ORM><ServiceActionID>3537</ServiceActionID><UsageFrequency>41</UsageFrequency><MinExecutionTime>121</MinExecutionTime><MaxExecutionTime>405</MaxExecutionTime><AvgExecutionTime>263</AvgExecutionTime></ORM><ORM><ServiceActionID>3510</ServiceActionID><UsageFrequency>408</UsageFrequency><MinExecutionTime>1066</MinExecutionTime><MaxExecutionTime>12767</MaxExecutionTime><AvgExecutionTime>6916.5</AvgExecutionTime></ORM><ORM><ServiceActionID>3385</ServiceActionID><UsageFrequency>3</UsageFrequency><MinExecutionTime>68</MinExecutionTime><MaxExecutionTime>408</MaxExecutionTime><AvgExecutionTime>238</AvgExecutionTime></ORM><ORM><ServiceActionID>3501</ServiceActionID><UsageFrequency>1</UsageFrequency><MinExecutionTime>159</MinExecutionTime><MaxExecutionTime>159</MaxExecutionTime><AvgExecutionTime>159</AvgExecutionTime></ORM><ORM><ServiceActionID>3532</ServiceActionID><UsageFrequency>108</UsageFrequency><MinExecutionTime>57</MinExecutionTime><MaxExecutionTime>932</MaxExecutionTime><AvgExecutionTime>494.5</AvgExecutionTime></ORM><ORM><ServiceActionID>1944</ServiceActionID><UsageFrequency>1</UsageFrequency><MinExecutionTime>56</MinExecutionTime><MaxExecutionTime>56</MaxExecutionTime><AvgExecutionTime>56</AvgExecutionTime></ORM><ORM><ServiceActionID>1916</ServiceActionID><UsageFrequency>64</UsageFrequency><MinExecutionTime>55</MinExecutionTime><MaxExecutionTime>600</MaxExecutionTime><AvgExecutionTime>327.5</AvgExecutionTime></ORM><ORM><ServiceActionID>3536</ServiceActionID><UsageFrequency>168</UsageFrequency><MinExecutionTime>55</MinExecutionTime><MaxExecutionTime>1309</MaxExecutionTime><AvgExecutionTime>682</AvgExecutionTime></ORM><ORM><ServiceActionID>1917</ServiceActionID><UsageFrequency>2</UsageFrequency><MinExecutionTime>66</MinExecutionTime><MaxExecutionTime>68</MaxExecutionTime><AvgExecutionTime>67</AvgExecutionTime></ORM><ORM><ServiceActionID>5</ServiceActionID><UsageFrequency>1</UsageFrequency><MinExecutionTime>77</MinExecutionTime><MaxExecutionTime>77</MaxExecutionTime><AvgExecutionTime>77</AvgExecutionTime></ORM><ORM><ServiceActionID>7</ServiceActionID><UsageFrequency>444</UsageFrequency><MinExecutionTime>3469</MinExecutionTime><MaxExecutionTime>21051</MaxExecutionTime><AvgExecutionTime>12260</AvgExecutionTime></ORM></iData>
+10 Feb 2024 00:01:00,109 | [248] | DEBUG | ~7336 | EXEC [mtd].[stpEODExpiryCheck] '<iData></iData>'
+10 Feb 2024 00:01:31,060 | [166] | DEBUG | ~7337 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:01:31,061 | [172] | DEBUG | ~7340 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:01:31,060 | [190] | DEBUG | ~7338 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:01:31,061 | [20] | DEBUG | ~7339 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:01:31,069 | [11] | DEBUG | ~7341 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:01:31,069 | [228] | DEBUG | ~7342 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:01:31,078 | [305] | DEBUG | ~7344 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:01:31,078 | [228] | DEBUG | ~7343 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:01:44,367 | [219] | DEBUG | ~7345 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:01:44,367 | [120] | DEBUG | ~7346 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:01:44,372 | [248] | DEBUG | ~7348 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:01:44,372 | [279] | DEBUG | ~7347 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:01:44,378 | [166] | DEBUG | ~7349 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:01:44,378 | [252] | DEBUG | ~7350 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:01:44,383 | [252] | DEBUG | ~7351 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:01:44,383 | [248] | DEBUG | ~7352 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:01:51,348 | [190] | DEBUG | ~7353 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:01:51,349 | [279] | DEBUG | ~7354 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:01:51,353 | [13] | DEBUG | ~7355 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:01:51,353 | [191] | DEBUG | ~7356 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:01:51,358 | [305] | DEBUG | ~7358 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:01:51,358 | [197] | DEBUG | ~7357 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:01:51,489 | [184] | DEBUG | ~7359 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:01:51,489 | [172] | DEBUG | ~7360 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:02:05,865 | [20] | DEBUG | ~7361 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:02:05,865 | [119] | DEBUG | ~7362 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:02:05,869 | [279] | DEBUG | ~7364 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:02:05,872 | [248] | DEBUG | ~7366 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:02:05,872 | [190] | DEBUG | ~7365 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:02:05,869 | [62] | DEBUG | ~7363 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:02:05,877 | [13] | DEBUG | ~7368 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:02:05,877 | [191] | DEBUG | ~7367 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:02:16,095 | [62] | DEBUG | ~7370 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:02:16,095 | [191] | DEBUG | ~7369 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:02:16,099 | [172] | DEBUG | ~7372 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:02:16,099 | [228] | DEBUG | ~7371 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:02:16,103 | [11] | DEBUG | ~7374 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:02:16,103 | [82] | DEBUG | ~7373 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:02:16,108 | [62] | DEBUG | ~7375 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:02:16,108 | [248] | DEBUG | ~7376 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:02:26,738 | [82] | DEBUG | ~7377 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:02:26,738 | [197] | DEBUG | ~7378 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:02:26,755 | [305] | DEBUG | ~7379 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:02:26,757 | [252] | DEBUG | ~7382 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:02:26,756 | [248] | DEBUG | ~7380 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:02:26,757 | [166] | DEBUG | ~7384 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:02:26,756 | [279] | DEBUG | ~7381 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:02:26,757 | [13] | DEBUG | ~7383 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:02:36,055 | [228] | DEBUG | ~7385 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:02:36,055 | [166] | DEBUG | ~7386 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:02:36,061 | [11] | DEBUG | ~7387 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:02:36,061 | [190] | DEBUG | ~7388 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:02:36,067 | [62] | DEBUG | ~7390 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:02:36,067 | [172] | DEBUG | ~7391 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:02:36,066 | [119] | DEBUG | ~7389 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:02:36,067 | [191] | DEBUG | ~7392 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:03:37,280 | [172] | DEBUG | ~7393 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:03:37,280 | [13] | DEBUG | ~7394 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:03:37,286 | [219] | DEBUG | ~7395 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:03:37,286 | [228] | DEBUG | ~7396 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:03:37,289 | [248] | DEBUG | ~7397 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:03:37,289 | [190] | DEBUG | ~7398 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:03:37,291 | [120] | DEBUG | ~7400 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:03:37,291 | [279] | DEBUG | ~7399 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:03:44,380 | [279] | DEBUG | ~7401 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:03:44,380 | [11] | DEBUG | ~7402 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:03:44,383 | [191] | DEBUG | ~7403 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:03:44,383 | [62] | DEBUG | ~7404 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:03:44,386 | [305] | DEBUG | ~7406 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:03:44,386 | [20] | DEBUG | ~7405 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:03:44,390 | [228] | DEBUG | ~7408 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:03:44,390 | [172] | DEBUG | ~7407 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:03:54,389 | [305] | DEBUG | ~7410 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:03:54,389 | [219] | DEBUG | ~7409 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:03:54,398 | [248] | DEBUG | ~7412 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:03:54,398 | [82] | DEBUG | ~7411 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:03:54,516 | [119] | DEBUG | ~7415 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:03:54,516 | [228] | DEBUG | ~7414 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:03:54,516 | [62] | DEBUG | ~7416 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:03:54,516 | [184] | DEBUG | ~7413 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:04:16,501 | [120] | DEBUG | ~7417 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:04:16,513 | [120] | DEBUG | ~7421 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:04:16,515 | [166] | DEBUG | ~7423 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:04:16,509 | [184] | DEBUG | ~7418 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:04:16,504 | [305] | DEBUG | ~7420 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:04:16,513 | [219] | DEBUG | ~7422 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:04:16,504 | [13] | DEBUG | ~7419 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:04:16,517 | [191] | DEBUG | ~7424 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:04:25,094 | [13] | DEBUG | ~7425 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:04:25,094 | [82] | DEBUG | ~7426 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:04:25,303 | [248] | DEBUG | ~7427 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:04:25,303 | [190] | DEBUG | ~7428 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:04:25,305 | [62] | DEBUG | ~7431 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:04:25,305 | [184] | DEBUG | ~7432 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:04:25,305 | [279] | DEBUG | ~7429 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:04:25,305 | [228] | DEBUG | ~7430 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:05:00,152 | [13] | DEBUG | ~7433 | 152~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 00:05:00,773 | [197] | DEBUG | ~7434 | 152~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42239','Available physical memory is high','2196996','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','794','1569357824','1425170432','01:01:00.0781250 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 00:05:11,927 | [279] | DEBUG | ~7436 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:05:11,927 | [248] | DEBUG | ~7435 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:05:11,941 | [11] | DEBUG | ~7437 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:05:11,942 | [20] | DEBUG | ~7440 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:05:11,943 | [219] | DEBUG | ~7442 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:05:11,943 | [13] | DEBUG | ~7441 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:05:11,941 | [62] | DEBUG | ~7438 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:05:11,941 | [120] | DEBUG | ~7439 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:06:13,880 | [279] | DEBUG | ~7444 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:06:13,880 | [184] | DEBUG | ~7443 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:06:14,362 | [248] | DEBUG | ~7445 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:06:14,363 | [166] | DEBUG | ~7446 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:06:14,369 | [190] | DEBUG | ~7449 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:06:14,369 | [119] | DEBUG | ~7450 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:06:14,367 | [20] | DEBUG | ~7448 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:06:14,366 | [120] | DEBUG | ~7447 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:06:20,290 | [197] | DEBUG | ~7454 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:06:20,290 | [20] | DEBUG | ~7451 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:06:20,292 | [190] | DEBUG | ~7455 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:06:20,290 | [119] | DEBUG | ~7452 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:06:20,290 | [172] | DEBUG | ~7453 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:06:20,292 | [191] | DEBUG | ~7456 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:06:20,292 | [13] | DEBUG | ~7458 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:06:20,292 | [305] | DEBUG | ~7457 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:06:59,391 | [82] | DEBUG | ~7459 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:06:59,391 | [11] | DEBUG | ~7460 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:06:59,610 | [279] | DEBUG | ~7463 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:06:59,610 | [305] | DEBUG | ~7461 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:06:59,613 | [427] | DEBUG | ~7465 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:06:59,610 | [248] | DEBUG | ~7464 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:06:59,610 | [13] | DEBUG | ~7462 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:06:59,613 | [425] | DEBUG | ~7466 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:07:14,003 | [172] | DEBUG | ~7467 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:07:14,003 | [248] | DEBUG | ~7468 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:07:14,011 | [252] | DEBUG | ~7469 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:07:14,011 | [219] | DEBUG | ~7471 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:07:14,011 | [190] | DEBUG | ~7470 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:07:14,011 | [13] | DEBUG | ~7472 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:07:14,011 | [20] | DEBUG | ~7473 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:07:14,012 | [305] | DEBUG | ~7474 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:07:51,172 | [197] | DEBUG | ~7475 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:07:51,172 | [13] | DEBUG | ~7476 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:07:51,403 | [166] | DEBUG | ~7477 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:07:51,405 | [119] | DEBUG | ~7482 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:07:51,404 | [427] | DEBUG | ~7480 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:07:51,404 | [252] | DEBUG | ~7479 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:07:51,405 | [82] | DEBUG | ~7481 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:07:51,404 | [11] | DEBUG | ~7478 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:08:09,103 | [252] | DEBUG | ~7483 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:08:09,103 | [20] | DEBUG | ~7485 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:08:09,103 | [119] | DEBUG | ~7484 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:08:09,103 | [120] | DEBUG | ~7486 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:08:09,111 | [427] | DEBUG | ~7488 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:08:09,111 | [305] | DEBUG | ~7490 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:08:09,111 | [219] | DEBUG | ~7489 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:08:09,110 | [248] | DEBUG | ~7487 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:08:26,684 | [172] | DEBUG | ~7491 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:08:26,684 | [428] | DEBUG | ~7492 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:08:26,696 | [120] | DEBUG | ~7495 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:08:26,696 | [305] | DEBUG | ~7494 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:08:26,696 | [427] | DEBUG | ~7496 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:08:26,696 | [11] | DEBUG | ~7493 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:08:26,697 | [20] | DEBUG | ~7498 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:08:26,696 | [13] | DEBUG | ~7497 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:08:46,359 | [197] | DEBUG | ~7499 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:08:46,359 | [13] | DEBUG | ~7500 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:08:46,375 | [120] | DEBUG | ~7501 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:08:46,375 | [252] | DEBUG | ~7505 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:08:46,375 | [119] | DEBUG | ~7503 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:08:46,375 | [279] | DEBUG | ~7502 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:08:46,375 | [172] | DEBUG | ~7504 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:08:46,375 | [190] | DEBUG | ~7506 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:09:46,859 | [279] | DEBUG | ~7507 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:09:46,859 | [228] | DEBUG | ~7508 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:09:47,151 | [120] | DEBUG | ~7510 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:09:47,383 | [228] | DEBUG | ~7512 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:09:47,386 | [305] | DEBUG | ~7513 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:09:47,151 | [119] | DEBUG | ~7509 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:09:47,383 | [425] | DEBUG | ~7511 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:09:47,386 | [197] | DEBUG | ~7514 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:09:49,982 | [13] | DEBUG | ~7515 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:09:49,982 | [228] | DEBUG | ~7518 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:09:49,982 | [120] | DEBUG | ~7516 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:09:49,989 | [172] | DEBUG | ~7521 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:09:49,989 | [197] | DEBUG | ~7522 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:09:49,982 | [166] | DEBUG | ~7517 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:09:49,989 | [82] | DEBUG | ~7519 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:09:49,989 | [119] | DEBUG | ~7520 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:10:00,878 | [428] | DEBUG | ~7523 | 147~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 00:10:03,039 | [119] | DEBUG | ~7524 | 147~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42259','Available physical memory is high','2197297','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','812','1697660928','1425170432','01:04:35.0312500 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 00:10:11,722 | [13] | DEBUG | ~7525 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:10:11,722 | [120] | DEBUG | ~7526 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:10:11,722 | [428] | DEBUG | ~7527 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:10:11,722 | [190] | DEBUG | ~7528 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:10:11,726 | [252] | DEBUG | ~7530 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:10:11,726 | [166] | DEBUG | ~7529 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:10:11,731 | [228] | DEBUG | ~7531 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:10:11,731 | [82] | DEBUG | ~7532 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:11:18,134 | [120] | DEBUG | ~7533 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:11:18,134 | [248] | DEBUG | ~7534 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:11:18,582 | [197] | DEBUG | ~7535 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:11:18,582 | [13] | DEBUG | ~7536 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:11:18,586 | [305] | DEBUG | ~7537 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:11:18,800 | [252] | DEBUG | ~7540 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:11:18,586 | [166] | DEBUG | ~7538 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:11:18,587 | [228] | DEBUG | ~7539 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:11:38,150 | [228] | DEBUG | ~7541 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:11:38,154 | [228] | DEBUG | ~7542 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:11:38,165 | [82] | DEBUG | ~7544 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:11:38,173 | [248] | DEBUG | ~7546 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:11:38,436 | [120] | DEBUG | ~7547 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:11:38,173 | [190] | DEBUG | ~7545 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:11:38,436 | [172] | DEBUG | ~7548 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:11:38,165 | [228] | DEBUG | ~7543 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:12:18,387 | [252] | DEBUG | ~7549 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:12:18,389 | [436] | DEBUG | ~7556 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:12:18,389 | [428] | DEBUG | ~7554 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:12:18,387 | [20] | DEBUG | ~7550 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:12:18,387 | [166] | DEBUG | ~7551 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:12:18,388 | [82] | DEBUG | ~7553 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:12:18,389 | [190] | DEBUG | ~7555 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:12:18,387 | [350] | DEBUG | ~7552 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:12:23,628 | [172] | DEBUG | ~7557 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:12:23,631 | [82] | DEBUG | ~7564 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:12:23,631 | [197] | DEBUG | ~7562 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:12:23,628 | [228] | DEBUG | ~7559 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:12:23,631 | [433] | DEBUG | ~7563 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:12:23,628 | [427] | DEBUG | ~7558 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:12:23,628 | [422] | DEBUG | ~7560 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:12:23,628 | [428] | DEBUG | ~7561 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:13:13,285 | [425] | DEBUG | ~7565 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:13:13,285 | [252] | DEBUG | ~7566 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:13:13,763 | [120] | DEBUG | ~7567 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:13:13,764 | [172] | DEBUG | ~7568 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:13:13,765 | [82] | DEBUG | ~7569 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:13:13,768 | [20] | DEBUG | ~7572 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:13:13,768 | [428] | DEBUG | ~7571 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:13:13,765 | [433] | DEBUG | ~7570 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:13:18,770 | [13] | DEBUG | ~7573 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:13:18,772 | [197] | DEBUG | ~7580 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:13:18,772 | [172] | DEBUG | ~7579 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:13:18,771 | [425] | DEBUG | ~7577 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:13:18,770 | [305] | DEBUG | ~7574 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:13:18,771 | [350] | DEBUG | ~7576 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:13:18,771 | [427] | DEBUG | ~7575 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:13:18,771 | [252] | DEBUG | ~7578 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:13:42,080 | [228] | DEBUG | ~7581 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:13:42,080 | [120] | DEBUG | ~7582 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:13:42,095 | [172] | DEBUG | ~7583 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:13:42,097 | [190] | DEBUG | ~7588 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:13:42,097 | [13] | DEBUG | ~7587 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:13:42,096 | [428] | DEBUG | ~7585 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:13:42,095 | [20] | DEBUG | ~7584 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:13:42,096 | [82] | DEBUG | ~7586 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:13:45,015 | [428] | DEBUG | ~7589 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:13:45,015 | [197] | DEBUG | ~7590 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:13:45,015 | [422] | DEBUG | ~7591 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:13:45,021 | [436] | DEBUG | ~7594 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:13:45,021 | [427] | DEBUG | ~7595 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:13:45,022 | [120] | DEBUG | ~7596 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:13:45,015 | [425] | DEBUG | ~7592 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:13:45,021 | [228] | DEBUG | ~7593 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:14:12,864 | [436] | DEBUG | ~7598 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:14:12,864 | [422] | DEBUG | ~7597 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:14:12,874 | [13] | DEBUG | ~7599 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:14:12,876 | [20] | DEBUG | ~7604 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:14:12,876 | [422] | DEBUG | ~7601 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:14:12,876 | [427] | DEBUG | ~7603 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:14:12,876 | [190] | DEBUG | ~7602 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:14:12,874 | [305] | DEBUG | ~7600 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:14:16,701 | [422] | DEBUG | ~7605 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:14:16,701 | [172] | DEBUG | ~7606 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:14:16,703 | [228] | DEBUG | ~7611 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:14:16,702 | [305] | DEBUG | ~7608 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:14:16,702 | [252] | DEBUG | ~7610 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:14:16,704 | [425] | DEBUG | ~7612 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:14:16,702 | [120] | DEBUG | ~7607 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:14:16,702 | [82] | DEBUG | ~7609 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:14:46,505 | [435] | DEBUG | ~7614 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:14:46,505 | [82] | DEBUG | ~7613 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:14:46,844 | [436] | DEBUG | ~7615 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:14:46,844 | [172] | DEBUG | ~7617 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:14:46,844 | [428] | DEBUG | ~7619 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:14:46,844 | [190] | DEBUG | ~7618 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:14:46,844 | [350] | DEBUG | ~7616 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:14:46,845 | [197] | DEBUG | ~7620 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:15:00,271 | [13] | DEBUG | ~7621 | 134~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 00:15:01,394 | [350] | DEBUG | ~7622 | 134~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42261','Available physical memory is high','2197597','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','796','1570738176','1425170432','01:08:09.4687500 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 00:16:20,720 | [20] | DEBUG | ~7623 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:16:20,720 | [82] | DEBUG | ~7624 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:16:20,946 | [13] | DEBUG | ~7626 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:16:20,946 | [305] | DEBUG | ~7625 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:16:21,115 | [427] | DEBUG | ~7628 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:16:21,115 | [435] | DEBUG | ~7627 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:16:21,115 | [252] | DEBUG | ~7629 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:16:21,115 | [172] | DEBUG | ~7630 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:16:28,364 | [305] | DEBUG | ~7632 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:16:28,366 | [435] | DEBUG | ~7637 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:16:28,364 | [13] | DEBUG | ~7631 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:16:28,364 | [120] | DEBUG | ~7633 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:16:28,365 | [228] | DEBUG | ~7636 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:16:28,366 | [427] | DEBUG | ~7638 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:16:28,365 | [433] | DEBUG | ~7634 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:16:28,365 | [428] | DEBUG | ~7635 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:16:52,464 | [82] | DEBUG | ~7640 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:16:52,464 | [422] | DEBUG | ~7644 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:16:52,464 | [252] | DEBUG | ~7642 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:16:52,464 | [13] | DEBUG | ~7643 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:16:52,464 | [120] | DEBUG | ~7641 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:16:52,464 | [228] | DEBUG | ~7639 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:16:52,638 | [305] | DEBUG | ~7645 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:16:52,638 | [425] | DEBUG | ~7646 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:17:59,901 | [427] | DEBUG | ~7648 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:17:59,901 | [172] | DEBUG | ~7647 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:18:00,287 | [305] | DEBUG | ~7649 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:18:00,287 | [197] | DEBUG | ~7651 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:18:00,287 | [428] | DEBUG | ~7650 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:18:00,290 | [120] | DEBUG | ~7654 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:18:00,290 | [422] | DEBUG | ~7653 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:18:00,287 | [424] | DEBUG | ~7652 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:19:47,810 | [432] | DEBUG | ~7655 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:19:47,810 | [435] | DEBUG | ~7656 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:19:48,291 | [172] | DEBUG | ~7657 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:19:48,291 | [427] | DEBUG | ~7658 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:19:48,305 | [423] | DEBUG | ~7659 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:19:48,306 | [428] | DEBUG | ~7660 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:19:48,306 | [197] | DEBUG | ~7661 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:19:48,306 | [436] | DEBUG | ~7662 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:19:52,496 | [424] | DEBUG | ~7664 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:19:52,496 | [425] | DEBUG | ~7663 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:19:52,505 | [120] | DEBUG | ~7669 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:19:52,501 | [427] | DEBUG | ~7667 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:19:52,501 | [433] | DEBUG | ~7668 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:19:52,496 | [422] | DEBUG | ~7665 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:19:52,497 | [197] | DEBUG | ~7666 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:19:52,505 | [20] | DEBUG | ~7670 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:20:00,769 | [20] | DEBUG | ~7671 | 148~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 00:20:00,775 | [432] | DEBUG | ~7672 | 148~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42246','Available physical memory is high','2197896','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','804','1634082816','1425170432','01:11:12.6406250 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 00:20:20,568 | [425] | DEBUG | ~7674 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:20:20,568 | [305] | DEBUG | ~7673 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:20:20,582 | [120] | DEBUG | ~7676 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:20:20,584 | [422] | DEBUG | ~7679 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:20:20,584 | [432] | DEBUG | ~7680 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:20:20,583 | [433] | DEBUG | ~7678 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:20:20,582 | [436] | DEBUG | ~7675 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:20:20,583 | [427] | DEBUG | ~7677 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:21:02,672 | [252] | DEBUG | ~7682 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:21:02,672 | [424] | DEBUG | ~7681 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:21:03,067 | [435] | DEBUG | ~7684 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:21:03,067 | [172] | DEBUG | ~7688 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:21:03,067 | [120] | DEBUG | ~7687 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:21:03,067 | [425] | DEBUG | ~7685 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:21:03,067 | [62] | DEBUG | ~7683 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:21:03,067 | [197] | DEBUG | ~7686 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:21:26,675 | [422] | DEBUG | ~7689 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:21:26,676 | [62] | DEBUG | ~7690 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:21:26,694 | [197] | DEBUG | ~7691 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:21:26,695 | [436] | DEBUG | ~7692 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:21:26,695 | [120] | DEBUG | ~7693 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:21:26,702 | [197] | DEBUG | ~7695 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:21:26,702 | [423] | DEBUG | ~7696 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:21:26,695 | [252] | DEBUG | ~7694 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:22:20,014 | [425] | DEBUG | ~7697 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:22:20,014 | [197] | DEBUG | ~7699 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:22:20,014 | [62] | DEBUG | ~7698 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:22:20,014 | [436] | DEBUG | ~7700 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:22:20,022 | [423] | DEBUG | ~7702 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:22:20,022 | [20] | DEBUG | ~7701 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:22:20,219 | [424] | DEBUG | ~7704 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:22:20,219 | [252] | DEBUG | ~7703 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:23:30,157 | [13] | DEBUG | ~7705 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:23:30,157 | [252] | DEBUG | ~7706 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:23:30,599 | [252] | DEBUG | ~7707 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:23:30,599 | [436] | DEBUG | ~7708 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:23:30,604 | [197] | DEBUG | ~7711 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:23:30,601 | [432] | DEBUG | ~7709 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:23:30,601 | [424] | DEBUG | ~7710 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:23:30,604 | [62] | DEBUG | ~7712 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:23:39,048 | [428] | DEBUG | ~7715 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:23:39,048 | [305] | DEBUG | ~7714 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:23:39,048 | [20] | DEBUG | ~7719 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:23:39,048 | [427] | DEBUG | ~7718 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:23:39,048 | [197] | DEBUG | ~7716 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:23:39,048 | [436] | DEBUG | ~7713 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:23:39,048 | [435] | DEBUG | ~7717 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:23:39,048 | [432] | DEBUG | ~7720 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:24:07,661 | [425] | DEBUG | ~7721 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:24:07,661 | [432] | DEBUG | ~7722 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:24:07,662 | [418] | DEBUG | ~7724 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:24:07,662 | [420] | DEBUG | ~7723 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:24:07,678 | [20] | DEBUG | ~7726 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:24:07,678 | [428] | DEBUG | ~7728 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:24:07,678 | [435] | DEBUG | ~7725 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:24:07,678 | [423] | DEBUG | ~7727 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:24:30,839 | [436] | DEBUG | ~7729 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:24:30,839 | [305] | DEBUG | ~7730 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:24:30,842 | [420] | DEBUG | ~7731 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:24:30,842 | [425] | DEBUG | ~7732 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:24:30,844 | [248] | DEBUG | ~7733 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:24:30,844 | [418] | DEBUG | ~7734 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:24:30,849 | [13] | DEBUG | ~7735 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:24:30,849 | [197] | DEBUG | ~7736 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:25:00,463 | [436] | DEBUG | ~7737 | 151~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 00:25:02,886 | [427] | DEBUG | ~7738 | 151~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42232','Available physical memory is high','2198196','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','797','1571299328','1425170432','01:14:30.0781250 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 00:25:03,197 | [433] | DEBUG | ~7739 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:25:03,201 | [172] | DEBUG | ~7740 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:25:03,203 | [435] | DEBUG | ~7741 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:25:03,202 | [119] | DEBUG | ~7742 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:25:03,215 | [435] | DEBUG | ~7745 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:25:03,218 | [172] | DEBUG | ~7746 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:25:03,213 | [433] | DEBUG | ~7744 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:25:03,213 | [62] | DEBUG | ~7743 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:25:07,144 | [248] | DEBUG | ~7747 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:25:07,145 | [418] | DEBUG | ~7748 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:25:07,150 | [419] | DEBUG | ~7750 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:25:07,152 | [20] | DEBUG | ~7753 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:25:07,150 | [248] | DEBUG | ~7749 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:25:07,152 | [424] | DEBUG | ~7752 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:25:07,152 | [423] | DEBUG | ~7754 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:25:07,152 | [418] | DEBUG | ~7751 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:28:07,197 | [428] | DEBUG | ~7756 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:28:07,197 | [427] | DEBUG | ~7755 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:28:07,486 | [197] | DEBUG | ~7757 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:28:07,487 | [305] | DEBUG | ~7759 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:28:07,487 | [419] | DEBUG | ~7760 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:28:07,486 | [407] | DEBUG | ~7758 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:28:07,487 | [413] | DEBUG | ~7761 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:28:07,487 | [248] | DEBUG | ~7762 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:28:12,271 | [435] | DEBUG | ~7763 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:28:12,274 | [428] | DEBUG | ~7770 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:28:12,271 | [219] | DEBUG | ~7766 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:28:12,272 | [418] | DEBUG | ~7768 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:28:12,272 | [423] | DEBUG | ~7769 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:28:12,271 | [120] | DEBUG | ~7764 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:28:12,271 | [248] | DEBUG | ~7767 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:28:12,271 | [427] | DEBUG | ~7765 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:29:43,124 | [419] | DEBUG | ~7772 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:29:43,124 | [420] | DEBUG | ~7771 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:29:43,324 | [120] | DEBUG | ~7774 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:29:43,325 | [407] | DEBUG | ~7775 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:29:43,325 | [422] | DEBUG | ~7778 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:29:43,325 | [305] | DEBUG | ~7776 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:29:43,324 | [428] | DEBUG | ~7773 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:29:43,325 | [424] | DEBUG | ~7777 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:30:00,095 | [435] | DEBUG | ~7779 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:30:00,100 | [409] | DEBUG | ~7785 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:30:00,100 | [422] | DEBUG | ~7784 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:30:00,100 | [120] | DEBUG | ~7781 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:30:00,100 | [119] | DEBUG | ~7786 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:30:00,095 | [418] | DEBUG | ~7780 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:30:00,100 | [20] | DEBUG | ~7783 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:30:00,100 | [248] | DEBUG | ~7782 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:30:01,244 | [419] | DEBUG | ~7787 | 139~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 00:30:01,259 | [305] | DEBUG | ~7788 | 139~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42225','Available physical memory is high','2198496','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','805','1635672064','1425170432','01:17:51.2500000 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 00:30:09,415 | [420] | DEBUG | ~7789 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:30:09,415 | [418] | DEBUG | ~7790 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:30:09,421 | [248] | DEBUG | ~7791 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:30:09,421 | [20] | DEBUG | ~7792 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:30:09,426 | [427] | DEBUG | ~7794 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:30:09,426 | [409] | DEBUG | ~7793 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:30:09,576 | [424] | DEBUG | ~7796 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:30:09,576 | [407] | DEBUG | ~7795 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:30:16,365 | [119] | DEBUG | ~7797 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:30:16,369 | [420] | DEBUG | ~7804 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:30:16,365 | [20] | DEBUG | ~7800 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:30:16,366 | [419] | DEBUG | ~7803 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:30:16,365 | [414] | DEBUG | ~7799 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:30:16,366 | [427] | DEBUG | ~7802 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:30:16,365 | [305] | DEBUG | ~7798 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:30:16,366 | [407] | DEBUG | ~7801 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:30:24,745 | [427] | DEBUG | ~7805 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:30:24,749 | [248] | DEBUG | ~7809 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:30:24,745 | [420] | DEBUG | ~7807 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:30:24,745 | [419] | DEBUG | ~7808 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:30:24,745 | [305] | DEBUG | ~7806 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:30:24,747 | [20] | DEBUG | ~7811 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:30:24,747 | [418] | DEBUG | ~7810 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:30:24,749 | [435] | DEBUG | ~7812 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:31:59,627 | [428] | DEBUG | ~7813 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:31:59,628 | [418] | DEBUG | ~7815 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:31:59,627 | [248] | DEBUG | ~7814 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:31:59,628 | [407] | DEBUG | ~7816 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:31:59,637 | [420] | DEBUG | ~7817 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:31:59,637 | [435] | DEBUG | ~7818 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:31:59,643 | [432] | DEBUG | ~7819 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:31:59,643 | [305] | DEBUG | ~7820 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:32:16,354 | [305] | DEBUG | ~7822 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:32:16,354 | [424] | DEBUG | ~7821 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:32:16,364 | [422] | DEBUG | ~7823 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:32:16,364 | [120] | DEBUG | ~7826 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:32:16,365 | [409] | DEBUG | ~7828 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:32:16,364 | [411] | DEBUG | ~7824 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:32:16,364 | [248] | DEBUG | ~7825 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:32:16,365 | [20] | DEBUG | ~7827 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:35:00,845 | [120] | DEBUG | ~7829 | 136~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 00:35:00,861 | [248] | DEBUG | ~7830 | 136~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4696','65535','42267','Available physical memory is high','2198796','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','799','1566703616','1425170432','01:20:58.9531250 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 00:36:31,511 | [422] | DEBUG | ~7831 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:36:31,512 | [411] | DEBUG | ~7832 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:36:31,762 | [219] | DEBUG | ~7833 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:36:31,763 | [402] | DEBUG | ~7834 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:36:31,772 | [120] | DEBUG | ~7835 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:36:31,773 | [407] | DEBUG | ~7836 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:36:31,774 | [419] | DEBUG | ~7838 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:36:31,774 | [414] | DEBUG | ~7837 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:36:34,413 | [419] | DEBUG | ~7839 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:36:34,413 | [219] | DEBUG | ~7842 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:36:34,413 | [120] | DEBUG | ~7841 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:36:34,413 | [408] | DEBUG | ~7844 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:36:34,417 | [432] | DEBUG | ~7846 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:36:34,413 | [418] | DEBUG | ~7843 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:36:34,417 | [400] | DEBUG | ~7845 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:36:34,413 | [190] | DEBUG | ~7840 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:37:09,162 | [432] | DEBUG | ~7847 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:37:09,162 | [419] | DEBUG | ~7848 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:37:09,413 | [427] | DEBUG | ~7850 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:37:09,416 | [405] | DEBUG | ~7854 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:37:09,414 | [399] | DEBUG | ~7852 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:37:09,414 | [414] | DEBUG | ~7851 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:37:09,413 | [400] | DEBUG | ~7849 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:37:09,416 | [82] | DEBUG | ~7853 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:37:40,770 | [433] | DEBUG | ~7856 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:37:40,770 | [400] | DEBUG | ~7855 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:37:41,021 | [419] | DEBUG | ~7858 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:37:41,021 | [228] | DEBUG | ~7857 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:37:41,033 | [405] | DEBUG | ~7860 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:37:41,189 | [418] | DEBUG | ~7862 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:37:41,032 | [432] | DEBUG | ~7859 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:37:41,191 | [228] | DEBUG | ~7861 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:37:47,388 | [350] | DEBUG | ~7864 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:37:47,388 | [420] | DEBUG | ~7863 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:37:47,395 | [190] | DEBUG | ~7866 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:37:47,395 | [400] | DEBUG | ~7865 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:37:47,535 | [402] | DEBUG | ~7867 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:37:47,535 | [420] | DEBUG | ~7868 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:37:47,674 | [399] | DEBUG | ~7869 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:37:47,674 | [350] | DEBUG | ~7870 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:40:00,299 | [433] | DEBUG | ~7871 | 147~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 00:40:00,926 | [429] | DEBUG | ~7872 | 147~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42242','Available physical memory is high','2199096','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','799','1569013760','1425170432','01:24:02.7031250 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 00:44:07,235 | [120] | DEBUG | ~7873 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:44:07,235 | [82] | DEBUG | ~7874 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:44:08,129 | [402] | DEBUG | ~7875 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:44:08,130 | [405] | DEBUG | ~7877 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:44:08,130 | [431] | DEBUG | ~7880 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:44:08,130 | [279] | DEBUG | ~7878 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:44:08,130 | [409] | DEBUG | ~7879 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:44:08,129 | [432] | DEBUG | ~7876 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:44:16,706 | [424] | DEBUG | ~7881 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:44:16,707 | [279] | DEBUG | ~7888 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:44:16,706 | [405] | DEBUG | ~7884 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:44:16,707 | [432] | DEBUG | ~7887 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:44:16,706 | [305] | DEBUG | ~7882 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:44:16,706 | [414] | DEBUG | ~7883 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:44:16,706 | [119] | DEBUG | ~7885 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:44:16,706 | [62] | DEBUG | ~7886 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:44:39,667 | [350] | DEBUG | ~7889 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:44:39,667 | [427] | DEBUG | ~7890 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:44:39,683 | [82] | DEBUG | ~7891 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:44:39,686 | [429] | DEBUG | ~7896 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:44:39,685 | [228] | DEBUG | ~7894 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:44:39,685 | [184] | DEBUG | ~7893 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:44:39,685 | [425] | DEBUG | ~7895 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:44:39,683 | [407] | DEBUG | ~7892 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:44:46,489 | [399] | DEBUG | ~7897 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:44:46,489 | [409] | DEBUG | ~7898 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:44:46,497 | [402] | DEBUG | ~7899 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:44:46,497 | [119] | DEBUG | ~7900 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:44:46,672 | [408] | DEBUG | ~7902 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:44:46,672 | [62] | DEBUG | ~7901 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:44:46,674 | [427] | DEBUG | ~7903 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:44:46,674 | [350] | DEBUG | ~7904 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:44:55,192 | [305] | DEBUG | ~7906 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:44:55,192 | [431] | DEBUG | ~7908 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:44:55,192 | [279] | DEBUG | ~7909 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:44:55,192 | [219] | DEBUG | ~7912 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:44:55,192 | [120] | DEBUG | ~7907 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:44:55,192 | [429] | DEBUG | ~7910 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:44:55,192 | [119] | DEBUG | ~7911 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:44:55,192 | [407] | DEBUG | ~7905 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:45:00,151 | [405] | DEBUG | ~7913 | 141~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 00:45:01,376 | [431] | DEBUG | ~7914 | 141~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4696','65535','42243','Available physical memory is high','2199395','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','807','1647435776','1425170432','01:27:06.7812500 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 00:50:00,274 | [279] | DEBUG | ~7915 | 158~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 00:50:00,861 | [408] | DEBUG | ~7916 | 158~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42250','Available physical memory is high','2199696','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','800','1570574336','1425170432','01:30:03.0468750 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 00:52:30,071 | [172] | DEBUG | ~7917 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:52:30,071 | [413] | DEBUG | ~7918 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:52:31,040 | [402] | DEBUG | ~7919 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:52:31,042 | [428] | DEBUG | ~7921 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:52:31,040 | [166] | DEBUG | ~7920 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:52:31,045 | [402] | DEBUG | ~7924 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:52:31,044 | [428] | DEBUG | ~7923 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:52:31,042 | [279] | DEBUG | ~7922 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:53:19,504 | [402] | DEBUG | ~7926 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:53:19,504 | [119] | DEBUG | ~7925 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:53:19,847 | [421] | DEBUG | ~7927 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:53:19,848 | [11] | DEBUG | ~7929 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:53:19,849 | [405] | DEBUG | ~7932 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:53:19,848 | [428] | DEBUG | ~7930 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:53:19,849 | [184] | DEBUG | ~7931 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:53:19,847 | [82] | DEBUG | ~7928 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:53:41,878 | [172] | DEBUG | ~7933 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:53:41,878 | [428] | DEBUG | ~7934 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:53:42,096 | [191] | DEBUG | ~7935 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:53:42,097 | [119] | DEBUG | ~7938 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:53:42,096 | [279] | DEBUG | ~7936 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:53:42,096 | [418] | DEBUG | ~7937 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:53:42,098 | [11] | DEBUG | ~7940 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:53:42,098 | [402] | DEBUG | ~7939 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:53:50,993 | [305] | DEBUG | ~7941 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:53:50,995 | [279] | DEBUG | ~7946 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:53:50,993 | [172] | DEBUG | ~7944 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:53:50,999 | [405] | DEBUG | ~7945 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:53:50,995 | [191] | DEBUG | ~7948 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:53:50,993 | [421] | DEBUG | ~7942 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:53:50,993 | [62] | DEBUG | ~7943 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:53:50,995 | [418] | DEBUG | ~7947 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:53:55,500 | [82] | DEBUG | ~7949 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:53:55,500 | [418] | DEBUG | ~7952 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:53:55,501 | [279] | DEBUG | ~7956 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:53:55,500 | [119] | DEBUG | ~7954 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:53:55,500 | [62] | DEBUG | ~7951 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:53:55,501 | [421] | DEBUG | ~7955 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:53:55,500 | [305] | DEBUG | ~7953 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:53:55,500 | [428] | DEBUG | ~7950 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:54:07,889 | [62] | DEBUG | ~7959 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:54:07,892 | [119] | DEBUG | ~7963 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:54:07,889 | [402] | DEBUG | ~7962 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:54:07,889 | [421] | DEBUG | ~7960 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:54:07,889 | [184] | DEBUG | ~7957 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:54:07,892 | [305] | DEBUG | ~7964 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:54:07,889 | [172] | DEBUG | ~7958 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:54:07,889 | [279] | DEBUG | ~7961 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:54:15,526 | [428] | DEBUG | ~7966 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:54:15,528 | [402] | DEBUG | ~7970 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:54:15,529 | [279] | DEBUG | ~7972 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:54:15,527 | [418] | DEBUG | ~7968 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:54:15,526 | [172] | DEBUG | ~7965 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:54:15,527 | [82] | DEBUG | ~7967 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:54:15,529 | [11] | DEBUG | ~7971 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:54:15,528 | [119] | DEBUG | ~7969 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:55:00,575 | [11] | DEBUG | ~7973 | 134~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 00:55:02,828 | [172] | DEBUG | ~7974 | 134~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4696','65535','42253','Available physical memory is high','2199996','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','801','1570619392','1425170432','01:33:16.4062500 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 00:55:58,908 | [428] | DEBUG | ~7975 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:55:58,908 | [429] | DEBUG | ~7976 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:55:59,557 | [172] | DEBUG | ~7977 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:55:59,557 | [305] | DEBUG | ~7978 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:55:59,564 | [412] | DEBUG | ~7979 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:55:59,570 | [403] | DEBUG | ~7982 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:55:59,570 | [172] | DEBUG | ~7981 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:55:59,564 | [191] | DEBUG | ~7980 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:56:13,054 | [412] | DEBUG | ~7983 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:56:13,054 | [403] | DEBUG | ~7984 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:56:13,059 | [417] | DEBUG | ~7986 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:56:13,062 | [305] | DEBUG | ~7990 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:56:13,062 | [62] | DEBUG | ~7989 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:56:13,059 | [402] | DEBUG | ~7985 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:56:13,059 | [191] | DEBUG | ~7987 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:56:13,059 | [405] | DEBUG | ~7988 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:58:04,135 | [279] | DEBUG | ~7992 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:58:04,135 | [427] | DEBUG | ~7991 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:58:04,511 | [248] | DEBUG | ~7993 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:58:04,512 | [424] | DEBUG | ~7996 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:58:04,513 | [120] | DEBUG | ~7997 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:58:04,512 | [418] | DEBUG | ~7995 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:58:04,511 | [119] | DEBUG | ~7994 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:58:04,513 | [421] | DEBUG | ~7998 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:59:55,637 | [409] | DEBUG | ~7999 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:59:55,637 | [166] | DEBUG | ~8000 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 00:59:56,437 | [119] | DEBUG | ~8001 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:59:56,438 | [421] | DEBUG | ~8002 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 00:59:56,439 | [405] | DEBUG | ~8003 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:59:56,439 | [248] | DEBUG | ~8004 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 00:59:56,458 | [62] | DEBUG | ~8006 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 00:59:56,456 | [417] | DEBUG | ~8005 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:00:02,221 | [120] | DEBUG | ~8007 | 136~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 01:00:02,232 | [119] | DEBUG | ~8008 | 136~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4696','65535','42251','Available physical memory is high','2200296','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','805','1571799040','1425170432','01:37:01.1875000 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 01:00:10,360 | [417] | DEBUG | ~8009 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:00:10,361 | [279] | DEBUG | ~8014 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:00:10,360 | [429] | DEBUG | ~8011 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:00:10,361 | [409] | DEBUG | ~8015 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:00:10,361 | [418] | DEBUG | ~8013 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:00:10,360 | [412] | DEBUG | ~8012 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:00:10,367 | [424] | DEBUG | ~8016 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:00:10,360 | [248] | DEBUG | ~8010 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:00:33,058 | [418] | DEBUG | ~8017 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:00:33,096 | [403] | DEBUG | ~8020 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:00:33,127 | [11] | DEBUG | ~8024 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:00:33,096 | [279] | DEBUG | ~8019 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:00:33,109 | [305] | DEBUG | ~8022 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:00:33,088 | [120] | DEBUG | ~8018 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:00:33,109 | [421] | DEBUG | ~8021 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:00:33,127 | [427] | DEBUG | ~8023 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:01:05,703 | [119] | DEBUG | ~8025 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:01:05,703 | [427] | DEBUG | ~8026 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:01:05,704 | [403] | DEBUG | ~8028 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:01:05,712 | [62] | DEBUG | ~8029 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:01:05,704 | [402] | DEBUG | ~8027 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:01:05,715 | [305] | DEBUG | ~8031 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:01:05,715 | [279] | DEBUG | ~8032 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:01:05,712 | [219] | DEBUG | ~8030 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:02:05,586 | [166] | DEBUG | ~8033 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:02:05,586 | [421] | DEBUG | ~8034 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:02:05,946 | [397] | DEBUG | ~8035 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:02:05,948 | [429] | DEBUG | ~8040 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:02:05,947 | [409] | DEBUG | ~8037 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:02:05,947 | [11] | DEBUG | ~8036 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:02:05,947 | [425] | DEBUG | ~8039 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:02:05,947 | [402] | DEBUG | ~8038 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:02:55,237 | [279] | DEBUG | ~8041 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:02:55,563 | [424] | DEBUG | ~8044 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:02:55,563 | [350] | DEBUG | ~8048 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:02:55,563 | [62] | DEBUG | ~8043 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:02:55,563 | [405] | DEBUG | ~8045 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:02:55,237 | [425] | DEBUG | ~8042 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:02:55,563 | [403] | DEBUG | ~8047 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:02:55,563 | [219] | DEBUG | ~8046 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:04:34,560 | [409] | DEBUG | ~8049 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:04:34,560 | [166] | DEBUG | ~8050 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:04:34,913 | [11] | DEBUG | ~8052 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:04:34,916 | [414] | DEBUG | ~8054 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:04:34,918 | [424] | DEBUG | ~8056 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:04:34,916 | [279] | DEBUG | ~8053 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:04:34,913 | [429] | DEBUG | ~8051 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:04:34,917 | [428] | DEBUG | ~8055 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:05:01,601 | [428] | DEBUG | ~8057 | 141~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 01:05:01,614 | [397] | DEBUG | ~8058 | 141~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4696','65535','42260','Available physical memory is high','2200596','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','805','1567404032','1425170432','01:40:35.8281250 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 01:06:15,837 | [429] | DEBUG | ~8059 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:06:15,838 | [411] | DEBUG | ~8060 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:06:16,222 | [422] | DEBUG | ~8061 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:06:16,224 | [428] | DEBUG | ~8064 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:06:16,224 | [414] | DEBUG | ~8063 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:06:16,224 | [410] | DEBUG | ~8066 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:06:16,223 | [400] | DEBUG | ~8062 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:06:16,224 | [197] | DEBUG | ~8065 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:07:09,587 | [190] | DEBUG | ~8067 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:07:09,588 | [414] | DEBUG | ~8071 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:07:09,588 | [400] | DEBUG | ~8072 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:07:09,587 | [119] | DEBUG | ~8069 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:07:09,587 | [279] | DEBUG | ~8070 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:07:09,655 | [197] | DEBUG | ~8073 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:07:09,587 | [424] | DEBUG | ~8068 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:07:09,655 | [410] | DEBUG | ~8074 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:07:26,375 | [428] | DEBUG | ~8075 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:07:26,375 | [279] | DEBUG | ~8076 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:07:26,393 | [409] | DEBUG | ~8077 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:07:26,393 | [411] | DEBUG | ~8079 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:07:26,394 | [397] | DEBUG | ~8080 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:07:26,395 | [423] | DEBUG | ~8082 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:07:26,395 | [410] | DEBUG | ~8081 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:07:26,393 | [429] | DEBUG | ~8078 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:08:32,663 | [190] | DEBUG | ~8084 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:08:32,663 | [279] | DEBUG | ~8083 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:08:32,672 | [166] | DEBUG | ~8088 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:08:32,666 | [414] | DEBUG | ~8085 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:08:32,666 | [400] | DEBUG | ~8086 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:08:32,672 | [397] | DEBUG | ~8087 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:08:32,685 | [197] | DEBUG | ~8090 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:08:32,685 | [398] | DEBUG | ~8089 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:08:38,244 | [279] | DEBUG | ~8091 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:08:38,282 | [414] | DEBUG | ~8096 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:08:38,282 | [410] | DEBUG | ~8095 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:08:38,273 | [166] | DEBUG | ~8093 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:08:38,244 | [409] | DEBUG | ~8092 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:08:38,295 | [421] | DEBUG | ~8098 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:08:38,273 | [190] | DEBUG | ~8094 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:08:38,292 | [397] | DEBUG | ~8097 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:10:04,160 | [423] | DEBUG | ~8099 | 136~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 01:10:04,178 | [424] | DEBUG | ~8100 | 136~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42258','Available physical memory is high','2200896','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','803','1571975168','1425170432','01:44:27.7656250 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 01:10:25,840 | [279] | DEBUG | ~8102 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:10:25,840 | [414] | DEBUG | ~8101 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:10:27,955 | [410] | DEBUG | ~8103 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:10:27,963 | [406] | DEBUG | ~8105 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:10:27,979 | [420] | DEBUG | ~8107 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:10:27,982 | [423] | DEBUG | ~8108 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:10:27,964 | [427] | DEBUG | ~8106 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:10:27,961 | [252] | DEBUG | ~8104 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:10:31,529 | [400] | DEBUG | ~8109 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:10:31,531 | [421] | DEBUG | ~8114 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:10:31,529 | [407] | DEBUG | ~8110 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:10:31,534 | [219] | DEBUG | ~8116 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:10:31,530 | [402] | DEBUG | ~8111 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:10:31,530 | [401] | DEBUG | ~8112 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:10:31,531 | [411] | DEBUG | ~8113 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:10:31,533 | [279] | DEBUG | ~8115 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:13:45,235 | [403] | DEBUG | ~8117 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:13:45,236 | [120] | DEBUG | ~8118 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:13:46,361 | [219] | DEBUG | ~8120 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:13:46,368 | [421] | DEBUG | ~8122 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:13:46,376 | [417] | DEBUG | ~8124 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:13:46,368 | [252] | DEBUG | ~8121 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:13:46,361 | [62] | DEBUG | ~8119 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:13:46,370 | [120] | DEBUG | ~8123 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:14:53,567 | [120] | DEBUG | ~8125 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:14:53,567 | [403] | DEBUG | ~8126 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:14:53,994 | [62] | DEBUG | ~8127 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:14:54,002 | [417] | DEBUG | ~8131 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:14:54,004 | [423] | DEBUG | ~8132 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:14:53,997 | [399] | DEBUG | ~8129 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:14:53,997 | [406] | DEBUG | ~8130 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:14:53,994 | [219] | DEBUG | ~8128 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:15:04,374 | [184] | DEBUG | ~8133 | 140~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 01:15:04,393 | [418] | DEBUG | ~8134 | 140~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42258','Available physical memory is high','2201196','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','808','1634844672','1425170432','01:47:58.1562500 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 01:15:33,024 | [399] | DEBUG | ~8135 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:15:33,025 | [120] | DEBUG | ~8140 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:15:33,048 | [406] | DEBUG | ~8141 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:15:33,049 | [172] | DEBUG | ~8142 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:15:33,025 | [219] | DEBUG | ~8136 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:15:33,025 | [423] | DEBUG | ~8137 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:15:33,025 | [62] | DEBUG | ~8138 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:15:33,025 | [403] | DEBUG | ~8139 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:16:01,421 | [184] | DEBUG | ~8143 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:16:01,421 | [418] | DEBUG | ~8144 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:16:01,757 | [406] | DEBUG | ~8146 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:16:02,125 | [402] | DEBUG | ~8150 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:16:02,121 | [423] | DEBUG | ~8147 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:16:02,122 | [219] | DEBUG | ~8148 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:16:01,757 | [172] | DEBUG | ~8145 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:16:02,124 | [62] | DEBUG | ~8149 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:17:18,165 | [279] | DEBUG | ~8151 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:17:18,169 | [419] | DEBUG | ~8152 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:17:18,196 | [399] | DEBUG | ~8153 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:17:18,196 | [412] | DEBUG | ~8154 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:17:18,204 | [172] | DEBUG | ~8158 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:17:18,203 | [11] | DEBUG | ~8156 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:17:18,205 | [417] | DEBUG | ~8157 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:17:18,202 | [402] | DEBUG | ~8155 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:18:23,400 | [403] | DEBUG | ~8159 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:18:23,402 | [409] | DEBUG | ~8160 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:18:23,823 | [252] | DEBUG | ~8162 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:18:23,823 | [417] | DEBUG | ~8161 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:18:23,829 | [407] | DEBUG | ~8164 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:18:23,829 | [279] | DEBUG | ~8165 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:18:23,831 | [406] | DEBUG | ~8166 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:18:23,829 | [172] | DEBUG | ~8163 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:18:37,003 | [248] | DEBUG | ~8167 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:18:37,004 | [412] | DEBUG | ~8171 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:18:37,004 | [172] | DEBUG | ~8172 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:18:37,003 | [11] | DEBUG | ~8170 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:18:37,003 | [279] | DEBUG | ~8168 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:18:37,004 | [423] | DEBUG | ~8173 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:18:37,003 | [120] | DEBUG | ~8169 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:18:37,006 | [419] | DEBUG | ~8174 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:19:23,364 | [252] | DEBUG | ~8175 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:19:23,365 | [402] | DEBUG | ~8180 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:19:23,364 | [219] | DEBUG | ~8178 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:19:23,366 | [399] | DEBUG | ~8181 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:19:23,364 | [62] | DEBUG | ~8177 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:19:23,364 | [423] | DEBUG | ~8176 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:19:23,364 | [248] | DEBUG | ~8179 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:19:23,371 | [172] | DEBUG | ~8182 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:19:32,392 | [403] | DEBUG | ~8184 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:19:32,394 | [417] | DEBUG | ~8188 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:19:32,393 | [402] | DEBUG | ~8187 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:19:32,392 | [252] | DEBUG | ~8186 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:19:32,401 | [396] | DEBUG | ~8190 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:19:32,392 | [418] | DEBUG | ~8185 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:19:32,392 | [419] | DEBUG | ~8183 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:19:32,401 | [399] | DEBUG | ~8189 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:20:00,789 | [279] | DEBUG | ~8191 | 144~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 01:20:03,450 | [403] | DEBUG | ~8192 | 144~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42243','Available physical memory is high','2201496','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','805','1571188736','1425170432','01:52:43.6562500 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 01:20:22,319 | [120] | DEBUG | ~8194 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:20:22,319 | [248] | DEBUG | ~8193 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:20:22,660 | [403] | DEBUG | ~8195 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:20:22,663 | [407] | DEBUG | ~8200 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:20:22,663 | [252] | DEBUG | ~8199 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:20:22,661 | [417] | DEBUG | ~8198 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:20:22,660 | [402] | DEBUG | ~8196 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:20:22,661 | [62] | DEBUG | ~8197 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:20:49,538 | [405] | DEBUG | ~8201 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:20:49,538 | [279] | DEBUG | ~8202 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:20:49,539 | [418] | DEBUG | ~8204 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:20:49,538 | [191] | DEBUG | ~8203 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:20:49,545 | [423] | DEBUG | ~8208 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:20:49,539 | [396] | DEBUG | ~8207 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:20:49,539 | [62] | DEBUG | ~8205 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:20:49,539 | [399] | DEBUG | ~8206 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:21:26,089 | [422] | DEBUG | ~8210 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:21:26,090 | [405] | DEBUG | ~8214 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:21:26,093 | [410] | DEBUG | ~8216 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:21:26,089 | [412] | DEBUG | ~8209 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:21:26,090 | [419] | DEBUG | ~8213 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:21:26,090 | [279] | DEBUG | ~8215 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:21:26,090 | [11] | DEBUG | ~8212 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:21:26,090 | [399] | DEBUG | ~8211 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:22:12,724 | [404] | DEBUG | ~8218 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:22:12,724 | [410] | DEBUG | ~8217 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:22:13,075 | [402] | DEBUG | ~8219 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:22:13,078 | [13] | DEBUG | ~8224 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:22:13,077 | [279] | DEBUG | ~8220 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:22:13,078 | [11] | DEBUG | ~8221 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:22:13,078 | [399] | DEBUG | ~8222 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:22:13,078 | [423] | DEBUG | ~8223 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:22:43,597 | [419] | DEBUG | ~8225 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:22:43,597 | [401] | DEBUG | ~8228 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:22:43,597 | [404] | DEBUG | ~8226 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:22:43,602 | [350] | DEBUG | ~8231 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:22:43,602 | [422] | DEBUG | ~8232 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:22:43,597 | [248] | DEBUG | ~8230 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:22:43,597 | [418] | DEBUG | ~8227 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:22:43,597 | [398] | DEBUG | ~8229 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:24:43,485 | [422] | DEBUG | ~8233 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:24:43,487 | [389] | DEBUG | ~8237 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:24:43,487 | [382] | DEBUG | ~8235 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:24:43,805 | [410] | DEBUG | ~8239 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:24:43,805 | [377] | DEBUG | ~8240 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:24:43,485 | [252] | DEBUG | ~8234 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:24:43,487 | [419] | DEBUG | ~8236 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:24:43,792 | [82] | DEBUG | ~8238 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:25:00,367 | [381] | DEBUG | ~8241 | 148~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 01:25:01,694 | [419] | DEBUG | ~8242 | 148~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42250','Available physical memory is high','2201796','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','815','1620471808','1425170432','01:56:08.3125000 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 01:26:24,761 | [410] | DEBUG | ~8244 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:26:24,761 | [407] | DEBUG | ~8243 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:26:25,082 | [382] | DEBUG | ~8245 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:26:25,086 | [11] | DEBUG | ~8250 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:26:25,084 | [422] | DEBUG | ~8248 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:26:25,082 | [252] | DEBUG | ~8246 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:26:25,084 | [419] | DEBUG | ~8247 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:26:25,086 | [305] | DEBUG | ~8249 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:28:51,448 | [392] | DEBUG | ~8251 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:28:51,448 | [376] | DEBUG | ~8252 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:28:51,484 | [408] | DEBUG | ~8254 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:28:51,493 | [394] | DEBUG | ~8253 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:28:51,957 | [408] | DEBUG | ~8255 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:28:52,375 | [228] | DEBUG | ~8257 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:28:51,956 | [407] | DEBUG | ~8256 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:28:52,375 | [120] | DEBUG | ~8258 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:29:52,841 | [382] | DEBUG | ~8259 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:29:52,841 | [401] | DEBUG | ~8260 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:29:53,141 | [377] | DEBUG | ~8262 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:29:53,144 | [305] | DEBUG | ~8263 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:29:53,144 | [407] | DEBUG | ~8264 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:29:53,149 | [400] | DEBUG | ~8266 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:29:53,148 | [228] | DEBUG | ~8265 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:29:53,142 | [197] | DEBUG | ~8261 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:30:00,334 | [382] | DEBUG | ~8267 | 158~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 01:30:01,467 | [411] | DEBUG | ~8268 | 158~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42238','Available physical memory is high','2202096','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','807','1572380672','1425170432','01:58:57.4062500 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 01:34:05,192 | [248] | DEBUG | ~8269 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:34:05,192 | [119] | DEBUG | ~8270 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:34:05,551 | [120] | DEBUG | ~8271 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:34:05,553 | [417] | DEBUG | ~8273 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:34:05,557 | [408] | DEBUG | ~8275 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:34:05,553 | [388] | DEBUG | ~8274 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:34:05,551 | [383] | DEBUG | ~8272 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:34:05,558 | [395] | DEBUG | ~8276 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:35:00,307 | [228] | DEBUG | ~8277 | 140~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 01:35:01,476 | [377] | DEBUG | ~8278 | 140~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42246','Available physical memory is high','2202396','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','806','1571348480','1425170432','02:01:25.1562500 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 01:36:03,909 | [119] | DEBUG | ~8279 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:36:03,909 | [409] | DEBUG | ~8280 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:36:04,309 | [400] | DEBUG | ~8281 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:36:04,310 | [228] | DEBUG | ~8283 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:36:04,310 | [166] | DEBUG | ~8285 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:36:04,310 | [412] | DEBUG | ~8284 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:36:04,309 | [389] | DEBUG | ~8282 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:36:04,310 | [388] | DEBUG | ~8286 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:37:01,019 | [418] | DEBUG | ~8287 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:37:01,019 | [395] | DEBUG | ~8288 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:37:01,424 | [398] | DEBUG | ~8289 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:37:01,425 | [392] | DEBUG | ~8293 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:37:01,424 | [197] | DEBUG | ~8290 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:37:01,428 | [252] | DEBUG | ~8294 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:37:01,425 | [386] | DEBUG | ~8292 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:37:01,425 | [228] | DEBUG | ~8291 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:39:28,126 | [228] | DEBUG | ~8296 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:39:28,126 | [400] | DEBUG | ~8295 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:39:28,506 | [409] | DEBUG | ~8298 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:39:28,506 | [418] | DEBUG | ~8297 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:39:28,517 | [197] | DEBUG | ~8302 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:39:28,515 | [386] | DEBUG | ~8301 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:39:28,507 | [252] | DEBUG | ~8300 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:39:28,507 | [389] | DEBUG | ~8299 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:40:00,075 | [409] | DEBUG | ~8303 | 140~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 01:40:02,426 | [388] | DEBUG | ~8304 | 140~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42230','Available physical memory is high','2202695','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','806','1571819520','1425170432','02:04:10.1718750 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 01:42:56,065 | [383] | DEBUG | ~8306 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:42:56,065 | [166] | DEBUG | ~8305 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:42:56,073 | [377] | DEBUG | ~8308 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:42:56,073 | [390] | DEBUG | ~8307 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:42:56,082 | [399] | DEBUG | ~8309 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:42:56,082 | [409] | DEBUG | ~8310 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:42:56,090 | [376] | DEBUG | ~8311 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:42:56,090 | [386] | DEBUG | ~8312 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:43:08,915 | [380] | DEBUG | ~8313 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:43:08,917 | [389] | DEBUG | ~8320 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:43:08,915 | [376] | DEBUG | ~8317 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:43:08,916 | [383] | DEBUG | ~8318 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:43:08,915 | [390] | DEBUG | ~8314 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:43:08,917 | [166] | DEBUG | ~8319 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:43:08,915 | [119] | DEBUG | ~8315 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:43:08,915 | [190] | DEBUG | ~8316 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:43:59,950 | [392] | DEBUG | ~8321 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:43:59,950 | [402] | DEBUG | ~8322 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:44:00,415 | [377] | DEBUG | ~8323 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:44:00,420 | [388] | DEBUG | ~8328 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:44:00,416 | [391] | DEBUG | ~8324 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:44:00,416 | [418] | DEBUG | ~8325 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:44:00,416 | [119] | DEBUG | ~8326 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:44:00,417 | [383] | DEBUG | ~8327 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:45:00,219 | [392] | DEBUG | ~8329 | 139~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 01:45:02,533 | [119] | DEBUG | ~8330 | 139~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42228','Available physical memory is high','2202996','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','807','1571995648','1425170432','02:06:50.9687500 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 01:45:48,647 | [379] | DEBUG | ~8331 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:45:48,647 | [388] | DEBUG | ~8332 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:45:49,122 | [392] | DEBUG | ~8333 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:45:49,122 | [386] | DEBUG | ~8335 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:45:49,122 | [11] | DEBUG | ~8336 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:45:49,137 | [402] | DEBUG | ~8337 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:45:49,137 | [382] | DEBUG | ~8338 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:45:49,122 | [418] | DEBUG | ~8334 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:45:55,082 | [389] | DEBUG | ~8339 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:45:55,089 | [380] | DEBUG | ~8344 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:45:55,092 | [119] | DEBUG | ~8346 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:45:55,092 | [11] | DEBUG | ~8345 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:45:55,083 | [392] | DEBUG | ~8340 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:45:55,083 | [386] | DEBUG | ~8341 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:45:55,083 | [377] | DEBUG | ~8342 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:45:55,089 | [394] | DEBUG | ~8343 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:47:04,661 | [11] | DEBUG | ~8348 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:47:04,661 | [392] | DEBUG | ~8347 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:47:04,672 | [389] | DEBUG | ~8349 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:47:04,672 | [386] | DEBUG | ~8350 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:47:04,685 | [119] | DEBUG | ~8351 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:47:04,685 | [388] | DEBUG | ~8352 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:47:04,694 | [382] | DEBUG | ~8353 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:47:04,694 | [377] | DEBUG | ~8354 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:48:12,681 | [406] | DEBUG | ~8355 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:48:12,681 | [401] | DEBUG | ~8356 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:48:13,151 | [376] | DEBUG | ~8357 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:48:13,151 | [11] | DEBUG | ~8358 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:48:13,161 | [376] | DEBUG | ~8359 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:48:13,162 | [389] | DEBUG | ~8360 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:48:13,164 | [379] | DEBUG | ~8361 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:48:13,162 | [380] | DEBUG | ~8362 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:50:00,365 | [386] | DEBUG | ~8363 | 152~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 01:50:01,733 | [395] | DEBUG | ~8364 | 152~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4696','65535','41837','Available physical memory is high','2203295','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','810','1572216832','1425170432','02:10:10.4062500 Since 02/Feb/2024 03:59:37','0')
+10 Feb 2024 01:51:46,540 | [197] | DEBUG | ~8366 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:51:46,540 | [388] | DEBUG | ~8365 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:51:47,724 | [380] | DEBUG | ~8368 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:51:48,072 | [248] | DEBUG | ~8371 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:51:48,072 | [386] | DEBUG | ~8372 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:51:47,725 | [392] | DEBUG | ~8369 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:51:47,724 | [395] | DEBUG | ~8367 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:51:47,725 | [11] | DEBUG | ~8370 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:53:04,733 | [377] | DEBUG | ~8373 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:53:04,744 | [388] | DEBUG | ~8375 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:53:04,734 | [252] | DEBUG | ~8374 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:53:05,150 | [386] | DEBUG | ~8380 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:53:05,079 | [377] | DEBUG | ~8379 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:53:04,745 | [379] | DEBUG | ~8377 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:53:04,747 | [381] | DEBUG | ~8378 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:53:04,745 | [418] | DEBUG | ~8376 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:54:33,025 | [252] | DEBUG | ~8381 | ~0~ EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:54:33,025 | [381] | DEBUG | ~8382 | EXEC mtd.stpApplicationMainMenuGet
+10 Feb 2024 01:54:33,405 | [389] | DEBUG | ~8383 | EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:54:33,409 | [400] | DEBUG | ~8388 | ~0~ EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:54:33,408 | [388] | DEBUG | ~8385 | EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:54:33,405 | [248] | DEBUG | ~8384 | ~0~ EXEC mtd.stpApplicationPreferencesGet
+10 Feb 2024 01:54:33,408 | [377] | DEBUG | ~8386 | ~0~ EXEC mtd.stpApplicationMenusLoadGet '<iData><UserIdentity>1</UserIdentity></iData>'
+10 Feb 2024 01:54:33,408 | [379] | DEBUG | ~8387 | EXEC mtd.stpApplicationThemeComponentList
+10 Feb 2024 01:55:00,349 | [402] | DEBUG | ~8389 | 152~ EXEC WITH SQLProcessCPU AS(SELECT TOP(30) SQLProcessUtilization AS 'CPU_Usage', ROW_NUMBER() OVER(ORDER BY(SELECT NULL)) AS 'row_number'FROM (SELECT record.value('(./Record/@id)[1]', 'int') AS record_id,record.value('(./Record/SchedulerMonitorEvent/SystemHealth/SystemIdle)[1]', 'int') AS[SystemIdle],record.value('(./Record/SchedulerMonitorEvent/SystemHealth/ProcessUtilization)[1]', 'int') AS[SQLProcessUtilization],[timestamp]FROM (SELECT[timestamp], CONVERT(xml, record) AS[record] FROM sys.dm_os_ring_buffers WHERE ring_buffer_type = N'RING_BUFFER_SCHEDULER_MONITOR' AND record LIKE '%<SystemHealth>%') AS x ) AS y)SELECT SERVERPROPERTY('SERVERNAME') AS 'DBInstance',(SELECT value_in_use FROM sys.configurations WHERE name like '%max server memory%') AS 'DBMaxServerMemory',(SELECT physical_memory_in_use_kb / 1024 FROM sys.dm_os_process_memory) AS 'DBMemoryUsageInMB',(SELECT total_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBPhysicalMemoryInMB',(SELECT available_physical_memory_kb / 1024 FROM sys.dm_os_sys_memory) AS 'DBAvailableMemoryInMB',(SELECT system_memory_state_desc FROM sys.dm_os_sys_memory) AS 'DBSystemMemoryState',(SELECT[cntr_value] FROM sys.dm_os_performance_counters WHERE[object_name] LIKE '%Manager%' AND[counter_name] = 'Page life expectancy') AS 'DBPageLifeExpectancy',(SELECT AVG(CPU_Usage) FROM SQLProcessCPU WHERE row_number BETWEEN 1 AND 100) AS 'DBCPUUsage',SYSUTCDATETIME() AS 'UsageAsOf'
+10 Feb 2024 01:55:01,555 | [228] | DEBUG | ~8390 | 152~ EXEC INSERT INTO [mtd].[APPLICATIONRESOURCEUSAGE](DBInstance,DBMaxServerMemory,DBMemoryUsageInMB,DBPhysicalMemoryInMB,DBAvailableMemoryInMB,DBSystemMemoryState,DBPageLifeExpectancy,DBCPUUsage,UsageAsOf,AppInstance,TrustedUsers,RCUsers,WebUsers,MobileUsers,IOTUsers,SignalRUsers,IOSUsers,AndroidUsers,PhysicalMemory,ServiceMemory,PeakMemoryUsage,TotalProcessorTime,ServiceCPUUsage)VALUES('LAINGDB01\DEV','59392','4697','65535','42204','Available physical memory is high','2203596','0',SYSUTCDATETIME(),'LAIBLRLT6156','15','0','0','0','0','0','0','1','808','1571356672','1425170432','02:13:15.7031250 Since 02/Feb/2024 03:59:37','-2.94178768848168E-09')
+10 Feb 2024 07:35:23,743 | [401] | DEBUG | ~8391 | 148~ EXEC DELETE FROM [mtd].[APPLICATIONUSERCACHE] WHERE UserToken = '434fa66f-2106-4bfb-98c8-2f04142ce950'
+ 

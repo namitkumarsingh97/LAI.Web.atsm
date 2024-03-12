@@ -1,0 +1,24 @@
+15 Dec 2023 10:23:09,045 | [20] | INFO  | ~1 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+15 Dec 2023 10:23:11,329 | [21] | INFO  | ~2 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+15 Dec 2023 10:23:11,814 | [20] | INFO  | ~3 | Application Path is verified.
+15 Dec 2023 10:23:11,820 | [22] | INFO  | ~4 | Logger Engine Initialized.
+15 Dec 2023 10:23:11,830 | [22] | INFO  | ~6 | Mapping Directories.
+15 Dec 2023 10:23:11,821 | [21] | INFO  | ~5 | Checked Network Availability.
+15 Dec 2023 10:23:12,349 | [26] | INFO  | ~7 | DB Backup Set To 0:30
+15 Dec 2023 10:23:12,351 | [24] | INFO  | ~8 | Log Backup Set To 17:30
+15 Dec 2023 10:23:12,353 | [22] | INFO  | ~9 | EOD Set To 0:1
+15 Dec 2023 10:23:12,567 | [21] | INFO  | ~10 | Config Loaded Successfully
+ 
+15 Dec 2023 16:12:10,362 | [20] | INFO  | ~1 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+15 Dec 2023 16:12:12,896 | [20] | INFO  | ~2 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+15 Dec 2023 16:12:13,011 | [21] | INFO  | ~3 | Application Path is verified.
+15 Dec 2023 16:12:13,011 | [22] | INFO  | ~4 | Logger Engine Initialized.
+15 Dec 2023 16:12:13,016 | [24] | INFO  | ~6 | Mapping Directories.
+15 Dec 2023 16:12:13,012 | [20] | INFO  | ~5 | Checked Network Availability.
+15 Dec 2023 16:12:13,182 | [21] | INFO  | ~7 | DB Backup Set To 0:30
+15 Dec 2023 16:12:13,183 | [24] | INFO  | ~8 | Log Backup Set To 17:30
+15 Dec 2023 16:12:13,185 | [22] | INFO  | ~9 | EOD Set To 0:1
+15 Dec 2023 16:12:13,247 | [24] | INFO  | ~10 | Config Loaded Successfully
+ 

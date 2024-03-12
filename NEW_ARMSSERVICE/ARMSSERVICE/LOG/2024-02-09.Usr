@@ -1,0 +1,23 @@
+09 Feb 2024 16:53:18,226 | [191] | INFO  | ~69 | Logging Out Token:720fa0b8-d58f-404a-b9bf-ed0f49121f22
+09 Feb 2024 16:54:00,599 | [286] | INFO  | ~70 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.5
+09 Feb 2024 16:54:00,660 | [82] | INFO  | ~71 | ADMIN User Authenticated !!
+09 Feb 2024 16:54:10,457 | [108] | INFO  | ~72 | Logging Out Token:3f01a5e5-30b1-4c85-b29f-88128392315d
+09 Feb 2024 16:54:10,999 | [70] | INFO  | ~73 | Logging Out Token:3f01a5e5-30b1-4c85-b29f-88128392315d
+09 Feb 2024 16:54:13,487 | [214] | INFO  | ~74 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.5
+09 Feb 2024 16:54:13,577 | [173] | INFO  | ~75 | ADMIN User Authenticated !!
+09 Feb 2024 17:09:15,976 | [73] | INFO  | ~76 | Logging Out Token:cc94b679-65e5-42a6-9fbe-f7f15625c03b
+09 Feb 2024 17:09:20,965 | [72] | INFO  | ~77 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.5
+09 Feb 2024 17:09:21,027 | [206] | INFO  | ~78 | ADMIN User Authenticated !!
+09 Feb 2024 17:13:29,386 | [204] | INFO  | ~79 | UserName:ADMIN Logged Client Type CDT_DEFAULT::127.0.0.1
+09 Feb 2024 17:13:29,444 | [206] | INFO  | ~80 | ADMIN User Authenticated !!
+09 Feb 2024 17:26:49,938 | [242] | INFO  | ~81 | Logging Out Token:85ce0a6a-69f7-4d0d-8ad1-cbf66215f010
+09 Feb 2024 17:27:04,480 | [283] | INFO  | ~82 | UserName:ADMIN Logged Client Type CDT_DEFAULT::127.0.0.1
+09 Feb 2024 17:27:04,550 | [209] | INFO  | ~83 | ADMIN User Authenticated !!
+09 Feb 2024 18:35:01,205 | [287] | INFO  | ~84 | Scavenging Inactivate User d58eb34d-10e6-4b04-ba2b-311779a8275a:ADMIN
+09 Feb 2024 18:35:01,207 | [189] | INFO  | ~86 | Unable To Logout Token :
+09 Feb 2024 18:35:01,206 | [13] | INFO  | ~85 | ADMIN Logged Out From Host - PID:
+09 Feb 2024 22:32:04,642 | [193] | INFO  | ~88 | Invalid Token:|d58eb34d-10e6-4b04-ba2b-311779a8275a
+09 Feb 2024 22:32:04,642 | [239] | INFO  | ~87 | Logging Out Token:d58eb34d-10e6-4b04-ba2b-311779a8275a
+09 Feb 2024 22:38:37,010 | [177] | INFO  | ~89 | UserName:ADMIN Logged Client Type CDT_DEFAULT::127.0.0.1
+09 Feb 2024 22:38:37,076 | [234] | INFO  | ~90 | ADMIN User Authenticated !!
+ 

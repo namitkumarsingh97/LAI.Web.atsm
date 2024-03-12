@@ -1,0 +1,10 @@
+23 Nov 2023 18:29:52,837 | [5] | INFO  | ~1 | User Logged In LDAP
+23 Nov 2023 18:29:55,207 | [6] | INFO  | ~2 | Validation Failed For Login In AD 
+ 
+23 Nov 2023 18:29:58,176 | [8] | INFO  | ~3 | User Logged In LDAP
+23 Nov 2023 18:29:59,394 | [4] | INFO  | ~4 | AD User : NT AUTHORITY\SYSTEM Validated.
+ 
+23 Nov 2023 18:30:00,193 | [15] | INFO  | ~5 | User Logged In LDAP
+23 Nov 2023 18:30:00,276 | [8] | INFO  | ~6 | AD User : NT AUTHORITY\SYSTEM Validated.
+ 
+ 

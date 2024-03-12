@@ -1,0 +1,53 @@
+08 Mar 2024 17:57:44,312 | [8] | INFO  | ~1 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsWindowsService.exe
+08 Mar 2024 17:57:47,645 | [11] | INFO  | ~2 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+08 Mar 2024 17:57:48,198 | [7] | INFO  | ~3 | Application Path is verified.
+08 Mar 2024 17:57:48,198 | [8] | INFO  | ~4 | Logger Engine Initialized.
+08 Mar 2024 17:57:48,198 | [5] | INFO  | ~5 | Checked Network Availability.
+08 Mar 2024 17:57:48,214 | [9] | INFO  | ~6 | Mapping Directories.
+08 Mar 2024 17:57:49,508 | [11] | INFO  | ~7 | DB Backup Set To 0:30
+08 Mar 2024 17:57:49,524 | [10] | INFO  | ~8 | Log Backup Set To 17:30
+08 Mar 2024 17:57:49,524 | [7] | INFO  | ~9 | EOD Set To 0:1
+08 Mar 2024 17:57:49,776 | [11] | INFO  | ~10 | Config Loaded Successfully
+08 Mar 2024 17:57:54,550 | [5] | INFO  | ~11 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsWindowsService.exe
+08 Mar 2024 17:57:55,370 | [10] | INFO  | ~12 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+08 Mar 2024 17:57:55,558 | [5] | INFO  | ~13 | Application Path is verified.
+08 Mar 2024 17:57:55,558 | [7] | INFO  | ~14 | Logger Engine Initialized.
+08 Mar 2024 17:57:55,605 | [9] | INFO  | ~15 | Checked Network Availability.
+08 Mar 2024 17:57:55,605 | [6] | INFO  | ~16 | Mapping Directories.
+08 Mar 2024 17:57:55,766 | [11] | INFO  | ~17 | DB Backup Set To 0:30
+08 Mar 2024 17:57:55,767 | [11] | INFO  | ~18 | Log Backup Set To 17:30
+08 Mar 2024 17:57:55,769 | [7] | INFO  | ~19 | EOD Set To 0:1
+08 Mar 2024 17:57:55,842 | [10] | INFO  | ~20 | Config Loaded Successfully
+08 Mar 2024 17:57:55,890 | [7] | INFO  | ~21 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsWindowsService.exe
+08 Mar 2024 17:57:55,906 | [10] | INFO  | ~22 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+08 Mar 2024 17:57:56,111 | [6] | INFO  | ~23 | Application Path is verified.
+08 Mar 2024 17:57:56,111 | [9] | INFO  | ~24 | Logger Engine Initialized.
+08 Mar 2024 17:57:56,143 | [4] | INFO  | ~25 | Checked Network Availability.
+08 Mar 2024 17:57:56,143 | [7] | INFO  | ~26 | Mapping Directories.
+08 Mar 2024 17:57:56,441 | [5] | INFO  | ~27 | DB Backup Set To 0:30
+08 Mar 2024 17:57:56,457 | [5] | INFO  | ~28 | Log Backup Set To 17:30
+08 Mar 2024 17:57:56,457 | [11] | INFO  | ~29 | EOD Set To 0:1
+08 Mar 2024 17:57:56,583 | [11] | INFO  | ~30 | Config Loaded Successfully
+08 Mar 2024 17:57:56,598 | [10] | INFO  | ~31 | Setting File Import Cache
+08 Mar 2024 17:57:57,291 | [9] | INFO  | ~32 | Lazy DS Processing Enabled
+08 Mar 2024 17:57:59,383 | [4] | INFO  | ~33 | Lazy Audit Write Enabled
+08 Mar 2024 17:57:59,716 | [11] | INFO  | ~34 | Lazy SignalR Notify Enabled
+08 Mar 2024 17:57:59,716 | [10] | INFO  | ~35 | MSMQ Initialized.
+08 Mar 2024 18:01:28,893 | [21] | INFO  | ~1 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+08 Mar 2024 18:01:31,458 | [21] | INFO  | ~2 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+08 Mar 2024 18:01:31,760 | [23] | INFO  | ~3 | Logger Engine Initialized.
+08 Mar 2024 18:01:31,760 | [22] | INFO  | ~4 | Application Path is verified.
+08 Mar 2024 18:01:31,768 | [25] | INFO  | ~6 | Mapping Directories.
+08 Mar 2024 18:01:31,768 | [21] | INFO  | ~5 | Checked Network Availability.
+08 Mar 2024 18:01:32,980 | [23] | INFO  | ~7 | DB Backup Set To 0:30
+08 Mar 2024 18:01:32,987 | [25] | INFO  | ~8 | Log Backup Set To 17:30
+08 Mar 2024 18:01:32,987 | [22] | INFO  | ~9 | EOD Set To 0:1
+08 Mar 2024 18:01:33,167 | [25] | INFO  | ~10 | Config Loaded Successfully
+08 Mar 2024 18:31:20,042 | [80] | INFO  | ~36 | Database NOT Initialized.
+08 Mar 2024 18:31:20,064 | [82] | INFO  | ~37 | Loading Metadata Users !!
+08 Mar 2024 18:31:20,088 | [70] | INFO  | ~38 | TSC:1
+ 

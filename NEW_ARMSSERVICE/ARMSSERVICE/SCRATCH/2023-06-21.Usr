@@ -1,0 +1,30 @@
+21 Jun 2023 09:10:13,386 | [21] | INFO  | ~1 | User Logged In LDAP
+21 Jun 2023 09:10:15,523 | [22] | INFO  | ~2 | AD User : LAMINAAR\namit.singh Validated.
+ 
+21 Jun 2023 09:10:23,430 | [17] | INFO  | ~1 | User Logged In LDAP
+21 Jun 2023 09:10:23,429 | [16] | INFO  | ~2 | AD User : LAMINAAR\namit.singh Validated.
+ 
+21 Jun 2023 09:10:25,107 | [24] | INFO  | ~3 | User Logged In LDAP
+21 Jun 2023 09:10:29,813 | [16] | INFO  | ~3 | User Logged In LDAP
+21 Jun 2023 09:10:36,455 | [26] | INFO  | ~4 | User Logged In LDAP
+21 Jun 2023 09:10:36,472 | [20] | INFO  | ~5 | AD User : LAMINAAR\namit.singh Validated.
+ 
+21 Jun 2023 09:10:38,028 | [26] | INFO  | ~6 | User Logged In LDAP
+21 Jun 2023 09:10:38,041 | [29] | INFO  | ~7 | AD User : LAMINAAR\namit.singh Validated.
+ 
+21 Jun 2023 09:27:42,275 | [19] | INFO  | ~8 | Logging Out Token:7a869bcc-d4a6-44fe-9720-4b8bb89f3bd2
+21 Jun 2023 09:27:42,275 | [55] | INFO  | ~9 | Invalid Token:|7a869bcc-d4a6-44fe-9720-4b8bb89f3bd2
+21 Jun 2023 09:27:45,452 | [49] | INFO  | ~10 | UserName:ADMIN Logged Client Type CDT_DEFAULT::172.18.11.30
+21 Jun 2023 09:27:45,491 | [52] | INFO  | ~11 | ADMIN User Authenticated !!
+21 Jun 2023 10:50:00,081 | [55] | INFO  | ~12 | Scavenging Inactivate User 122ed48e-652e-45fe-8de3-8a1b35ed4d26:ADMIN
+21 Jun 2023 10:50:00,081 | [28] | INFO  | ~13 | ADMIN Logged Out From Host - PID:
+21 Jun 2023 10:50:00,081 | [51] | INFO  | ~14 | Unable To Logout Token :
+21 Jun 2023 14:37:54,945 | [61] | INFO  | ~15 | Logging Out Token:122ed48e-652e-45fe-8de3-8a1b35ed4d26
+21 Jun 2023 14:37:54,945 | [22] | INFO  | ~16 | Invalid Token:|122ed48e-652e-45fe-8de3-8a1b35ed4d26
+21 Jun 2023 14:37:57,008 | [70] | INFO  | ~17 | UserName:ADMIN Logged Client Type CDT_DEFAULT::172.18.11.30
+21 Jun 2023 14:37:57,023 | [62] | INFO  | ~18 | ADMIN User Authenticated !!
+21 Jun 2023 17:55:00,067 | [22] | INFO  | ~20 | ADMIN Logged Out From Host - PID:
+21 Jun 2023 17:55:00,067 | [46] | INFO  | ~19 | Scavenging Inactivate User 57290e6a-ed44-4211-bf8d-f05a3473412e:ADMIN
+21 Jun 2023 17:55:00,067 | [80] | INFO  | ~21 | Unable To Logout Token :
+ 
+ 

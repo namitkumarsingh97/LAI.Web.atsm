@@ -1,0 +1,25 @@
+28 Sep 2023 08:50:20,089 | [69] | INFO  | ~31 | Scavenging Inactivate User bd3e6876-7b20-4d0b-a9f7-da9858915503:ADMIN
+28 Sep 2023 08:50:20,089 | [62] | INFO  | ~32 | ADMIN Logged Out From Host - PID:
+28 Sep 2023 08:50:20,091 | [56] | INFO  | ~33 | Unable To Logout Token :
+28 Sep 2023 08:58:02,008 | [69] | INFO  | ~35 | Invalid Token:|bd3e6876-7b20-4d0b-a9f7-da9858915503
+28 Sep 2023 08:58:02,008 | [91] | INFO  | ~34 | Logging Out Token:bd3e6876-7b20-4d0b-a9f7-da9858915503
+28 Sep 2023 08:58:04,532 | [128] | INFO  | ~36 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.7
+28 Sep 2023 08:58:04,595 | [84] | INFO  | ~37 | ADMIN User Authenticated !!
+28 Sep 2023 14:00:00,407 | [105] | INFO  | ~38 | Scavenging Inactivate User 3b736b62-353e-4ed0-a574-5ecdef2cae02:ADMIN
+28 Sep 2023 14:00:00,409 | [52] | INFO  | ~40 | Unable To Logout Token :
+28 Sep 2023 14:00:00,407 | [132] | INFO  | ~39 | ADMIN Logged Out From Host - PID:
+28 Sep 2023 14:03:21,273 | [20] | INFO  | ~41 | Logging Out Token:3b736b62-353e-4ed0-a574-5ecdef2cae02
+28 Sep 2023 14:03:21,273 | [69] | INFO  | ~42 | Invalid Token:|3b736b62-353e-4ed0-a574-5ecdef2cae02
+28 Sep 2023 14:03:23,344 | [128] | INFO  | ~43 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.7
+28 Sep 2023 14:03:23,447 | [62] | INFO  | ~44 | ADMIN User Authenticated !!
+28 Sep 2023 16:05:00,659 | [69] | INFO  | ~45 | Scavenging Inactivate User b7f8fd59-5d70-4a9f-849d-4d21985ca65f:ADMIN
+28 Sep 2023 16:05:00,660 | [48] | INFO  | ~47 | Unable To Logout Token :
+28 Sep 2023 16:05:00,659 | [134] | INFO  | ~46 | ADMIN Logged Out From Host - PID:
+28 Sep 2023 16:05:36,622 | [134] | INFO  | ~49 | Invalid Token:|b7f8fd59-5d70-4a9f-849d-4d21985ca65f
+28 Sep 2023 16:05:36,622 | [55] | INFO  | ~48 | Logging Out Token:b7f8fd59-5d70-4a9f-849d-4d21985ca65f
+28 Sep 2023 16:05:38,980 | [20] | INFO  | ~50 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.7
+28 Sep 2023 16:05:39,042 | [55] | INFO  | ~51 | ADMIN User Authenticated !!
+28 Sep 2023 20:57:57,338 | [82] | INFO  | ~52 | ADMIN Logged Out From Host - PID:
+28 Sep 2023 20:57:57,338 | [59] | INFO  | ~53 | Scavenging Inactivate User 54e32aaf-c4e2-4e6b-bdcc-1b171972b3ba:ADMIN
+28 Sep 2023 20:57:57,339 | [107] | INFO  | ~54 | Unable To Logout Token :
+ 

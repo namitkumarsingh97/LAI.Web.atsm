@@ -1,0 +1,32 @@
+25 Aug 2023 08:04:53,495 | [138] | INFO  | ~103 | Scavenging Inactivate User dc10705b-1268-48e1-b96b-a0a207393836:ADMIN
+25 Aug 2023 08:04:53,495 | [147] | INFO  | ~104 | Unable To Logout Token :
+25 Aug 2023 08:04:53,495 | [66] | INFO  | ~102 | ADMIN Logged Out From Host - PID:
+25 Aug 2023 08:05:49,972 | [117] | INFO  | ~105 | Logging Out Token:dc10705b-1268-48e1-b96b-a0a207393836
+25 Aug 2023 08:05:49,972 | [72] | INFO  | ~106 | Invalid Token:|dc10705b-1268-48e1-b96b-a0a207393836
+25 Aug 2023 08:06:16,613 | [100] | INFO  | ~107 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.5
+25 Aug 2023 08:06:16,676 | [55] | INFO  | ~108 | ADMIN User Authenticated !!
+ 
+25 Aug 2023 11:06:41,783 | [11] | INFO  | ~1 | User Logged In LDAP
+25 Aug 2023 11:06:46,447 | [15] | INFO  | ~2 | AD User : LAMINAAR\namit.singh Validated.
+ 
+25 Aug 2023 11:06:53,144 | [9] | INFO  | ~3 | User Logged In LDAP
+25 Aug 2023 11:07:03,862 | [9] | INFO  | ~4 | User Logged In LDAP
+25 Aug 2023 11:07:03,871 | [15] | INFO  | ~5 | AD User : LAMINAAR\namit.singh Validated.
+ 
+25 Aug 2023 11:07:24,586 | [10] | INFO  | ~6 | User Logged In LDAP
+25 Aug 2023 11:07:24,597 | [12] | INFO  | ~7 | AD User : LAMINAAR\namit.singh Validated.
+ 
+25 Aug 2023 11:07:51,622 | [49] | INFO  | ~8 | Logging Out Token:47bbb602-dc0e-41dd-9ba2-2ee6d341d1d4
+25 Aug 2023 11:07:51,623 | [13] | INFO  | ~9 | Invalid Token:|47bbb602-dc0e-41dd-9ba2-2ee6d341d1d4
+25 Aug 2023 11:07:56,497 | [10] | INFO  | ~10 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.5
+25 Aug 2023 11:07:56,582 | [9] | INFO  | ~11 | ADMIN User Authenticated !!
+25 Aug 2023 13:51:39,395 | [69] | INFO  | ~12 | Scavenging Inactivate User dce03d69-daea-41d5-98cf-c0960b4f8464:ADMIN
+25 Aug 2023 13:51:39,396 | [14] | INFO  | ~14 | Unable To Logout Token :
+25 Aug 2023 13:51:39,396 | [24] | INFO  | ~13 | ADMIN Logged Out From Host - PID:
+25 Aug 2023 16:44:11,971 | [56] | INFO  | ~16 | Invalid Token:|dce03d69-daea-41d5-98cf-c0960b4f8464
+25 Aug 2023 16:44:11,971 | [55] | INFO  | ~15 | Logging Out Token:dce03d69-daea-41d5-98cf-c0960b4f8464
+25 Aug 2023 16:44:55,453 | [55] | INFO  | ~17 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.5
+25 Aug 2023 16:44:55,596 | [53] | INFO  | ~18 | ADMIN User Authenticated !!
+25 Aug 2023 16:44:55,657 | [25] | INFO  | ~19 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.5
+25 Aug 2023 16:44:55,726 | [52] | INFO  | ~20 | ADMIN User Authenticated !!
+ 

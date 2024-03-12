@@ -1,0 +1,59 @@
+ 
+14 Jun 2023 11:23:29,192 | [21] | INFO  | ~1 | User Logged In LDAP
+14 Jun 2023 11:23:29,193 | [22] | INFO  | ~2 | AD User : LAMINAAR\namit.singh Validated.
+ 
+14 Jun 2023 11:23:35,779 | [20] | INFO  | ~3 | User Logged In LDAP
+14 Jun 2023 11:24:10,235 | [25] | INFO  | ~3 | User Logged In LDAP
+14 Jun 2023 11:24:48,956 | [5] | INFO  | ~1 | User Logged In LDAP
+14 Jun 2023 11:24:51,207 | [4] | INFO  | ~2 | Validation Failed For Login In AD 
+ 
+14 Jun 2023 11:24:54,716 | [5] | INFO  | ~3 | User Logged In LDAP
+14 Jun 2023 11:24:54,745 | [8] | INFO  | ~4 | AD User : NT AUTHORITY\SYSTEM Validated.
+ 
+14 Jun 2023 11:24:57,746 | [10] | INFO  | ~5 | User Logged In LDAP
+14 Jun 2023 11:24:57,786 | [4] | INFO  | ~6 | AD User : NT AUTHORITY\SYSTEM Validated.
+ 
+ 
+14 Jun 2023 11:27:06,048 | [7] | INFO  | ~4 | User Logged In LDAP
+14 Jun 2023 11:27:06,080 | [18] | INFO  | ~5 | AD User : LAMINAAR\namit.singh Validated.
+ 
+14 Jun 2023 11:27:06,912 | [10] | INFO  | ~6 | User Logged In LDAP
+14 Jun 2023 11:27:06,929 | [15] | INFO  | ~7 | AD User : LAMINAAR\namit.singh Validated.
+ 
+14 Jun 2023 11:29:53,348 | [5] | INFO  | ~1 | User Logged In LDAP
+14 Jun 2023 11:29:55,355 | [5] | INFO  | ~2 | Validation Failed For Login In AD 
+ 
+14 Jun 2023 11:29:56,544 | [8] | INFO  | ~3 | User Logged In LDAP
+14 Jun 2023 11:29:56,568 | [4] | INFO  | ~4 | AD User : NT AUTHORITY\SYSTEM Validated.
+ 
+14 Jun 2023 11:29:57,376 | [5] | INFO  | ~5 | User Logged In LDAP
+14 Jun 2023 11:29:57,398 | [8] | INFO  | ~6 | AD User : NT AUTHORITY\SYSTEM Validated.
+ 
+ 
+14 Jun 2023 11:30:05,722 | [47] | INFO  | ~4 | User Logged In LDAP
+14 Jun 2023 11:30:05,750 | [39] | INFO  | ~5 | AD User : LAMINAAR\namit.singh Validated.
+ 
+14 Jun 2023 11:30:06,393 | [41] | INFO  | ~6 | User Logged In LDAP
+14 Jun 2023 11:30:06,408 | [42] | INFO  | ~7 | AD User : LAMINAAR\namit.singh Validated.
+ 
+ 
+14 Jun 2023 14:31:37,425 | [52] | INFO  | ~8 | User Logged In LDAP
+14 Jun 2023 14:31:38,672 | [64] | INFO  | ~9 | User Logged In LDAP
+14 Jun 2023 14:31:39,733 | [56] | INFO  | ~10 | AD User : LAMINAAR\namit.singh Validated.
+ 
+14 Jun 2023 14:31:40,940 | [60] | INFO  | ~11 | AD User : LAMINAAR\namit.singh Validated.
+ 
+ 
+14 Jun 2023 14:32:12,436 | [21] | INFO  | ~1 | User Logged In LDAP
+14 Jun 2023 14:32:12,445 | [22] | INFO  | ~2 | AD User : LAMINAAR\namit.singh Validated.
+ 
+14 Jun 2023 14:32:18,169 | [21] | INFO  | ~3 | User Logged In LDAP
+14 Jun 2023 14:32:33,114 | [17] | INFO  | ~4 | User Logged In LDAP
+14 Jun 2023 14:32:33,122 | [21] | INFO  | ~5 | AD User : LAMINAAR\namit.singh Validated.
+ 
+14 Jun 2023 14:32:34,059 | [21] | INFO  | ~6 | User Logged In LDAP
+14 Jun 2023 14:32:34,068 | [19] | INFO  | ~7 | AD User : LAMINAAR\namit.singh Validated.
+ 
+14 Jun 2023 14:47:37,679 | [16] | INFO  | ~8 | UserName:ADMIN Logged Client Type CDT_DEFAULT::172.18.11.30
+14 Jun 2023 14:47:37,701 | [52] | INFO  | ~9 | ADMIN User Authenticated !!
+ 

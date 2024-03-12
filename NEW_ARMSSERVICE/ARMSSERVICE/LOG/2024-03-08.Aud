@@ -1,0 +1,22 @@
+08 Mar 2024 09:02:39,293 | [241] | INFO  | ~52 | Zipping Logs took 55815 Secs
+08 Mar 2024 09:02:39,293 | [155] | INFO  | ~53 | Archived Logs  Succeeded !!
+08 Mar 2024 10:51:49,667 | [236] | INFO  | ~54 | 
+
+Starting Async Purging Of Archive Database ...
+08 Mar 2024 10:51:49,717 | [59] | INFO  | ~55 | Archive DB Returned NULL Dataset !!
+ 
+ 
+08 Mar 2024 17:57:49,555 | [6] | INFO  | ~1 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+08 Mar 2024 17:57:55,778 | [9] | INFO  | ~2 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+08 Mar 2024 17:57:56,457 | [7] | INFO  | ~3 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+ 
+08 Mar 2024 18:01:33,002 | [21] | INFO  | ~1 | iOS PNS Certificate File : [D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\CERTIFICATES\AOMEnterprise.p12] Configured !!
+08 Mar 2024 18:05:45,752 | [22] | INFO  | ~4 | Power Event On Services !!
+08 Mar 2024 18:05:46,322 | [25] | INFO  | ~5 | Power Event On Services !!
+ 
+08 Mar 2024 18:31:48,998 | [79] | INFO  | ~6 | Power Event On Services !!
+08 Mar 2024 18:31:49,978 | [90] | INFO  | ~7 | Power Event On Services !!
+08 Mar 2024 18:31:50,799 | [70] | INFO  | ~8 | Power Event On Services !!
+ 

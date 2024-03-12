@@ -1,0 +1,16 @@
+08 Mar 2024 14:01:42,887 | [265] | INFO  | ~82 | Logging Out Token:9a2c5901-21fe-4dc2-b715-7ad61fa802cb
+ 
+08 Mar 2024 17:57:44,312 | [5] | INFO  | ~1 | User Logged In LDAP
+08 Mar 2024 17:57:47,645 | [6] | INFO  | ~2 | Validation Failed For Login In AD 
+ 
+08 Mar 2024 17:57:54,550 | [11] | INFO  | ~3 | User Logged In LDAP
+08 Mar 2024 17:57:55,370 | [6] | INFO  | ~4 | AD User : NT AUTHORITY\SYSTEM Validated.
+ 
+08 Mar 2024 17:57:55,890 | [9] | INFO  | ~5 | User Logged In LDAP
+08 Mar 2024 17:57:55,906 | [4] | INFO  | ~6 | AD User : NT AUTHORITY\SYSTEM Validated.
+ 
+08 Mar 2024 18:01:28,893 | [22] | INFO  | ~1 | User Logged In LDAP
+08 Mar 2024 18:01:31,458 | [22] | INFO  | ~2 | AD User : LAMINAAR\namit.singh Validated.
+ 
+08 Mar 2024 18:01:40,912 | [23] | INFO  | ~3 | User Logged In LDAP
+ 

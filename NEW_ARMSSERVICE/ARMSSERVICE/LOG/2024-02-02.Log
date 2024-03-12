@@ -1,0 +1,404 @@
+02 Feb 2024 09:11:49,403 | [20] | INFO  | ~1 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+02 Feb 2024 09:11:53,725 | [20] | INFO  | ~2 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+02 Feb 2024 09:11:54,044 | [24] | INFO  | ~3 | Logger Engine Initialized.
+02 Feb 2024 09:11:54,044 | [22] | INFO  | ~4 | Application Path is verified.
+02 Feb 2024 09:11:54,048 | [20] | INFO  | ~5 | Checked Network Availability.
+02 Feb 2024 09:11:54,052 | [24] | INFO  | ~6 | Mapping Directories.
+02 Feb 2024 09:11:54,686 | [22] | INFO  | ~7 | DB Backup Set To 0:30
+02 Feb 2024 09:11:54,690 | [21] | INFO  | ~8 | Log Backup Set To 17:30
+02 Feb 2024 09:11:54,694 | [21] | INFO  | ~9 | EOD Set To 0:1
+02 Feb 2024 09:11:54,889 | [20] | INFO  | ~10 | Config Loaded Successfully
+02 Feb 2024 09:29:31,496 | [162] | INFO  | ~11 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+02 Feb 2024 09:29:36,233 | [165] | INFO  | ~12 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+02 Feb 2024 09:29:36,489 | [166] | INFO  | ~14 | Logger Engine Initialized.
+02 Feb 2024 09:29:36,489 | [170] | INFO  | ~13 | Application Path is verified.
+02 Feb 2024 09:29:36,516 | [169] | INFO  | ~15 | Checked Network Availability.
+02 Feb 2024 09:29:36,516 | [165] | INFO  | ~16 | Mapping Directories.
+02 Feb 2024 09:29:36,808 | [164] | INFO  | ~17 | DB Backup Set To 0:30
+02 Feb 2024 09:29:36,810 | [164] | INFO  | ~18 | Log Backup Set To 17:30
+02 Feb 2024 09:29:36,812 | [167] | INFO  | ~19 | EOD Set To 0:1
+02 Feb 2024 09:29:36,945 | [162] | INFO  | ~20 | Config Loaded Successfully
+02 Feb 2024 09:29:37,030 | [167] | INFO  | ~21 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+02 Feb 2024 09:29:37,064 | [166] | INFO  | ~22 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+02 Feb 2024 09:29:37,341 | [169] | INFO  | ~23 | Application Path is verified.
+02 Feb 2024 09:29:37,341 | [165] | INFO  | ~24 | Logger Engine Initialized.
+02 Feb 2024 09:29:37,364 | [166] | INFO  | ~25 | Checked Network Availability.
+02 Feb 2024 09:29:37,364 | [164] | INFO  | ~26 | Mapping Directories.
+02 Feb 2024 09:29:37,777 | [162] | INFO  | ~27 | DB Backup Set To 0:30
+02 Feb 2024 09:29:37,784 | [165] | INFO  | ~28 | Log Backup Set To 17:30
+02 Feb 2024 09:29:37,787 | [167] | INFO  | ~29 | EOD Set To 0:1
+02 Feb 2024 09:29:38,018 | [166] | INFO  | ~30 | Config Loaded Successfully
+02 Feb 2024 09:29:38,023 | [167] | INFO  | ~31 | Setting File Import Cache
+02 Feb 2024 09:29:38,818 | [164] | INFO  | ~32 | Lazy DS Processing Enabled
+02 Feb 2024 09:29:41,401 | [164] | INFO  | ~33 | Lazy Audit Write Enabled
+02 Feb 2024 09:29:41,734 | [169] | INFO  | ~34 | Lazy SignalR Notify Enabled
+02 Feb 2024 09:29:41,734 | [165] | INFO  | ~35 | MSMQ Initialized.
+02 Feb 2024 09:29:45,058 | [166] | INFO  | ~36 | Synced Date Time With DB Server
+02 Feb 2024 09:29:46,456 | [163] | INFO  | ~37 | Database Engine Initialized.
+02 Feb 2024 09:29:46,466 | [165] | INFO  | ~38 | POP3 Engine Initialized.
+02 Feb 2024 09:29:46,491 | [162] | INFO  | ~39 | SMTP Engine Initialized.
+02 Feb 2024 09:29:46,549 | [160] | INFO  | ~40 | CRON Engine Initialized.
+02 Feb 2024 09:29:46,582 | [169] | INFO  | ~41 | Loading Metadata Users !!
+02 Feb 2024 09:29:46,619 | [167] | INFO  | ~42 | TSC:1
+02 Feb 2024 09:29:46,619 | [163] | INFO  | ~43 | Loading ORM !!
+02 Feb 2024 09:29:46,834 | [164] | INFO  | ~44 | Loading Trusted Subscribers !!
+02 Feb 2024 09:29:46,951 | [170] | INFO  | ~45 | Registered Peers IP:192.168.16.113:192.168.1.5
+02 Feb 2024 09:29:46,952 | [163] | INFO  | ~46 | Registered 11 trusted users.
+02 Feb 2024 09:29:46,953 | [169] | INFO  | ~50 | Loading Trusted Devices !!
+02 Feb 2024 09:29:46,952 | [165] | INFO  | ~47 | Registered NLB Token
+02 Feb 2024 09:29:46,952 | [167] | INFO  | ~48 | Registered NLB Peers192.168.16.113,
+02 Feb 2024 09:29:46,952 | [160] | INFO  | ~49 | Server Slave To 192.168.16.114:9095
+02 Feb 2024 09:29:47,046 | [166] | INFO  | ~51 | Cached 2 trusted devices.
+02 Feb 2024 09:29:47,046 | [170] | INFO  | ~52 | Loading Application Metadata !!
+02 Feb 2024 09:29:47,186 | [162] | INFO  | ~53 | Dynamic Parsing Disabled : No Metadata Defined !!
+02 Feb 2024 09:29:48,209 | [170] | INFO  | ~54 | User Scavenger CRON Initialized 
+
+02 Feb 2024 09:29:48,355 | [165] | INFO  | ~55 | LOG Backup CRON Initialized 
+
+02 Feb 2024 09:29:48,449 | [162] | INFO  | ~56 | Loaded Application Emails:4
+02 Feb 2024 09:29:48,451 | [167] | INFO  | ~58 | SMS Monitor CRON Initialized 
+
+02 Feb 2024 09:29:48,451 | [169] | INFO  | ~57 | POP Emails CRON Initialized 
+
+02 Feb 2024 09:29:48,452 | [170] | INFO  | ~59 | DB Backup CRON Initialized 
+
+02 Feb 2024 09:29:48,454 | [165] | INFO  | ~60 | Memory Monitor CRON Initialized 
+
+02 Feb 2024 09:29:48,456 | [163] | INFO  | ~61 | Memory Monitor CRON Initialized 
+
+02 Feb 2024 09:29:48,458 | [162] | INFO  | ~62 | Network Monitor CRON Initialized 
+
+02 Feb 2024 09:29:48,460 | [164] | INFO  | ~63 | EOD CRON Initialized 
+
+02 Feb 2024 09:29:48,746 | [167] | INFO  | ~64 | Hosting http://192.168.1.5:9095/arms/IDBO
+02 Feb 2024 09:29:49,250 | [169] | INFO  | ~65 | Hosted SData hosted at http://192.168.1.5:9095/arms/IDBO
+
+02 Feb 2024 09:29:49,251 | [166] | INFO  | ~66 | Hosting http://192.168.1.5:9095/arms/IFIO
+02 Feb 2024 09:29:49,286 | [165] | INFO  | ~67 | Hosted SFile hosted at http://192.168.1.5:9095/arms/IFIO
+
+02 Feb 2024 09:29:49,288 | [164] | INFO  | ~68 | Hosting http://192.168.1.5:9095/arms/IDSO
+02 Feb 2024 09:29:49,298 | [167] | INFO  | ~69 | Hosted SDataStream hosted at http://192.168.1.5:9095/arms/IDSO
+
+02 Feb 2024 09:29:49,298 | [163] | INFO  | ~70 | Hosting http://192.168.1.5:9095/arms/IUSO
+02 Feb 2024 09:29:49,335 | [166] | INFO  | ~71 | Hosted SUser hosted at http://192.168.1.5:9095/arms/IUSO
+
+02 Feb 2024 09:29:49,336 | [160] | INFO  | ~72 | Hosting http://192.168.1.5:9095/arms/ISVO
+02 Feb 2024 09:29:49,365 | [164] | INFO  | ~73 | Hosted SServer hosted at http://192.168.1.5:9095/arms/ISVO
+
+02 Feb 2024 09:29:49,366 | [169] | INFO  | ~74 | Hosting http://192.168.1.5:9095/arms/IMDO
+02 Feb 2024 09:29:49,383 | [163] | INFO  | ~75 | Hosted SDevice hosted at http://192.168.1.5:9095/arms/IMDO
+
+02 Feb 2024 09:29:49,384 | [165] | INFO  | ~76 | Hosting http://192.168.1.5:9095/arms/IEMO
+02 Feb 2024 09:29:49,408 | [170] | INFO  | ~77 | Hosted SEmail hosted at http://192.168.1.5:9095/arms/IEMO
+
+02 Feb 2024 09:29:49,410 | [164] | INFO  | ~78 | Hosting http://192.168.1.5:9095/arms/ISMO
+02 Feb 2024 09:29:49,420 | [162] | INFO  | ~79 | Hosted SSMS hosted at http://192.168.1.5:9095/arms/ISMO
+
+02 Feb 2024 09:29:49,421 | [163] | INFO  | ~80 | Hosting http://192.168.1.5:9095/arms/ILMO
+02 Feb 2024 09:29:49,426 | [165] | INFO  | ~81 | Hosted SLMO hosted at http://192.168.1.5:9095/arms/ILMO
+
+02 Feb 2024 09:29:49,428 | [169] | INFO  | ~82 | Hosting http://192.168.1.5:9095/arms/IVER
+02 Feb 2024 09:29:49,435 | [164] | INFO  | ~83 | Hosted SVER hosted at http://192.168.1.5:9095/arms/IVER
+
+02 Feb 2024 09:29:49,436 | [160] | INFO  | ~84 | Hosting http://192.168.1.5:9095/arms/ISYN
+02 Feb 2024 09:29:49,442 | [167] | INFO  | ~85 | Hosted SSYN hosted at http://192.168.1.5:9095/arms/ISYN
+
+02 Feb 2024 09:29:49,442 | [163] | INFO  | ~86 | Hosting http://192.168.1.5:9095/arms/ILBO
+02 Feb 2024 09:29:49,451 | [166] | INFO  | ~87 | Hosted SNLB hosted at http://192.168.1.5:9095/arms/ILBO
+
+02 Feb 2024 09:29:49,482 | [169] | INFO  | ~88 | IPC Pipe b359757d-1565-4e77-85ba-5e916fa74313 Started
+02 Feb 2024 09:29:49,490 | [170] | INFO  | ~89 | Web Monitor Initialized At http://192.168.1.5:8888
+02 Feb 2024 09:29:55,970 | [164] | INFO  | ~90 | SignalR Service Hosted at http://192.168.1.5:8080
+
+02 Feb 2024 15:46:50,473 | [160] | INFO  | ~91 | Cached 2 trusted devices.
+02 Feb 2024 15:46:50,475 | [156] | INFO  | ~92 | Cached 2 trusted devices.
+02 Feb 2024 15:46:50,524 | [20] | INFO  | ~93 | Cached 2 trusted devices.
+02 Feb 2024 15:46:50,529 | [159] | INFO  | ~94 | Cached 2 trusted devices.
+02 Feb 2024 15:46:50,590 | [169] | INFO  | ~95 | Cached 2 trusted devices.
+02 Feb 2024 15:46:50,761 | [163] | INFO  | ~96 | Cached 2 trusted devices.
+02 Feb 2024 15:46:50,765 | [125] | INFO  | ~97 | Cached 2 trusted devices.
+02 Feb 2024 15:46:57,458 | [19] | INFO  | ~98 | Cached 2 trusted devices.
+02 Feb 2024 15:46:57,484 | [163] | INFO  | ~100 | Cached 2 trusted devices.
+02 Feb 2024 15:46:57,484 | [126] | INFO  | ~99 | Cached 2 trusted devices.
+02 Feb 2024 15:46:57,509 | [127] | INFO  | ~101 | Cached 2 trusted devices.
+02 Feb 2024 15:46:57,550 | [166] | INFO  | ~102 | Cached 2 trusted devices.
+02 Feb 2024 15:46:57,550 | [24] | INFO  | ~103 | Cached 2 trusted devices.
+02 Feb 2024 15:46:57,722 | [159] | INFO  | ~104 | Cached 2 trusted devices.
+02 Feb 2024 15:47:06,743 | [22] | INFO  | ~105 | Cached 2 trusted devices.
+02 Feb 2024 15:47:06,766 | [24] | INFO  | ~106 | Cached 2 trusted devices.
+02 Feb 2024 15:47:06,766 | [21] | INFO  | ~107 | Cached 2 trusted devices.
+02 Feb 2024 15:47:06,905 | [170] | INFO  | ~109 | Cached 2 trusted devices.
+02 Feb 2024 15:47:06,905 | [127] | INFO  | ~108 | Cached 2 trusted devices.
+02 Feb 2024 15:47:06,911 | [168] | INFO  | ~110 | Cached 2 trusted devices.
+02 Feb 2024 15:47:28,879 | [162] | INFO  | ~111 | Cached 2 trusted devices.
+02 Feb 2024 15:47:28,901 | [167] | INFO  | ~112 | Cached 2 trusted devices.
+02 Feb 2024 15:47:28,904 | [133] | INFO  | ~113 | Cached 2 trusted devices.
+02 Feb 2024 15:47:28,953 | [20] | INFO  | ~114 | Cached 2 trusted devices.
+02 Feb 2024 15:47:28,953 | [164] | INFO  | ~115 | Cached 2 trusted devices.
+02 Feb 2024 15:48:36,682 | [126] | INFO  | ~116 | Cached 2 trusted devices.
+02 Feb 2024 15:48:36,713 | [21] | INFO  | ~117 | Cached 2 trusted devices.
+02 Feb 2024 15:48:36,713 | [168] | INFO  | ~118 | Cached 2 trusted devices.
+02 Feb 2024 15:48:36,835 | [22] | INFO  | ~120 | Cached 2 trusted devices.
+02 Feb 2024 15:48:36,835 | [169] | INFO  | ~119 | Cached 2 trusted devices.
+02 Feb 2024 15:48:36,838 | [163] | INFO  | ~121 | Cached 2 trusted devices.
+02 Feb 2024 16:54:25,406 | [162] | INFO  | ~122 | Cached 2 trusted devices.
+02 Feb 2024 16:54:25,536 | [156] | INFO  | ~123 | Cached 2 trusted devices.
+02 Feb 2024 16:54:25,596 | [22] | INFO  | ~124 | Cached 2 trusted devices.
+02 Feb 2024 16:54:25,654 | [20] | INFO  | ~125 | Cached 2 trusted devices.
+02 Feb 2024 16:54:25,711 | [165] | INFO  | ~126 | Cached 2 trusted devices.
+02 Feb 2024 16:54:25,768 | [19] | INFO  | ~127 | Cached 2 trusted devices.
+02 Feb 2024 16:54:25,784 | [24] | INFO  | ~128 | Cached 2 trusted devices.
+02 Feb 2024 16:54:37,637 | [156] | INFO  | ~129 | Cached 2 trusted devices.
+02 Feb 2024 16:54:37,648 | [24] | INFO  | ~130 | Cached 2 trusted devices.
+02 Feb 2024 16:54:37,696 | [163] | INFO  | ~131 | Cached 2 trusted devices.
+02 Feb 2024 16:54:37,706 | [20] | INFO  | ~132 | Cached 2 trusted devices.
+02 Feb 2024 16:54:37,750 | [21] | INFO  | ~133 | Cached 2 trusted devices.
+02 Feb 2024 16:54:37,763 | [162] | INFO  | ~134 | Cached 2 trusted devices.
+02 Feb 2024 16:54:37,875 | [20] | INFO  | ~135 | Cached 2 trusted devices.
+02 Feb 2024 16:54:52,642 | [160] | INFO  | ~136 | Cached 2 trusted devices.
+02 Feb 2024 16:54:52,658 | [162] | INFO  | ~137 | Cached 2 trusted devices.
+02 Feb 2024 16:54:52,658 | [159] | INFO  | ~138 | Cached 2 trusted devices.
+02 Feb 2024 16:54:52,795 | [163] | INFO  | ~139 | Cached 2 trusted devices.
+02 Feb 2024 16:54:52,798 | [170] | INFO  | ~140 | Cached 2 trusted devices.
+02 Feb 2024 16:54:52,802 | [21] | INFO  | ~141 | Cached 2 trusted devices.
+02 Feb 2024 16:54:59,083 | [168] | INFO  | ~142 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+02 Feb 2024 16:55:01,208 | [20] | INFO  | ~143 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+02 Feb 2024 16:55:04,030 | [21] | INFO  | ~144 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+02 Feb 2024 16:55:04,125 | [162] | INFO  | ~146 | Logger Engine Initialized.
+02 Feb 2024 16:55:04,125 | [156] | INFO  | ~145 | Application Path is verified.
+02 Feb 2024 16:55:04,150 | [168] | INFO  | ~147 | Checked Network Availability.
+02 Feb 2024 16:55:04,151 | [164] | INFO  | ~148 | Mapping Directories.
+02 Feb 2024 16:55:04,246 | [165] | INFO  | ~149 | DB Backup Set To 0:30
+02 Feb 2024 16:55:04,247 | [133] | INFO  | ~150 | Log Backup Set To 17:30
+02 Feb 2024 16:55:04,249 | [170] | INFO  | ~151 | EOD Set To 0:1
+02 Feb 2024 16:55:04,291 | [162] | INFO  | ~152 | Config Loaded Successfully
+02 Feb 2024 16:55:04,291 | [24] | INFO  | ~153 | Loading Metadata Users !!
+02 Feb 2024 16:55:04,291 | [20] | INFO  | ~154 | TSC:13
+02 Feb 2024 16:55:04,291 | [168] | INFO  | ~155 | Loading ORM !!
+02 Feb 2024 16:55:04,863 | [159] | INFO  | ~156 | Loading Trusted Subscribers !!
+02 Feb 2024 16:55:04,924 | [170] | INFO  | ~157 | Registered Peers IP:192.168.16.113:192.168.1.5
+02 Feb 2024 16:55:04,924 | [21] | INFO  | ~159 | Registered NLB Token
+02 Feb 2024 16:55:04,924 | [160] | INFO  | ~158 | Registered NLB Peers192.168.16.113,
+02 Feb 2024 16:55:04,924 | [22] | INFO  | ~161 | Server Slave To 192.168.16.114:9095
+02 Feb 2024 16:55:04,924 | [163] | INFO  | ~160 | Registered 13 trusted users.
+02 Feb 2024 16:55:04,924 | [167] | INFO  | ~162 | Loading Trusted Devices !!
+02 Feb 2024 16:55:04,982 | [159] | INFO  | ~163 | Cached 2 trusted devices.
+02 Feb 2024 16:55:04,982 | [166] | INFO  | ~164 | Loading Application Metadata !!
+02 Feb 2024 16:55:05,125 | [170] | INFO  | ~165 | Loading Application Data !!
+02 Feb 2024 16:55:05,136 | [163] | INFO  | ~168 | Loading Application Emails !!
+02 Feb 2024 16:55:05,136 | [160] | INFO  | ~167 | Row : 0DBIndex: 0 CS:Data Source=APGH01\DEV;User ID=arms;Password=roti1234;Initial Catalog=TESTDB;Application Name=ARMS;Min Pool Size=1;Max Pool Size=100;
+02 Feb 2024 16:55:05,136 | [22] | INFO  | ~166 | Loading Application Databases : 1
+02 Feb 2024 16:55:05,136 | [164] | INFO  | ~169 | Loading Application Rules !!
+02 Feb 2024 16:55:05,144 | [166] | INFO  | ~171 | Loading Application Preferences !!
+02 Feb 2024 16:55:05,144 | [159] | INFO  | ~170 | Loaded Application Rules :1
+02 Feb 2024 16:55:05,218 | [24] | INFO  | ~172 | Loading MFA Service Actions !!
+02 Feb 2024 16:55:05,224 | [21] | INFO  | ~174 | Cached Custom Message Dictionary :7
+02 Feb 2024 16:55:05,224 | [165] | INFO  | ~175 | Loading Application Automated Imports !!
+02 Feb 2024 16:55:05,224 | [170] | INFO  | ~173 | Loading Status Messages :7
+02 Feb 2024 16:55:05,246 | [163] | INFO  | ~176 | Granting Access Privileges To IMPEX Path
+02 Feb 2024 16:55:05,251 | [167] | INFO  | ~177 | Cached 1 Bulk Import Sites.
+02 Feb 2024 16:55:05,261 | [165] | INFO  | ~178 | Cached Download URL Dictionary :0
+02 Feb 2024 16:55:05,261 | [160] | INFO  | ~180 | Cached Application Metadata !!
+02 Feb 2024 16:55:05,261 | [170] | INFO  | ~179 | Loading Pre Defined Scheduled Download URLs :0
+02 Feb 2024 16:55:05,376 | [162] | INFO  | ~182 | Dynamic Parsing Enabled :3
+02 Feb 2024 16:55:05,376 | [24] | INFO  | ~181 | Cached Application Message Map Metadata !!
+02 Feb 2024 16:55:05,444 | [167] | INFO  | ~183 | User Scavenger CRON Initialized 
+
+02 Feb 2024 16:55:05,449 | [20] | INFO  | ~191 | EOD CRON Initialized 
+
+02 Feb 2024 16:55:05,444 | [170] | INFO  | ~189 | Memory Monitor CRON Initialized 
+
+02 Feb 2024 16:55:05,444 | [22] | INFO  | ~185 | POP Emails CRON Initialized 
+
+02 Feb 2024 16:55:05,444 | [160] | INFO  | ~188 | Memory Monitor CRON Initialized 
+
+02 Feb 2024 16:55:05,444 | [156] | INFO  | ~190 | Network Monitor CRON Initialized 
+
+02 Feb 2024 16:55:05,444 | [165] | INFO  | ~187 | DB Backup CRON Initialized 
+
+02 Feb 2024 16:55:05,444 | [168] | INFO  | ~186 | SMS Monitor CRON Initialized 
+
+02 Feb 2024 16:55:05,444 | [159] | INFO  | ~184 | LOG Backup CRON Initialized 
+
+02 Feb 2024 16:55:05,450 | [166] | INFO  | ~192 | Impex Transfers Initialized 
+
+02 Feb 2024 16:55:05,450 | [162] | INFO  | ~193 | Hosting http://192.168.1.5:9095/arms/IDBO
+02 Feb 2024 16:55:05,473 | [164] | INFO  | ~194 | Hosted 
+
+02 Feb 2024 16:55:05,473 | [24] | INFO  | ~195 | Hosting http://192.168.1.5:9095/arms/IFIO
+02 Feb 2024 16:55:05,475 | [20] | INFO  | ~196 | Hosted 
+
+02 Feb 2024 16:55:05,477 | [22] | INFO  | ~197 | Hosting http://192.168.1.5:9095/arms/IDSO
+02 Feb 2024 16:55:05,479 | [156] | INFO  | ~198 | Hosted 
+
+02 Feb 2024 16:55:05,480 | [133] | INFO  | ~199 | Hosting http://192.168.1.5:9095/arms/IUSO
+02 Feb 2024 16:55:05,483 | [163] | INFO  | ~200 | Hosted 
+
+02 Feb 2024 16:55:05,483 | [166] | INFO  | ~201 | Hosting http://192.168.1.5:9095/arms/ISVO
+02 Feb 2024 16:55:05,491 | [21] | INFO  | ~202 | Hosted 
+
+02 Feb 2024 16:55:05,491 | [164] | INFO  | ~203 | Hosting http://192.168.1.5:9095/arms/IMDO
+02 Feb 2024 16:55:05,495 | [170] | INFO  | ~204 | Hosted 
+
+02 Feb 2024 16:55:05,495 | [20] | INFO  | ~205 | Hosting http://192.168.1.5:9095/arms/IEMO
+02 Feb 2024 16:55:05,498 | [165] | INFO  | ~206 | Hosted 
+
+02 Feb 2024 16:55:05,498 | [156] | INFO  | ~207 | Hosting http://192.168.1.5:9095/arms/ISMO
+02 Feb 2024 16:55:05,501 | [159] | INFO  | ~208 | Hosted 
+
+02 Feb 2024 16:55:05,501 | [163] | INFO  | ~209 | Hosting http://192.168.1.5:9095/arms/ILMO
+02 Feb 2024 16:55:05,503 | [167] | INFO  | ~210 | Hosted 
+
+02 Feb 2024 16:55:05,503 | [21] | INFO  | ~211 | Hosting http://192.168.1.5:9095/arms/IVER
+02 Feb 2024 16:55:05,506 | [160] | INFO  | ~212 | Hosted 
+
+02 Feb 2024 16:55:05,506 | [170] | INFO  | ~213 | Hosting http://192.168.1.5:9095/arms/ISYN
+02 Feb 2024 16:55:05,509 | [168] | INFO  | ~214 | Hosted 
+
+02 Feb 2024 16:55:05,509 | [165] | INFO  | ~215 | Hosting http://192.168.1.5:9095/arms/ILBO
+02 Feb 2024 16:55:05,515 | [162] | INFO  | ~216 | Hosted 
+
+02 Feb 2024 16:55:05,515 | [159] | INFO  | ~217 | IPC Pipe b359757d-1565-4e77-85ba-5e916fa74313 Started
+02 Feb 2024 16:55:05,774 | [167] | INFO  | ~218 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+02 Feb 2024 16:55:05,850 | [170] | INFO  | ~220 | Logger Engine Initialized.
+02 Feb 2024 16:55:05,850 | [20] | INFO  | ~219 | Application Path is verified.
+02 Feb 2024 16:55:05,874 | [168] | INFO  | ~221 | Checked Network Availability.
+02 Feb 2024 16:55:05,874 | [166] | INFO  | ~222 | Mapping Directories.
+02 Feb 2024 16:55:05,974 | [162] | INFO  | ~223 | DB Backup Set To 0:30
+02 Feb 2024 16:55:05,977 | [169] | INFO  | ~224 | Log Backup Set To 17:30
+02 Feb 2024 16:55:05,977 | [21] | INFO  | ~225 | EOD Set To 0:1
+02 Feb 2024 16:55:06,019 | [170] | INFO  | ~227 | Loading Metadata Users !!
+02 Feb 2024 16:55:06,019 | [133] | INFO  | ~226 | Config Loaded Successfully
+02 Feb 2024 16:55:06,019 | [20] | INFO  | ~228 | TSC:14
+02 Feb 2024 16:55:06,019 | [163] | INFO  | ~229 | Loading ORM !!
+02 Feb 2024 16:55:06,556 | [165] | INFO  | ~230 | Loading Trusted Subscribers !!
+02 Feb 2024 16:55:06,616 | [162] | INFO  | ~231 | Registered Peers IP:192.168.16.113:192.168.1.5
+02 Feb 2024 16:55:06,616 | [24] | INFO  | ~233 | Registered NLB Token
+02 Feb 2024 16:55:06,616 | [169] | INFO  | ~234 | Registered 14 trusted users.
+02 Feb 2024 16:55:06,616 | [156] | INFO  | ~232 | Registered NLB Peers192.168.16.113,
+02 Feb 2024 16:55:06,616 | [160] | INFO  | ~236 | Loading Trusted Devices !!
+02 Feb 2024 16:55:06,616 | [166] | INFO  | ~235 | Server Slave To 192.168.16.114:9095
+02 Feb 2024 16:55:06,674 | [165] | INFO  | ~238 | Loading Application Metadata !!
+02 Feb 2024 16:55:06,674 | [159] | INFO  | ~237 | Cached 2 trusted devices.
+02 Feb 2024 16:55:06,751 | [164] | INFO  | ~239 | Loading Application Data !!
+02 Feb 2024 16:55:06,751 | [166] | INFO  | ~245 | Loaded Application Rules :1
+02 Feb 2024 16:55:06,751 | [160] | INFO  | ~241 | Loading Application Rules !!
+02 Feb 2024 16:55:06,751 | [169] | INFO  | ~240 | Row : 0DBIndex: 0 CS:Data Source=APGH01\DEV;User ID=arms;Password=roti1234;Initial Catalog=TESTDB;Application Name=ARMS;Min Pool Size=1;Max Pool Size=100;
+02 Feb 2024 16:55:06,751 | [168] | INFO  | ~246 | Loading MFA Service Actions !!
+02 Feb 2024 16:55:06,751 | [24] | INFO  | ~244 | Loading Application Preferences !!
+02 Feb 2024 16:55:06,751 | [156] | INFO  | ~243 | Loading Application Databases : 1
+02 Feb 2024 16:55:06,751 | [162] | INFO  | ~242 | Loading Application Emails !!
+02 Feb 2024 16:55:06,752 | [20] | INFO  | ~248 | Loading Status Messages :7
+02 Feb 2024 16:55:06,753 | [165] | INFO  | ~250 | Loading Application Automated Imports !!
+02 Feb 2024 16:55:06,752 | [159] | INFO  | ~249 | Granting Access Privileges To IMPEX Path
+02 Feb 2024 16:55:06,751 | [163] | INFO  | ~247 | Cached Custom Message Dictionary :7
+02 Feb 2024 16:55:06,757 | [166] | INFO  | ~251 | Cached 1 Bulk Import Sites.
+02 Feb 2024 16:55:06,758 | [22] | INFO  | ~254 | Cached Application Metadata !!
+02 Feb 2024 16:55:06,757 | [170] | INFO  | ~253 | Loading Pre Defined Scheduled Download URLs :0
+02 Feb 2024 16:55:06,757 | [21] | INFO  | ~252 | Cached Download URL Dictionary :0
+02 Feb 2024 16:55:06,820 | [160] | INFO  | ~256 | Dynamic Parsing Enabled :3
+02 Feb 2024 16:55:06,820 | [169] | INFO  | ~255 | Cached Application Message Map Metadata !!
+02 Feb 2024 16:55:06,878 | [80] | INFO  | ~257 | User Scavenger CRON Initialized 
+
+02 Feb 2024 16:55:06,879 | [77] | INFO  | ~259 | POP Emails CRON Initialized 
+
+02 Feb 2024 16:55:06,879 | [165] | INFO  | ~263 | Memory Monitor CRON Initialized 
+
+02 Feb 2024 16:55:06,879 | [163] | INFO  | ~265 | EOD CRON Initialized 
+
+02 Feb 2024 16:55:06,886 | [159] | INFO  | ~268 | Hosted 
+
+02 Feb 2024 16:55:06,879 | [167] | INFO  | ~258 | LOG Backup CRON Initialized 
+
+02 Feb 2024 16:55:06,879 | [79] | INFO  | ~264 | Network Monitor CRON Initialized 
+
+02 Feb 2024 16:55:06,879 | [162] | INFO  | ~262 | Memory Monitor CRON Initialized 
+
+02 Feb 2024 16:55:06,880 | [81] | INFO  | ~267 | Hosting http://192.168.1.5:9095/arms/IDBO
+02 Feb 2024 16:55:06,879 | [20] | INFO  | ~261 | DB Backup CRON Initialized 
+
+02 Feb 2024 16:55:06,879 | [82] | INFO  | ~260 | SMS Monitor CRON Initialized 
+
+02 Feb 2024 16:55:06,879 | [166] | INFO  | ~266 | Impex Transfers Initialized 
+
+02 Feb 2024 16:55:06,900 | [21] | INFO  | ~273 | Hosting http://192.168.1.5:9095/arms/IUSO
+02 Feb 2024 16:55:06,892 | [22] | INFO  | ~270 | Hosted 
+
+02 Feb 2024 16:55:06,889 | [86] | INFO  | ~269 | Hosting http://192.168.1.5:9095/arms/IFIO
+02 Feb 2024 16:55:06,892 | [165] | INFO  | ~271 | Hosting http://192.168.1.5:9095/arms/IDSO
+02 Feb 2024 16:55:06,903 | [24] | INFO  | ~274 | Hosted 
+
+02 Feb 2024 16:55:06,903 | [160] | INFO  | ~275 | Hosting http://192.168.1.5:9095/arms/ISVO
+02 Feb 2024 16:55:06,900 | [85] | INFO  | ~272 | Hosted 
+
+02 Feb 2024 16:55:06,911 | [133] | INFO  | ~276 | Hosted 
+
+02 Feb 2024 16:55:06,911 | [80] | INFO  | ~277 | Hosting http://192.168.1.5:9095/arms/IMDO
+02 Feb 2024 16:55:06,921 | [163] | INFO  | ~278 | Hosted 
+
+02 Feb 2024 16:55:06,922 | [167] | INFO  | ~279 | Hosting http://192.168.1.5:9095/arms/IEMO
+02 Feb 2024 16:55:06,924 | [162] | INFO  | ~280 | Hosted 
+
+02 Feb 2024 16:55:06,925 | [84] | INFO  | ~281 | Hosting http://192.168.1.5:9095/arms/ISMO
+02 Feb 2024 16:55:06,928 | [20] | INFO  | ~282 | Hosted 
+
+02 Feb 2024 16:55:06,928 | [82] | INFO  | ~283 | Hosting http://192.168.1.5:9095/arms/ILMO
+02 Feb 2024 16:55:06,930 | [166] | INFO  | ~284 | Hosted 
+
+02 Feb 2024 16:55:06,931 | [164] | INFO  | ~285 | Hosting http://192.168.1.5:9095/arms/IVER
+02 Feb 2024 16:55:06,933 | [22] | INFO  | ~286 | Hosted 
+
+02 Feb 2024 16:55:06,934 | [165] | INFO  | ~287 | Hosting http://192.168.1.5:9095/arms/ISYN
+02 Feb 2024 16:55:06,936 | [160] | INFO  | ~288 | Hosted 
+
+02 Feb 2024 16:55:06,936 | [156] | INFO  | ~289 | Hosting http://192.168.1.5:9095/arms/ILBO
+02 Feb 2024 16:55:06,939 | [133] | INFO  | ~290 | Hosted 
+
+02 Feb 2024 16:55:06,939 | [159] | INFO  | ~291 | IPC Pipe b359757d-1565-4e77-85ba-5e916fa74313 Started
+02 Feb 2024 16:55:16,489 | [24] | INFO  | ~292 | Cached 2 trusted devices.
+02 Feb 2024 16:55:16,503 | [168] | INFO  | ~293 | Cached 2 trusted devices.
+02 Feb 2024 16:55:16,503 | [22] | INFO  | ~294 | Cached 2 trusted devices.
+02 Feb 2024 16:55:16,549 | [81] | INFO  | ~295 | Cached 2 trusted devices.
+02 Feb 2024 16:55:16,558 | [85] | INFO  | ~296 | Cached 2 trusted devices.
+02 Feb 2024 16:55:16,756 | [162] | INFO  | ~297 | Cached 2 trusted devices.
+02 Feb 2024 16:55:17,152 | [83] | INFO  | ~298 | Cached 2 trusted devices.
+02 Feb 2024 16:55:32,843 | [156] | INFO  | ~299 | Cached 2 trusted devices.
+02 Feb 2024 16:55:32,844 | [86] | INFO  | ~301 | Cached 2 trusted devices.
+02 Feb 2024 16:55:32,843 | [21] | INFO  | ~300 | Cached 2 trusted devices.
+02 Feb 2024 16:55:46,547 | [133] | INFO  | ~302 | Cached 2 trusted devices.
+02 Feb 2024 16:55:46,565 | [22] | INFO  | ~303 | Cached 2 trusted devices.
+02 Feb 2024 16:55:46,576 | [82] | INFO  | ~304 | Cached 2 trusted devices.
+02 Feb 2024 16:55:46,725 | [84] | INFO  | ~305 | Cached 2 trusted devices.
+02 Feb 2024 16:55:46,728 | [85] | INFO  | ~307 | Cached 2 trusted devices.
+02 Feb 2024 16:55:46,725 | [162] | INFO  | ~306 | Cached 2 trusted devices.
+02 Feb 2024 16:55:49,551 | [79] | INFO  | ~308 | Cached 2 trusted devices.
+02 Feb 2024 16:55:49,581 | [166] | INFO  | ~309 | Cached 2 trusted devices.
+02 Feb 2024 16:55:52,912 | [165] | INFO  | ~310 | Cached 2 trusted devices.
+02 Feb 2024 16:55:52,955 | [163] | INFO  | ~311 | Cached 2 trusted devices.
+02 Feb 2024 17:13:05,896 | [79] | INFO  | ~312 | Cached 2 trusted devices.
+02 Feb 2024 17:13:06,186 | [160] | INFO  | ~313 | Cached 2 trusted devices.
+02 Feb 2024 17:13:06,249 | [21] | INFO  | ~314 | Cached 2 trusted devices.
+02 Feb 2024 17:13:06,421 | [22] | INFO  | ~315 | Cached 2 trusted devices.
+02 Feb 2024 17:13:06,477 | [160] | INFO  | ~316 | Cached 2 trusted devices.
+02 Feb 2024 17:13:06,480 | [21] | INFO  | ~317 | Cached 2 trusted devices.
+02 Feb 2024 17:13:06,835 | [165] | INFO  | ~318 | Cached 2 trusted devices.
+02 Feb 2024 17:13:31,484 | [20] | INFO  | ~319 | Cached 2 trusted devices.
+02 Feb 2024 17:13:31,575 | [80] | INFO  | ~320 | Cached 2 trusted devices.
+02 Feb 2024 17:13:31,579 | [83] | INFO  | ~321 | Cached 2 trusted devices.
+02 Feb 2024 17:13:31,584 | [20] | INFO  | ~322 | Cached 2 trusted devices.
+02 Feb 2024 17:13:32,265 | [83] | INFO  | ~323 | Cached 2 trusted devices.
+02 Feb 2024 17:13:32,297 | [167] | INFO  | ~324 | Cached 2 trusted devices.
+02 Feb 2024 17:13:32,303 | [159] | INFO  | ~325 | Cached 2 trusted devices.
+02 Feb 2024 17:14:02,892 | [24] | INFO  | ~326 | Cached 2 trusted devices.
+02 Feb 2024 17:14:02,998 | [133] | INFO  | ~327 | Cached 2 trusted devices.
+02 Feb 2024 17:14:03,005 | [167] | INFO  | ~328 | Cached 2 trusted devices.
+02 Feb 2024 17:14:03,009 | [164] | INFO  | ~329 | Cached 2 trusted devices.
+02 Feb 2024 17:14:03,487 | [83] | INFO  | ~330 | Cached 2 trusted devices.
+02 Feb 2024 17:14:03,488 | [85] | INFO  | ~331 | Cached 2 trusted devices.
+02 Feb 2024 17:14:03,543 | [20] | INFO  | ~332 | Cached 2 trusted devices.
+ 

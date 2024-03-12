@@ -1,0 +1,135 @@
+22 Feb 2024 19:17:00,487 | [20] | INFO  | ~1 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+22 Feb 2024 19:17:10,499 | [27] | INFO  | ~2 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+22 Feb 2024 19:17:10,799 | [20] | INFO  | ~3 | Application Path is verified.
+22 Feb 2024 19:17:10,799 | [22] | INFO  | ~4 | Logger Engine Initialized.
+22 Feb 2024 19:17:10,803 | [25] | INFO  | ~6 | Mapping Directories.
+22 Feb 2024 19:17:10,803 | [24] | INFO  | ~5 | Checked Network Availability.
+22 Feb 2024 19:17:11,275 | [21] | INFO  | ~7 | DB Backup Set To 0:30
+22 Feb 2024 19:17:11,278 | [20] | INFO  | ~8 | Log Backup Set To 17:30
+22 Feb 2024 19:17:11,282 | [27] | INFO  | ~9 | EOD Set To 0:1
+22 Feb 2024 19:17:11,430 | [26] | INFO  | ~10 | Config Loaded Successfully
+22 Feb 2024 19:17:29,352 | [24] | INFO  | ~11 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+22 Feb 2024 19:17:29,371 | [27] | INFO  | ~12 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+22 Feb 2024 19:17:29,538 | [21] | INFO  | ~13 | Application Path is verified.
+22 Feb 2024 19:17:29,538 | [24] | INFO  | ~14 | Logger Engine Initialized.
+22 Feb 2024 19:17:29,550 | [26] | INFO  | ~15 | Checked Network Availability.
+22 Feb 2024 19:17:29,550 | [22] | INFO  | ~16 | Mapping Directories.
+22 Feb 2024 19:17:29,776 | [25] | INFO  | ~17 | DB Backup Set To 0:30
+22 Feb 2024 19:17:29,779 | [24] | INFO  | ~18 | Log Backup Set To 17:30
+22 Feb 2024 19:17:29,782 | [23] | INFO  | ~19 | EOD Set To 0:1
+22 Feb 2024 19:17:29,873 | [26] | INFO  | ~20 | Config Loaded Successfully
+22 Feb 2024 19:17:29,896 | [21] | INFO  | ~21 | System Executable :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE\ArmsServiceMonitor.exe
+22 Feb 2024 19:17:29,909 | [27] | INFO  | ~22 | Initializing Log From Path :D:\FPDS\NEW_ARMSSERVICE\ARMSSERVICE
+ 
+22 Feb 2024 19:17:30,062 | [24] | INFO  | ~23 | Application Path is verified.
+22 Feb 2024 19:17:30,062 | [25] | INFO  | ~24 | Logger Engine Initialized.
+22 Feb 2024 19:17:30,068 | [23] | INFO  | ~25 | Checked Network Availability.
+22 Feb 2024 19:17:30,069 | [21] | INFO  | ~26 | Mapping Directories.
+22 Feb 2024 19:17:30,269 | [24] | INFO  | ~27 | DB Backup Set To 0:30
+22 Feb 2024 19:17:30,271 | [25] | INFO  | ~28 | Log Backup Set To 17:30
+22 Feb 2024 19:17:30,273 | [22] | INFO  | ~29 | EOD Set To 0:1
+22 Feb 2024 19:17:30,355 | [23] | INFO  | ~30 | Config Loaded Successfully
+22 Feb 2024 19:17:30,358 | [22] | INFO  | ~31 | Setting File Import Cache
+22 Feb 2024 19:17:31,076 | [21] | INFO  | ~32 | Lazy DS Processing Enabled
+22 Feb 2024 19:17:32,844 | [24] | INFO  | ~33 | Lazy Audit Write Enabled
+22 Feb 2024 19:17:33,062 | [26] | INFO  | ~34 | Lazy SignalR Notify Enabled
+22 Feb 2024 19:17:33,062 | [27] | INFO  | ~35 | MSMQ Initialized.
+22 Feb 2024 19:17:41,491 | [22] | INFO  | ~36 | Synced Date Time With DB Server
+22 Feb 2024 19:17:42,341 | [26] | INFO  | ~37 | Database Engine Initialized.
+22 Feb 2024 19:17:42,349 | [23] | INFO  | ~38 | POP3 Engine Initialized.
+22 Feb 2024 19:17:42,372 | [24] | INFO  | ~39 | SMTP Engine Initialized.
+22 Feb 2024 19:17:42,412 | [22] | INFO  | ~40 | CRON Engine Initialized.
+22 Feb 2024 19:17:42,433 | [26] | INFO  | ~41 | Loading Metadata Users !!
+22 Feb 2024 19:17:42,456 | [23] | INFO  | ~42 | TSC:1
+22 Feb 2024 19:17:42,456 | [21] | INFO  | ~43 | Loading ORM !!
+22 Feb 2024 19:17:44,449 | [25] | INFO  | ~44 | Loading Trusted Subscribers !!
+22 Feb 2024 19:17:44,581 | [21] | INFO  | ~45 | Registered Peers IP:192.168.16.113:192.168.1.5
+22 Feb 2024 19:17:44,581 | [26] | INFO  | ~47 | Registered NLB Token
+22 Feb 2024 19:17:44,583 | [23] | INFO  | ~50 | Loading Trusted Devices !!
+22 Feb 2024 19:17:44,581 | [25] | INFO  | ~48 | Registered 11 trusted users.
+22 Feb 2024 19:17:44,582 | [24] | INFO  | ~49 | Server Slave To 192.168.16.114:9095
+22 Feb 2024 19:17:44,581 | [27] | INFO  | ~46 | Registered NLB Peers192.168.16.113,
+22 Feb 2024 19:17:44,673 | [22] | INFO  | ~51 | Loading Application Metadata !!
+22 Feb 2024 19:17:44,673 | [25] | INFO  | ~52 | Cached 2 trusted devices.
+22 Feb 2024 19:17:45,333 | [18] | INFO  | ~53 | Loading Application Data !!
+22 Feb 2024 19:17:45,360 | [24] | INFO  | ~54 | Row : 0DBIndex: 0 CS:Data Source=APGH01\DEV;User ID=arms;Password=roti1234;Initial Catalog=TESTDB;Application Name=ARMS;Min Pool Size=1;Max Pool Size=100;
+22 Feb 2024 19:17:45,360 | [22] | INFO  | ~57 | Loading Application Emails !!
+22 Feb 2024 19:17:45,360 | [25] | INFO  | ~55 | Loading Application Databases : 1
+22 Feb 2024 19:17:45,360 | [26] | INFO  | ~56 | Loading Application Rules !!
+22 Feb 2024 19:17:45,374 | [18] | INFO  | ~58 | Loaded Application Rules :1
+22 Feb 2024 19:17:45,374 | [21] | INFO  | ~59 | Loading Application Preferences !!
+22 Feb 2024 19:17:45,392 | [25] | INFO  | ~60 | Loading MFA Service Actions !!
+22 Feb 2024 19:17:45,410 | [27] | INFO  | ~61 | Cached Custom Message Dictionary :7
+22 Feb 2024 19:17:45,410 | [23] | INFO  | ~63 | Loading Application Automated Imports !!
+22 Feb 2024 19:17:45,410 | [24] | INFO  | ~62 | Loading Status Messages :7
+22 Feb 2024 19:17:45,472 | [22] | INFO  | ~64 | Granting Access Privileges To IMPEX Path
+22 Feb 2024 19:17:45,487 | [24] | INFO  | ~65 | Cached 1 Bulk Import Sites.
+22 Feb 2024 19:17:45,509 | [27] | INFO  | ~67 | Loading Pre Defined Scheduled Download URLs :0
+22 Feb 2024 19:17:45,510 | [25] | INFO  | ~68 | Cached Application Metadata !!
+22 Feb 2024 19:17:45,509 | [21] | INFO  | ~66 | Cached Download URL Dictionary :0
+22 Feb 2024 19:17:45,620 | [18] | INFO  | ~69 | Dynamic Parsing Enabled :3
+22 Feb 2024 19:17:45,620 | [22] | INFO  | ~70 | Cached Application Message Map Metadata !!
+22 Feb 2024 19:17:46,196 | [25] | INFO  | ~71 | User Scavenger CRON Initialized 
+
+22 Feb 2024 19:17:46,298 | [26] | INFO  | ~72 | LOG Backup CRON Initialized 
+
+22 Feb 2024 19:17:46,377 | [22] | INFO  | ~73 | Loaded Application Emails:4
+22 Feb 2024 19:17:46,381 | [27] | INFO  | ~77 | Memory Monitor CRON Initialized 
+
+22 Feb 2024 19:17:46,379 | [18] | INFO  | ~76 | DB Backup CRON Initialized 
+
+22 Feb 2024 19:17:46,379 | [21] | INFO  | ~74 | POP Emails CRON Initialized 
+
+22 Feb 2024 19:17:46,383 | [23] | INFO  | ~78 | Memory Monitor CRON Initialized 
+
+22 Feb 2024 19:17:46,385 | [22] | INFO  | ~79 | Network Monitor CRON Initialized 
+
+22 Feb 2024 19:17:46,379 | [25] | INFO  | ~75 | SMS Monitor CRON Initialized 
+
+22 Feb 2024 19:17:46,392 | [26] | INFO  | ~80 | EOD CRON Initialized 
+
+22 Feb 2024 19:17:46,400 | [24] | INFO  | ~81 | Impex Transfers Initialized 
+
+22 Feb 2024 19:17:46,767 | [22] | INFO  | ~82 | Hosting http://192.168.1.5:9095/arms/IDBO
+22 Feb 2024 19:17:47,040 | [25] | INFO  | ~83 | Hosted SData hosted at http://192.168.1.5:9095/arms/IDBO
+
+22 Feb 2024 19:17:47,040 | [26] | INFO  | ~84 | Hosting http://192.168.1.5:9095/arms/IFIO
+22 Feb 2024 19:17:47,051 | [18] | INFO  | ~85 | Hosted SFile hosted at http://192.168.1.5:9095/arms/IFIO
+
+22 Feb 2024 19:17:47,051 | [21] | INFO  | ~86 | Hosting http://192.168.1.5:9095/arms/IDSO
+22 Feb 2024 19:17:47,060 | [25] | INFO  | ~88 | Hosting http://192.168.1.5:9095/arms/IUSO
+22 Feb 2024 19:17:47,059 | [27] | INFO  | ~87 | Hosted SDataStream hosted at http://192.168.1.5:9095/arms/IDSO
+
+22 Feb 2024 19:17:47,097 | [24] | INFO  | ~89 | Hosted SUser hosted at http://192.168.1.5:9095/arms/IUSO
+
+22 Feb 2024 19:17:47,098 | [22] | INFO  | ~90 | Hosting http://192.168.1.5:9095/arms/ISVO
+22 Feb 2024 19:17:47,122 | [23] | INFO  | ~91 | Hosted SServer hosted at http://192.168.1.5:9095/arms/ISVO
+
+22 Feb 2024 19:17:47,123 | [21] | INFO  | ~92 | Hosting http://192.168.1.5:9095/arms/IMDO
+22 Feb 2024 19:17:47,134 | [27] | INFO  | ~93 | Hosted SDevice hosted at http://192.168.1.5:9095/arms/IMDO
+
+22 Feb 2024 19:17:47,134 | [24] | INFO  | ~94 | Hosting http://192.168.1.5:9095/arms/IEMO
+22 Feb 2024 19:17:47,139 | [26] | INFO  | ~95 | Hosted SEmail hosted at http://192.168.1.5:9095/arms/IEMO
+
+22 Feb 2024 19:17:47,140 | [23] | INFO  | ~96 | Hosting http://192.168.1.5:9095/arms/ISMO
+22 Feb 2024 19:17:47,150 | [18] | INFO  | ~97 | Hosted SSMS hosted at http://192.168.1.5:9095/arms/ISMO
+
+22 Feb 2024 19:17:47,151 | [27] | INFO  | ~98 | Hosting http://192.168.1.5:9095/arms/ILMO
+22 Feb 2024 19:17:47,164 | [25] | INFO  | ~99 | Hosted SLMO hosted at http://192.168.1.5:9095/arms/ILMO
+
+22 Feb 2024 19:17:47,165 | [26] | INFO  | ~100 | Hosting http://192.168.1.5:9095/arms/IVER
+22 Feb 2024 19:17:47,172 | [22] | INFO  | ~101 | Hosted SVER hosted at http://192.168.1.5:9095/arms/IVER
+
+22 Feb 2024 19:17:47,172 | [26] | INFO  | ~102 | Hosting http://192.168.1.5:9095/arms/ISYN
+22 Feb 2024 19:17:47,181 | [27] | INFO  | ~104 | Hosting http://192.168.1.5:9095/arms/ILBO
+22 Feb 2024 19:17:47,179 | [21] | INFO  | ~103 | Hosted SSYN hosted at http://192.168.1.5:9095/arms/ISYN
+
+22 Feb 2024 19:17:47,208 | [24] | INFO  | ~105 | Hosted SNLB hosted at http://192.168.1.5:9095/arms/ILBO
+
+22 Feb 2024 19:17:47,236 | [50] | INFO  | ~106 | IPC Pipe 35a5070e-cea5-425f-a6bd-4a6c6ae357ca Started
+22 Feb 2024 19:17:47,244 | [27] | INFO  | ~107 | Web Monitor Initialized At http://192.168.1.5:8888
+22 Feb 2024 19:17:51,323 | [54] | INFO  | ~108 | SignalR Service Hosted at http://192.168.1.5:8080
+
+ 

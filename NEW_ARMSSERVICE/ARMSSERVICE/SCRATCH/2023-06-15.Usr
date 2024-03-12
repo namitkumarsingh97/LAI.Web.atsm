@@ -1,0 +1,6 @@
+15 Jun 2023 09:30:27,430 | [64] | INFO  | ~10 | Scavenging Inactivate User 1a2fa30e-ac0e-4732-b02f-96c3f5cb27f9:ADMIN
+15 Jun 2023 09:30:27,431 | [51] | INFO  | ~11 | ADMIN Logged Out From Host - PID:
+15 Jun 2023 09:30:27,432 | [54] | INFO  | ~12 | Unable To Logout Token :
+15 Jun 2023 10:21:03,371 | [6] | INFO  | ~13 | Logging Out Token:1a2fa30e-ac0e-4732-b02f-96c3f5cb27f9
+15 Jun 2023 10:21:03,371 | [57] | INFO  | ~14 | Invalid Token:|1a2fa30e-ac0e-4732-b02f-96c3f5cb27f9
+ 

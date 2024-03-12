@@ -1,0 +1,68 @@
+21 Jun 2023 09:00:08,471 | [ARMS Scheduler_Worker-20] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:IsAvailableNetworkActive:IsAvailableNetworkActive:An exception occurred during a Ping request.
+System.Net.NetworkInformation.PingException: An exception occurred during a Ping request. ---> System.ComponentModel.Win32Exception: Unknown error (0x2b2a)
+   at System.Net.NetworkInformation.Ping.InternalSend(IPAddress address, Byte[] buffer, Int32 timeout, PingOptions options, Boolean async)
+   at System.Net.NetworkInformation.Ping.Send(IPAddress address, Int32 timeout, Byte[] buffer, PingOptions options)
+   --- End of inner exception stack trace ---
+   at System.Net.NetworkInformation.Ping.Send(IPAddress address, Int32 timeout, Byte[] buffer, PingOptions options)
+   at System.Net.NetworkInformation.Ping.Send(IPAddress address, Int32 timeout)
+   at Arms.GlobalLibrary.GlobalCommon.IsAvailableNetworkActive()
+ 
+ 
+ 
+ 
+ 
+21 Jun 2023 09:40:00,207 | [ARMS Scheduler_Worker-19] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:ExecuteNonQuery:ExecuteNonQuery:Violation of UNIQUE KEY constraint 'UK_MTD_APPLICATIONRESOURCEUSAGE_USAGEASOF'. Cannot insert duplicate key in object 'mtd.APPLICATIONRESOURCEUSAGE'. The duplicate key value is (2023-06-21 04:10:00.2421441).The statement has been terminated.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_MTD_APPLICATIONRESOURCEUSAGE_USAGEASOF'. Cannot insert duplicate key in object 'mtd.APPLICATIONRESOURCEUSAGE'. The duplicate key value is (2023-06-21 04:10:00.2421441).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Arms.Service.clsDAL.ExecuteNonQuery(CommandType CommandType, String CommandText, SqlParameter[] CommandParameters)
+ClientConnectionId:93cb540f-a0d7-48d7-8b10-e65b6bfc152b
+Error Number:2627,State:1,Class:14
+21 Jun 2023 11:50:36,594 | [ARMS Scheduler_Worker-21] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:SelectTable:SelectTable:A transport-level error has occurred when receiving results from the server. (provider: Session Provider, error: 19 - Physical connection is not usable)
+Microsoft.Data.SqlClient.SqlException (0x80131904): A transport-level error has occurred when receiving results from the server. (provider: Session Provider, error: 19 - Physical connection is not usable)
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader()
+   at Arms.Service.clsBAL.SelectTable(String _CommandText)
+ClientConnectionId:5a1f82e8-662f-4003-8e89-1a8ad938554f
+Error Number:-1,State:0,Class:20
+21 Jun 2023 12:41:02,140 | [ARMS Scheduler_Worker-23] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:IsAvailableNetworkActive:IsAvailableNetworkActive:An exception occurred during a Ping request.
+System.Net.NetworkInformation.PingException: An exception occurred during a Ping request. ---> System.ComponentModel.Win32Exception: The network location cannot be reached. For information about network troubleshooting, see Windows Help
+   at System.Net.NetworkInformation.Ping.InternalSend(IPAddress address, Byte[] buffer, Int32 timeout, PingOptions options, Boolean async)
+   at System.Net.NetworkInformation.Ping.Send(IPAddress address, Int32 timeout, Byte[] buffer, PingOptions options)
+   --- End of inner exception stack trace ---
+   at System.Net.NetworkInformation.Ping.Send(IPAddress address, Int32 timeout, Byte[] buffer, PingOptions options)
+   at System.Net.NetworkInformation.Ping.Send(IPAddress address, Int32 timeout)
+   at Arms.GlobalLibrary.GlobalCommon.IsAvailableNetworkActive()
+21 Jun 2023 18:00:00,106 | [ARMS Scheduler_Worker-14] | ERROR | LAIBLRLT6156:0C:9A:3C:40:97:73:ExecuteNonQuery:ExecuteNonQuery:Violation of UNIQUE KEY constraint 'UK_MTD_APPLICATIONRESOURCEUSAGE_USAGEASOF'. Cannot insert duplicate key in object 'mtd.APPLICATIONRESOURCEUSAGE'. The duplicate key value is (2023-06-21 12:30:00.0697033).The statement has been terminated.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UK_MTD_APPLICATIONRESOURCEUSAGE_USAGEASOF'. Cannot insert duplicate key in object 'mtd.APPLICATIONRESOURCEUSAGE'. The duplicate key value is (2023-06-21 12:30:00.0697033).
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Arms.Service.clsDAL.ExecuteNonQuery(CommandType CommandType, String CommandText, SqlParameter[] CommandParameters)
+ClientConnectionId:ba910c6a-40ea-4670-801f-5edff89a493d
+Error Number:2627,State:1,Class:14
+ 
+ 

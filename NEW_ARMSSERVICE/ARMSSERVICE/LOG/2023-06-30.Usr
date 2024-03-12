@@ -1,0 +1,21 @@
+30 Jun 2023 09:12:10,529 | [128] | INFO  | ~13 | Logging Out Token:75bc3091-74cf-4bc5-8b9a-0cdb9feb1e55
+30 Jun 2023 09:12:10,530 | [120] | INFO  | ~14 | Invalid Token:|75bc3091-74cf-4bc5-8b9a-0cdb9feb1e55
+30 Jun 2023 09:12:18,279 | [120] | INFO  | ~15 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.2.197
+30 Jun 2023 09:12:18,301 | [73] | INFO  | ~16 | ADMIN User Authenticated !!
+30 Jun 2023 11:28:20,714 | [70] | INFO  | ~17 | Unable To Logout Token :
+30 Jun 2023 11:28:20,714 | [49] | INFO  | ~19 | Scavenging Inactivate User 0bdd7c66-2842-4c21-b52e-20b7f5b8cb44:ADMIN
+30 Jun 2023 11:28:20,714 | [129] | INFO  | ~18 | ADMIN Logged Out From Host - PID:
+30 Jun 2023 16:09:24,718 | [96] | INFO  | ~20 | User Logged In LDAP
+30 Jun 2023 16:09:26,808 | [118] | INFO  | ~21 | User Logged In LDAP
+30 Jun 2023 16:09:29,646 | [64] | INFO  | ~22 | AD User : LAMINAAR\namit.singh Validated.
+ 
+30 Jun 2023 16:09:31,392 | [96] | INFO  | ~23 | AD User : LAMINAAR\namit.singh Validated.
+ 
+30 Jun 2023 16:10:03,513 | [101] | INFO  | ~24 | Logging Out Token:0bdd7c66-2842-4c21-b52e-20b7f5b8cb44
+30 Jun 2023 16:10:03,513 | [29] | INFO  | ~25 | Invalid Token:|0bdd7c66-2842-4c21-b52e-20b7f5b8cb44
+30 Jun 2023 16:10:05,328 | [104] | INFO  | ~26 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.2.197
+30 Jun 2023 16:10:05,345 | [112] | INFO  | ~27 | ADMIN User Authenticated !!
+30 Jun 2023 17:36:39,647 | [54] | INFO  | ~29 | ADMIN Logged Out From Host - PID:
+30 Jun 2023 17:36:39,648 | [52] | INFO  | ~30 | Unable To Logout Token :
+30 Jun 2023 17:36:39,648 | [6] | INFO  | ~28 | Scavenging Inactivate User ac3f4b0b-52b3-4ed7-bf9a-a3d951b63bad:ADMIN
+ 

@@ -1,0 +1,8 @@
+20 Oct 2023 09:08:37,202 | [105] | INFO  | ~68 | 
+
+Starting Async Purging Of Archive Database ...
+20 Oct 2023 09:08:37,210 | [124] | INFO  | ~69 | Archive DB Returned NULL Dataset !!
+20 Oct 2023 17:30:00,017 | [66] | INFO  | ~70 | Starting Log Files Archival ..
+20 Oct 2023 17:30:34,622 | [93] | INFO  | ~71 | Zipping Logs took 34 Secs
+20 Oct 2023 17:30:34,623 | [93] | INFO  | ~72 | Archived Logs  Succeeded !!
+ 

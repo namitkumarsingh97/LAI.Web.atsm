@@ -1,0 +1,11 @@
+05 Nov 2023 10:59:06,355 | [78] | INFO  | ~25 | Starting Log Files Archival ..
+05 Nov 2023 10:59:16,649 | [112] | INFO  | ~26 | Zipping Logs took 135511 Secs
+05 Nov 2023 10:59:16,659 | [64] | INFO  | ~27 | Archived Logs  Succeeded !!
+05 Nov 2023 10:59:47,772 | [107] | INFO  | ~28 | Zipping Logs took 41 Secs
+05 Nov 2023 10:59:47,773 | [119] | INFO  | ~29 | Archived Logs  Succeeded !!
+05 Nov 2023 15:17:07,064 | [118] | INFO  | ~30 | 
+
+Starting Async Purging Of Archive Database ...
+05 Nov 2023 15:17:07,079 | [79] | INFO  | ~31 | Archive DB Returned NULL Dataset !!
+05 Nov 2023 18:09:37,608 | [147] | INFO  | ~32 | Starting Log Files Archival ..
+ 

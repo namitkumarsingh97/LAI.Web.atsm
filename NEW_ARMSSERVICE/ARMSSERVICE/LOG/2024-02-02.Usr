@@ -1,0 +1,28 @@
+02 Feb 2024 09:11:49,405 | [21] | INFO  | ~1 | User Logged In LDAP
+02 Feb 2024 09:11:53,724 | [21] | INFO  | ~2 | AD User : LAMINAAR\namit.singh Validated.
+ 
+02 Feb 2024 09:12:08,198 | [22] | INFO  | ~3 | User Logged In LDAP
+02 Feb 2024 09:29:31,496 | [166] | INFO  | ~4 | User Logged In LDAP
+02 Feb 2024 09:29:36,233 | [167] | INFO  | ~5 | AD User : LAMINAAR\namit.singh Validated.
+ 
+02 Feb 2024 09:29:37,031 | [165] | INFO  | ~6 | User Logged In LDAP
+02 Feb 2024 09:29:37,064 | [170] | INFO  | ~7 | AD User : LAMINAAR\namit.singh Validated.
+ 
+02 Feb 2024 15:46:49,287 | [166] | INFO  | ~8 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.5
+02 Feb 2024 15:46:49,474 | [125] | INFO  | ~9 | ADMIN User Authenticated !!
+02 Feb 2024 15:46:54,984 | [127] | INFO  | ~10 | Logging Out Token:10f5e050-17ea-4515-b1c9-38d96dd75414
+02 Feb 2024 15:46:56,950 | [163] | INFO  | ~11 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.5
+02 Feb 2024 15:46:57,016 | [21] | INFO  | ~12 | ADMIN User Authenticated !!
+02 Feb 2024 16:54:34,418 | [21] | INFO  | ~13 | Logging Out Token:f8d8b0f4-817c-4f3e-8be4-ae4bff1ee9ac
+02 Feb 2024 16:54:37,053 | [156] | INFO  | ~14 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.5
+02 Feb 2024 16:54:37,143 | [159] | INFO  | ~15 | ADMIN User Authenticated !!
+02 Feb 2024 16:54:59,083 | [20] | INFO  | ~16 | User Logged In LDAP
+02 Feb 2024 16:55:01,209 | [165] | INFO  | ~17 | User Logged In LDAP
+02 Feb 2024 16:55:04,030 | [160] | INFO  | ~18 | AD User : LAMINAAR\namit.singh Validated.
+ 
+02 Feb 2024 16:55:05,774 | [164] | INFO  | ~19 | AD User : LAMINAAR\namit.singh Validated.
+ 
+02 Feb 2024 16:55:13,933 | [170] | INFO  | ~20 | Logging Out Token:71e50e97-2fe3-4f52-931d-e7191f13afba
+02 Feb 2024 16:55:15,956 | [21] | INFO  | ~21 | UserName:ADMIN Logged Client Type CDT_DEFAULT::192.168.1.5
+02 Feb 2024 16:55:16,029 | [20] | INFO  | ~22 | ADMIN User Authenticated !!
+ 
